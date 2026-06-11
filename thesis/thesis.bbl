@@ -1,0 +1,3398 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{Idrissi2022AROA}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=66bd8554378db599a80665dbcb40d599}{%
+           family={Idrissi},
+           familyi={I\bibinitperiod},
+           given={Moad},
+           giveni={M\bibinitperiod}}}%
+        {{hash=616d8801434af45f5fd80d2c6b718968}{%
+           family={Salami},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a98e4996bfd519fe5d7d2ecaf2973aac}{%
+           family={Annaz},
+           familyi={A\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ee38ace0250a88644592baae930be49}
+      \strng{fullhash}{74a8fb4050278f8c6c819885c17eefb9}
+      \strng{fullhashraw}{74a8fb4050278f8c6c819885c17eefb9}
+      \strng{bibnamehash}{74a8fb4050278f8c6c819885c17eefb9}
+      \strng{authorbibnamehash}{74a8fb4050278f8c6c819885c17eefb9}
+      \strng{authornamehash}{6ee38ace0250a88644592baae930be49}
+      \strng{authorfullhash}{74a8fb4050278f8c6c819885c17eefb9}
+      \strng{authorfullhashraw}{74a8fb4050278f8c6c819885c17eefb9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Intelligent \& Robotic Systems}
+      \field{title}{A Review of Quadrotor Unmanned Aerial Vehicles: Applications, Architectural Design and Control Algorithms}
+      \field{volume}{104}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{pages}{1\bibrangedash 33}
+      \range{pages}{33}
+    \endentry
+    \entry{Lyu2023UnmannedAVA}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=5a60d7219a11055b03d3378040aa7b19}{%
+           family={Lyu},
+           familyi={L\bibinitperiod},
+           given={Mingyang},
+           giveni={M\bibinitperiod}}}%
+        {{hash=622f0da5c5d31fbf10fc79788acfe3e1}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Yibo},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=085ba9203d469ee85e0630e569da3d12}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Chao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=a988571ccc53414659a60daa50730a26}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Hailong},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{d1198045d0d9efaaec845bbfc7fe9277}
+      \strng{fullhash}{2a438bd6fcdc8f93b0323f2af422a8e6}
+      \strng{fullhashraw}{2a438bd6fcdc8f93b0323f2af422a8e6}
+      \strng{bibnamehash}{2a438bd6fcdc8f93b0323f2af422a8e6}
+      \strng{authorbibnamehash}{2a438bd6fcdc8f93b0323f2af422a8e6}
+      \strng{authornamehash}{d1198045d0d9efaaec845bbfc7fe9277}
+      \strng{authorfullhash}{2a438bd6fcdc8f93b0323f2af422a8e6}
+      \strng{authorfullhashraw}{2a438bd6fcdc8f93b0323f2af422a8e6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Remote. Sens.}
+      \field{title}{Unmanned Aerial Vehicles for Search and Rescue: A Survey}
+      \field{volume}{15}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{pages}{3266}
+      \range{pages}{1}
+    \endentry
+    \entry{Chen2021FromUSA}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=f12458352bf48d8ebe2ba46b11310c19}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Jie},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f85751488058842b5777c7b4074077b5}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Jian},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3d33b99ab2b9fa2c7987e1d7f5873222}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Gang},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{9e4bf25f043fa6b81b9954b8e1dd3f71}
+      \strng{fullhash}{2ada9b57e768b955a578d7c59aa717e1}
+      \strng{fullhashraw}{2ada9b57e768b955a578d7c59aa717e1}
+      \strng{bibnamehash}{2ada9b57e768b955a578d7c59aa717e1}
+      \strng{authorbibnamehash}{2ada9b57e768b955a578d7c59aa717e1}
+      \strng{authornamehash}{9e4bf25f043fa6b81b9954b8e1dd3f71}
+      \strng{authorfullhash}{2ada9b57e768b955a578d7c59aa717e1}
+      \strng{authorfullhashraw}{2ada9b57e768b955a578d7c59aa717e1}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Engineering}
+      \field{title}{From Unmanned Systems to Autonomous Intelligent Systems}
+      \field{year}{2021}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Abbaraju2018SensingASA}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{2}{}{%
+        {{hash=cdb929e8dd4d6dc5ff931d29eaeb8578}{%
+           family={Abbaraju},
+           familyi={A\bibinitperiod},
+           given={Praveen},
+           giveni={P\bibinitperiod}}}%
+        {{hash=645174914ae06840849dfd04fc676223}{%
+           family={Voyles},
+           familyi={V\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{698c93a11e1cfc6ceecf372b70b68d89}
+      \strng{fullhash}{698c93a11e1cfc6ceecf372b70b68d89}
+      \strng{fullhashraw}{698c93a11e1cfc6ceecf372b70b68d89}
+      \strng{bibnamehash}{698c93a11e1cfc6ceecf372b70b68d89}
+      \strng{authorbibnamehash}{698c93a11e1cfc6ceecf372b70b68d89}
+      \strng{authornamehash}{698c93a11e1cfc6ceecf372b70b68d89}
+      \strng{authorfullhash}{698c93a11e1cfc6ceecf372b70b68d89}
+      \strng{authorfullhashraw}{698c93a11e1cfc6ceecf372b70b68d89}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the WM2018 Symposium Conference, Phoenix, AZ, USA}
+      \field{title}{Sensing and sampling of trace contaminations by a dexterous hexrotor UAV at nuclear facilities-18600}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{pages}{18\bibrangedash 22}
+      \range{pages}{5}
+    \endentry
+    \entry{batra_decentralized_2022}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{hash=0f28242a9a47ed168e208df6c35c7b2e}{%
+           family={Batra},
+           familyi={B\bibinitperiod},
+           given={Sumeet},
+           giveni={S\bibinitperiod}}}%
+        {{hash=db38615bbc2278290c8ceecb85139fa1}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Zhehui},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=cab90f05d188bce5ec8ee8998fc48d47}{%
+           family={Petrenko},
+           familyi={P\bibinitperiod},
+           given={Aleksei},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4dfe6c562912f270f509083615b969e1}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Tushar},
+           giveni={T\bibinitperiod}}}%
+        {{hash=4dd6d20389d143002afdb3dd8e9b7dfa}{%
+           family={Molchanov},
+           familyi={M\bibinitperiod},
+           given={Artem},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6d430fe2b65c3d9fedd6f2d351604092}{%
+           family={Sukhatme},
+           familyi={S\bibinitperiod},
+           given={Gaurav\bibnamedelima S.},
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b74e5a072ccc3e8caa89904336f61a7}
+      \strng{fullhash}{b962408cb9a01273441ee04516174295}
+      \strng{fullhashraw}{b962408cb9a01273441ee04516174295}
+      \strng{bibnamehash}{b962408cb9a01273441ee04516174295}
+      \strng{authorbibnamehash}{b962408cb9a01273441ee04516174295}
+      \strng{authornamehash}{5b74e5a072ccc3e8caa89904336f61a7}
+      \strng{authorfullhash}{b962408cb9a01273441ee04516174295}
+      \strng{authorfullhashraw}{b962408cb9a01273441ee04516174295}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We demonstrate the possibility of learning drone swarm controllers that are zero-shot transferable to real quadrotors via large-scale multi-agent end-to-end reinforcement learning. We train policies parameterized by neural networks that are capable of controlling individual drones in a swarm in a fully decentralized manner. Our policies, trained in simulated environments with realistic quadrotor physics, demonstrate advanced flocking behaviors, perform aggressive maneuvers in tight formations while avoiding collisions with each other, break and re-establish formations to avoid collisions with moving obstacles, and efficiently coordinate in pursuit-evasion tasks. We analyze, in simulation, how different model architectures and parameters of the training regime influence the final performance of neural swarms. We demonstrate the successful deployment of the model learned in simulation to highly resource-constrained physical quadrotors performing station keeping and goal swapping behaviors. Video demonstrations and source code are available at the project website https://sites.google.com/view/swarm-rl.}
+      \field{booktitle}{Proceedings of the 5th Conference on Robot Learning}
+      \field{day}{11}
+      \field{eventtitle}{Conference on Robot Learning}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{title}{Decentralized Control of Quadrotor Swarms with End-to-end Deep Reinforcement Learning}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{pages}{576\bibrangedash 586}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.48550/arxiv.2109.07735
+      \endverb
+      \verb{eprint}
+      \verb 2109.07735
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/viktorlorentz/Zotero/storage/D9K6Q2FE/Batra et al. - 2022 - Decentralized Control of Quadrotor Swarms with End-to-end Deep Reinforcement Learning.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{Zhou2020EGOSwarmAF}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=6f9bf13df2a49ec91f9fbd8ac7c65912}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Xiaoxia},
+           giveni={X\bibinitperiod}}}%
+        {{hash=f82d313b405e37bc9ce0181544c9b7e0}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Jiangchao},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e61435c932c98b1090971e35d592f36e}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Hongyu},
+           giveni={H\bibinitperiod}}}%
+        {{hash=e51bd353d330d0203232b51fcbc2b64a}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Chao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=0be48a9daf13fde579d9d51375cfee5b}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Fei},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{7be47cbcdabd20270866347547105ba4}
+      \strng{fullhash}{bc8f4f42a8e14f70d7b68cb33fe625aa}
+      \strng{fullhashraw}{bc8f4f42a8e14f70d7b68cb33fe625aa}
+      \strng{bibnamehash}{bc8f4f42a8e14f70d7b68cb33fe625aa}
+      \strng{authorbibnamehash}{bc8f4f42a8e14f70d7b68cb33fe625aa}
+      \strng{authornamehash}{7be47cbcdabd20270866347547105ba4}
+      \strng{authorfullhash}{bc8f4f42a8e14f70d7b68cb33fe625aa}
+      \strng{authorfullhashraw}{bc8f4f42a8e14f70d7b68cb33fe625aa}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2021 IEEE International Conference on Robotics and Automation (ICRA)}
+      \field{title}{EGO-Swarm: A Fully Autonomous and Decentralized Quadrotor Swarm System in Cluttered Environments}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{pages}{4101\bibrangedash 4107}
+      \range{pages}{7}
+    \endentry
+    \entry{estevez_review_2024}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=49c27557c62e01847efcdac3a016476d}{%
+           family={Estevez},
+           familyi={E\bibinitperiod},
+           given={Julian},
+           giveni={J\bibinitperiod}}}%
+        {{hash=a834daf6c72bb426bc0599838c40d73b}{%
+           family={Garate},
+           familyi={G\bibinitperiod},
+           given={Gorka},
+           giveni={G\bibinitperiod}}}%
+        {{hash=64f88e9ace3d14225175d0e1b4d975cd}{%
+           family={Lopez-Guede},
+           familyi={L\bibinithyphendelim G\bibinitperiod},
+           given={Jose\bibnamedelima Manuel},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=cc90a8617d7f1908bbe93cf7976a108e}{%
+           family={Larrea},
+           familyi={L\bibinitperiod},
+           given={Mikel},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{1ca866c897d20f15a64fcfe14b9dc357}
+      \strng{fullhash}{d027b35cc77ad60c4caba37e56a02bfc}
+      \strng{fullhashraw}{d027b35cc77ad60c4caba37e56a02bfc}
+      \strng{bibnamehash}{d027b35cc77ad60c4caba37e56a02bfc}
+      \strng{authorbibnamehash}{d027b35cc77ad60c4caba37e56a02bfc}
+      \strng{authornamehash}{1ca866c897d20f15a64fcfe14b9dc357}
+      \strng{authorfullhash}{d027b35cc77ad60c4caba37e56a02bfc}
+      \strng{authorfullhashraw}{d027b35cc77ad60c4caba37e56a02bfc}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Payload transportation and manipulation by rotorcraft drones are receiving a lot of attention from the military, industrial and logistics research areas. The interactions between the {UAV} and the payload, plus the means of object attachment or manipulation (such as cables or anthropomorphic robotic arms), may be nonlinear, introducing difficulties in the overall system performance. In this paper, we focus on the current state of the art of aerial transportation systems with suspended loads by a single {UAV} and a team of them and present a review of different dynamic cable models and control systems. We cover the last sixteen years of the existing literature, and we add a discussion for evaluating the main trends in the referenced research works.}
+      \field{issn}{2504-446X}
+      \field{journaltitle}{Drones}
+      \field{langid}{english}
+      \field{month}{2}
+      \field{title}{Review of Aerial Transportation of Suspended-Cable Payloads with Quadrotors}
+      \field{volume}{8}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{pages}{35}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/drones8020035
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/viktorlorentz/Zotero/storage/RZZDVQHM/Estevez et al. - 2024 - Review of Aerial Transportation of Suspended-Cable Payloads with Quadrotors.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{Hwangbo2017ControlOA}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=8c6a64beba14091eba8c78ac2e5d2a2b}{%
+           family={Hwangbo},
+           familyi={H\bibinitperiod},
+           given={Jemin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b8db2631a5b72d20f27c1e41c03d74a4}{%
+           family={Sa},
+           familyi={S\bibinitperiod},
+           given={Inkyu},
+           giveni={I\bibinitperiod}}}%
+        {{hash=07818300893272680700e26b484b2f50}{%
+           family={Siegwart},
+           familyi={S\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=164607f9daa616a03bed0e2bf6531a8d}{%
+           family={Hutter},
+           familyi={H\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{52f08f096d39a43921ba8b33dd0be677}
+      \strng{fullhash}{df271a6a339c91dc981de10ff9cd7139}
+      \strng{fullhashraw}{df271a6a339c91dc981de10ff9cd7139}
+      \strng{bibnamehash}{df271a6a339c91dc981de10ff9cd7139}
+      \strng{authorbibnamehash}{df271a6a339c91dc981de10ff9cd7139}
+      \strng{authornamehash}{52f08f096d39a43921ba8b33dd0be677}
+      \strng{authorfullhash}{df271a6a339c91dc981de10ff9cd7139}
+      \strng{authorfullhashraw}{df271a6a339c91dc981de10ff9cd7139}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Robotics and Automation Letters}
+      \field{title}{Control of a Quadrotor With Reinforcement Learning}
+      \field{volume}{2}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{pages}{2096\bibrangedash 2103}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.48550/arxiv.1707.05110
+      \endverb
+      \verb{eprint}
+      \verb 1707.05110
+      \endverb
+    \endentry
+    \entry{kaufmann_champion-level_2023}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=67c97d80868fd6b133dedb6e929aac2d}{%
+           family={Kaufmann},
+           familyi={K\bibinitperiod},
+           given={Elia},
+           giveni={E\bibinitperiod}}}%
+        {{hash=59afafcd8a1882db2ba4f6af81e0f01a}{%
+           family={Bauersfeld},
+           familyi={B\bibinitperiod},
+           given={Leonard},
+           giveni={L\bibinitperiod}}}%
+        {{hash=ac29e4e32ee2a5bcaa325934a585b06f}{%
+           family={Loquercio},
+           familyi={L\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod}}}%
+        {{hash=81a3feeb579a36f8ed14c22d7264cf2c}{%
+           family={Müller},
+           familyi={M\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9025300f43a193cfed8e10e924f2a117}{%
+           family={Koltun},
+           familyi={K\bibinitperiod},
+           given={Vladlen},
+           giveni={V\bibinitperiod}}}%
+        {{hash=dac21ab4ede215439fcc6b051be53a11}{%
+           family={Scaramuzza},
+           familyi={S\bibinitperiod},
+           given={Davide},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{92409b57e303bc9e6aa9740c5b8df0de}
+      \strng{fullhash}{eb00725943e3ee22432047acb9e69901}
+      \strng{fullhashraw}{eb00725943e3ee22432047acb9e69901}
+      \strng{bibnamehash}{eb00725943e3ee22432047acb9e69901}
+      \strng{authorbibnamehash}{eb00725943e3ee22432047acb9e69901}
+      \strng{authornamehash}{92409b57e303bc9e6aa9740c5b8df0de}
+      \strng{authorfullhash}{eb00725943e3ee22432047acb9e69901}
+      \strng{authorfullhashraw}{eb00725943e3ee22432047acb9e69901}
+      \field{extraname}{1}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{First-person view ({FPV}) drone racing is a televised sport in which professional competitors pilot high-speed aircraft through a 3D circuit. Each pilot sees the environment from the perspective of their drone by means of video streamed from an onboard camera. Reaching the level of professional pilots with an autonomous drone is challenging because the robot needs to fly at its physical limits while estimating its speed and location in the circuit exclusively from onboard sensors1. Here we introduce Swift, an autonomous system that can race physical vehicles at the level of the human world champions. The system combines deep reinforcement learning ({RL}) in simulation with data collected in the physical world. Swift competed against three human champions, including the world champions of two international leagues, in real-world head-to-head races. Swift won several races against each of the human champions and demonstrated the fastest recorded race time. This work represents a milestone for mobile robotics and machine intelligence2, which may inspire the deployment of hybrid learning-based solutions in other physical systems.}
+      \field{issn}{1476-4687}
+      \field{journaltitle}{Nature}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{title}{Champion-level drone racing using deep reinforcement learning}
+      \field{volume}{620}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{pages}{982\bibrangedash 987}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1038/s41586-023-06419-4
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/viktorlorentz/Zotero/storage/BKZSL3KB/Kaufmann et al. - 2023 - Champion-level drone racing using deep reinforcement learning.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{Song2023ReachingTL}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=2cf9aadafe81136ce6f72094a85347b6}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Yunlong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=3d20df0e1a531fb1a6aaf0c013b4db3d}{%
+           family={Romero},
+           familyi={R\bibinitperiod},
+           given={Angel},
+           giveni={A\bibinitperiod}}}%
+        {{hash=81a3feeb579a36f8ed14c22d7264cf2c}{%
+           family={Müller},
+           familyi={M\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9025300f43a193cfed8e10e924f2a117}{%
+           family={Koltun},
+           familyi={K\bibinitperiod},
+           given={Vladlen},
+           giveni={V\bibinitperiod}}}%
+        {{hash=dac21ab4ede215439fcc6b051be53a11}{%
+           family={Scaramuzza},
+           familyi={S\bibinitperiod},
+           given={Davide},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{6d9500f9a7fedbd6e449eeeb7432d334}
+      \strng{fullhash}{2c46d25395b099509e251ae5652cc4ba}
+      \strng{fullhashraw}{2c46d25395b099509e251ae5652cc4ba}
+      \strng{bibnamehash}{2c46d25395b099509e251ae5652cc4ba}
+      \strng{authorbibnamehash}{2c46d25395b099509e251ae5652cc4ba}
+      \strng{authornamehash}{6d9500f9a7fedbd6e449eeeb7432d334}
+      \strng{authorfullhash}{2c46d25395b099509e251ae5652cc4ba}
+      \strng{authorfullhashraw}{2c46d25395b099509e251ae5652cc4ba}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science Robotics}
+      \field{title}{Reaching the limit in autonomous racing: Optimal control versus reinforcement learning}
+      \field{volume}{8}
+      \field{year}{2023}
+      \field{dateera}{ce}
+    \endentry
+    \entry{huang_collision_2024}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{hash=db38615bbc2278290c8ceecb85139fa1}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Zhehui},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=87208ea424fe9d9e3f0b52ffd8a4e417}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Zhaojing},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=06a6fd82eb20f6f5fc68369dcb4b628b}{%
+           family={Krupani},
+           familyi={K\bibinitperiod},
+           given={Rahul},
+           giveni={R\bibinitperiod}}}%
+        {{hash=4849e013ab8bf868ca2317cf55a3f6df}{%
+           family={Şenbaşlar},
+           familyi={Ş\bibinitperiod},
+           given={Baskın},
+           giveni={B\bibinitperiod}}}%
+        {{hash=0f28242a9a47ed168e208df6c35c7b2e}{%
+           family={Batra},
+           familyi={B\bibinitperiod},
+           given={Sumeet},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6d430fe2b65c3d9fedd6f2d351604092}{%
+           family={Sukhatme},
+           familyi={S\bibinitperiod},
+           given={Gaurav\bibnamedelima S.},
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{8bf696165924dd3e702c4342b0bcac3b}
+      \strng{fullhash}{e10ba8ae0eff5570ad9970b635b9ddc2}
+      \strng{fullhashraw}{e10ba8ae0eff5570ad9970b635b9ddc2}
+      \strng{bibnamehash}{e10ba8ae0eff5570ad9970b635b9ddc2}
+      \strng{authorbibnamehash}{e10ba8ae0eff5570ad9970b635b9ddc2}
+      \strng{authornamehash}{8bf696165924dd3e702c4342b0bcac3b}
+      \strng{authorfullhash}{e10ba8ae0eff5570ad9970b635b9ddc2}
+      \strng{authorfullhashraw}{e10ba8ae0eff5570ad9970b635b9ddc2}
+      \field{extraname}{1}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{End-to-end deep reinforcement learning ({DRL}) for quadrotor control promises many benefits – easy deployment, task generalization and real-time execution capability. Prior end-to-end {DRL}-based methods have showcased the ability to deploy learned controllers onto single quadrotors or quadrotor teams maneuvering in simple, obstacle-free environments. However, the addition of obstacles increases the number of possible interactions exponentially, thereby increasing the difficulty of training {RL} policies. In this work, we propose an end-to-end {DRL} approach to control quadrotor swarms in environments with obstacles. We provide our agents a curriculum and a replay buffer of the clipped collision episodes to improve performance in obstacle-rich environments. We implement an attention mechanism to attend to the neighbor robots and obstacle interactions - the first successful demonstration of this mechanism on policies for swarm behavior deployed on severely compute-constrained hardware. Our work is the first work that demonstrates the possibility of learning neighbor-avoiding and obstacle-avoiding control policies trained with end-to-end {DRL} that transfers zero-shot to real quadrotors. Our approach scales to 32 robots with 80\% obstacle density in simulation and 8 robots with 20\% obstacle density in physical deployment. Website: https://sites.google.com/view/obst-avoid-swarm-rl}
+      \field{booktitle}{2024 {IEEE} International Conference on Robotics and Automation ({ICRA})}
+      \field{eventtitle}{2024 {IEEE} International Conference on Robotics and Automation ({ICRA})}
+      \field{month}{5}
+      \field{title}{Collision Avoidance and Navigation for a Quadrotor Swarm Using End-to-end Deep Reinforcement Learning}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{pages}{300\bibrangedash 306}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/ICRA57147.2024.10611499
+      \endverb
+      \verb{file}
+      \verb IEEE Xplore Abstract Record:/Users/viktorlorentz/Zotero/storage/QSVAIBQD/10611499.html:text/html
+      \endverb
+    \endentry
+    \entry{Eschmann2024}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=cf2dc8fc638c7a73de367f8692d9805d}{%
+           family={Eschmann},
+           familyi={E\bibinitperiod},
+           given={Jonas},
+           giveni={J\bibinitperiod}}}%
+        {{hash=83a64f48e2f228efcc75d6385ced7734}{%
+           family={Albani},
+           familyi={A\bibinitperiod},
+           given={Dario},
+           giveni={D\bibinitperiod}}}%
+        {{hash=43621feced2cb49592fb38277ac77477}{%
+           family={Loianno},
+           familyi={L\bibinitperiod},
+           given={Giuseppe},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{9807248269981c76bdabaa382019f001}
+      \strng{fullhash}{47e84b1c10d35aca9553b1ca5e4d426a}
+      \strng{fullhashraw}{47e84b1c10d35aca9553b1ca5e4d426a}
+      \strng{bibnamehash}{47e84b1c10d35aca9553b1ca5e4d426a}
+      \strng{authorbibnamehash}{47e84b1c10d35aca9553b1ca5e4d426a}
+      \strng{authornamehash}{9807248269981c76bdabaa382019f001}
+      \strng{authorfullhash}{47e84b1c10d35aca9553b1ca5e4d426a}
+      \strng{authorfullhashraw}{47e84b1c10d35aca9553b1ca5e4d426a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Learning-based methods, particularly Reinforcement Learning ({RL}), hold great promise for streamlining deployment, enhancing performance, and achieving generalization in the control of autonomous multirotor aerial vehicles. Deep {RL} has been able to control complex systems with impressive fidelity and agility in simulation but the simulation-to-reality transfer often brings a hard-to-bridge reality gap. Moreover, {RL} is commonly plagued by prohibitively long training times. In this work, we propose a novel asymmetric actor-critic-based architecture coupled with a highly reliable {RL}-based training paradigm for end-to-end quadrotor control. We show how curriculum learning and a highly optimized simulator enhance sample complexity and lead to fast training times. To precisely discuss the challenges related to low-level/end-to-end multirotor control, we also introduce a taxonomy that classifies the existing levels of control abstractions as well as non-linearities and domain parameters. Our framework enables Simulation-to-Reality (Sim2Real) transfer for direct Revolutions Per Minute ({RPM}) control after only 18 seconds of training on a consumer-grade laptop as well as its deployment on microcontrollers to control a multirotor under real-time guarantees. Finally, our solution exhibits competitive performance in trajectory tracking, as demonstrated through various experimental comparisons with existing state-of-the-art control solutions using a real Crazyflie nano quadrotor. We open source the code including a very fast multirotor dynamics simulator that can simulate about 5 months of flight per second on a laptop {GPU}. The fast training times and deployment to a cheap, off-the-shelf quadrotor lower the barriers to entry and help democratize the research and development of these systems.}
+      \field{issn}{2377-3766}
+      \field{journaltitle}{{IEEE} Robotics and Automation Letters}
+      \field{month}{7}
+      \field{number}{7}
+      \field{title}{Learning to Fly in Seconds}
+      \field{volume}{9}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{pages}{6336\bibrangedash 6343}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/LRA.2024.3396025
+      \endverb
+      \verb{file}
+      \verb IEEE Xplore Abstract Record:/Users/viktorlorentz/Zotero/storage/94F4G94Y/10517383.html:text/html
+      \endverb
+    \endentry
+    \entry{wahba_kinodynamic_2024}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=680ca6b700a1bacd60524c63fc4ae9f1}{%
+           family={Wahba},
+           familyi={W\bibinitperiod},
+           given={Khaled},
+           giveni={K\bibinitperiod}}}%
+        {{hash=215c400491ca8abf2472cf5dbb8f23ee}{%
+           family={Ortiz-Haro},
+           familyi={O\bibinithyphendelim H\bibinitperiod},
+           given={Joaquim},
+           giveni={J\bibinitperiod}}}%
+        {{hash=98c39534d4602a8f85dbfe21f8a31a13}{%
+           family={Toussaint},
+           familyi={T\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c78a99ce702300cef14d551ea01dbc5b}{%
+           family={Hönig},
+           familyi={H\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{396e0b692fac6fc61666e4f630a852fb}
+      \strng{fullhash}{76ce170f526e7079cc6e56c0619bdd2e}
+      \strng{fullhashraw}{76ce170f526e7079cc6e56c0619bdd2e}
+      \strng{bibnamehash}{76ce170f526e7079cc6e56c0619bdd2e}
+      \strng{authorbibnamehash}{76ce170f526e7079cc6e56c0619bdd2e}
+      \strng{authornamehash}{396e0b692fac6fc61666e4f630a852fb}
+      \strng{authorfullhash}{76ce170f526e7079cc6e56c0619bdd2e}
+      \strng{authorfullhashraw}{76ce170f526e7079cc6e56c0619bdd2e}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We propose a motion planner for cable-driven payload transportation using multiple unmanned aerial vehicles ({UAVs}) in an environment cluttered with obstacles. Our planner is kinodynamic, i.e., it considers the full dynamics model of the transporting system including actuation constraints. Due to the high dimensionality of the planning problem, we use a hierarchical approach where we first solve for the geometric motion using a sampling-based method with a novel sampler, followed by constrained trajectory optimization that considers the full dynamics of the system. Both planning stages consider inter-robot and robot/obstacle collisions. We demonstrate in a software-in-the-loop simulation and real flight experiments that there is a significant benefit in kinodynamic motion planning for such payload transport systems with respect to payload tracking error and energy consumption compared to the standard methods of planning for the payload alone. Notably, we observe a significantly higher success rate in scenarios where the team formation changes are needed to move through tight spaces.}
+      \field{booktitle}{2024 {IEEE}/{RSJ} International Conference on Intelligent Robots and Systems ({IROS})}
+      \field{eventtitle}{2024 {IEEE}/{RSJ} International Conference on Intelligent Robots and Systems ({IROS})}
+      \field{month}{10}
+      \field{title}{Kinodynamic Motion Planning for a Team of Multirotors Transporting a Cable-Suspended Payload in Cluttered Environments}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{pages}{12750\bibrangedash 12757}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/IROS58592.2024.10802794
+      \endverb
+      \verb{file}
+      \verb IEEE Xplore Abstract Record:/Users/viktorlorentz/Zotero/storage/JZ75CYKF/10802794.html:text/html;PDF:/Users/viktorlorentz/Zotero/storage/SV6U36FI/Wahba et al. - 2024 - Kinodynamic Motion Planning for a Team of Multirotors Transporting a Cable-Suspended Payload in Clut.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{chen_what_2024}{article}{}{}
+      \name{author}{12}{}{%
+        {{hash=72bf8b2616c173d3477e4806536f1ef7}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Jiayu},
+           giveni={J\bibinitperiod}}}%
+        {{hash=a10237d1d57fbf19311761320dafceb5}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Chao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=91bfe32419cb38263af0598710ef58c9}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Yuqing},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=c8c5bb9f8ba6ff0df0521ea75cae9bda}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Feng},
+           giveni={F\bibinitperiod}}}%
+        {{hash=c4e1d229b4467e0e8a8e3e471b4bd6a0}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yinuo},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=47bc36716d276ed0cdea4f97095a7cee}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Shu’ang},
+           giveni={S\bibinitperiod}}}%
+        {{hash=60c85d9a998b53ed3bd31832db8e0790}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Wenhao},
+           giveni={W\bibinitperiod}}}%
+        {{hash=7f90579e4811cba86980ad1de5c4c162}{%
+           family={Ji},
+           familyi={J\bibinitperiod},
+           given={Shilong},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f752f794e597bb8ec7ad8e14367c201e}{%
+           family={Mu},
+           familyi={M\bibinitperiod},
+           given={Mo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e2101a0f6a72a2fb022cd3e2d45461e1}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Yi},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=4756886387a4c576f3366e0abf146be0}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Huazhong},
+           giveni={H\bibinitperiod}}}%
+        {{hash=b2eccb185095fccfeb40fdffd8b2105f}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Institute of Electrical}%
+        {Electronics Engineers (IEEE)}%
+      }
+      \strng{namehash}{a319d158b4e1ed83702521f152f3c4c2}
+      \strng{fullhash}{ead536ac8c913dc87ffd5d625a63bc11}
+      \strng{fullhashraw}{ead536ac8c913dc87ffd5d625a63bc11}
+      \strng{bibnamehash}{a319d158b4e1ed83702521f152f3c4c2}
+      \strng{authorbibnamehash}{a319d158b4e1ed83702521f152f3c4c2}
+      \strng{authornamehash}{a319d158b4e1ed83702521f152f3c4c2}
+      \strng{authorfullhash}{ead536ac8c913dc87ffd5d625a63bc11}
+      \strng{authorfullhashraw}{ead536ac8c913dc87ffd5d625a63bc11}
+      \field{extraname}{2}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2377-3774}
+      \field{journaltitle}{IEEE Robotics and Automation Letters}
+      \field{month}{7}
+      \field{number}{7}
+      \field{title}{What Matters in Learning a Zero-Shot Sim-to-Real RL Policy for Quadrotor Control? A Comprehensive Study}
+      \field{volume}{10}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{pages}{7134\bibrangedash 7141}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/lra.2025.3575011
+      \endverb
+    \endentry
+    \entry{littman1994markov}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=211e529e9f10ad1bfacff2284da10ea7}{%
+           family={Littman},
+           familyi={L\bibinitperiod},
+           given={Michael\bibnamedelima L},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{211e529e9f10ad1bfacff2284da10ea7}
+      \strng{fullhash}{211e529e9f10ad1bfacff2284da10ea7}
+      \strng{fullhashraw}{211e529e9f10ad1bfacff2284da10ea7}
+      \strng{bibnamehash}{211e529e9f10ad1bfacff2284da10ea7}
+      \strng{authorbibnamehash}{211e529e9f10ad1bfacff2284da10ea7}
+      \strng{authornamehash}{211e529e9f10ad1bfacff2284da10ea7}
+      \strng{authorfullhash}{211e529e9f10ad1bfacff2284da10ea7}
+      \strng{authorfullhashraw}{211e529e9f10ad1bfacff2284da10ea7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Machine learning proceedings 1994}
+      \field{title}{Markov games as a framework for multi-agent reinforcement learning}
+      \field{year}{1994}
+      \field{dateera}{ce}
+      \field{pages}{157\bibrangedash 163}
+      \range{pages}{7}
+    \endentry
+    \entry{sreenath_dynamics_2013}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=ae04632bf598bc33ad7db75e6aad2a41}{%
+           family={Sreenath},
+           familyi={S\bibinitperiod},
+           given={Koushil},
+           giveni={K\bibinitperiod}}}%
+        {{hash=3c2a6a0658f1ad90e7d4a83eef9c3841}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Vijay},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{427dc79e5a0cce772e761c740b2cb604}
+      \strng{fullhash}{427dc79e5a0cce772e761c740b2cb604}
+      \strng{fullhashraw}{427dc79e5a0cce772e761c740b2cb604}
+      \strng{bibnamehash}{427dc79e5a0cce772e761c740b2cb604}
+      \strng{authorbibnamehash}{427dc79e5a0cce772e761c740b2cb604}
+      \strng{authornamehash}{427dc79e5a0cce772e761c740b2cb604}
+      \strng{authorfullhash}{427dc79e5a0cce772e761c740b2cb604}
+      \strng{authorfullhashraw}{427dc79e5a0cce772e761c740b2cb604}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We address the problem of cooperative transportation of a cable-suspended payload by multiple quadrotors. In previous work, quasi-static models have been used to study this problem. However, these approaches are severely limited because they ignore the payload dynamics, and do not explicitly model the underactuation in the control problem. Thus, there are no guarantees on the payload trajectory or the cable tensions, which must be non negative. In this paper, we develop a complete dynamic model for the case when payload is a point load and for the case when the payload is a rigid body. We show in both cases the resulting system is differentially flat when the cable tensions are strictly positive. We also consider the case where the tensions are non negative (including the case with zero tensions) and establish that these systems are differentially flat hybrid systems by considering the switching dynamics induced by the unilateral tension constraints. We use the differential flatness property to find dynamically feasible trajectories for the payload+quadrotors system. We show using numerical and experimental methods that these trajectories are superior to those obtained by quasi-static models.}
+      \field{booktitle}{Robotics: Science and Systems {IX}}
+      \field{day}{23}
+      \field{eventtitle}{Robotics: Science and Systems 2013}
+      \field{isbn}{978-981-07-3937-9}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{title}{Dynamics, Control and Planning for Cooperative Manipulation of Payloads Suspended by Cables from Multiple Quadrotor Robots}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.15607/RSS.2013.IX.011
+      \endverb
+      \verb{file}
+      \verb PDF:/Users/viktorlorentz/Zotero/storage/YMUPSRPT/Sreenath and Kumar - 2013 - Dynamics, Control and Planning for Cooperative Manipulation of Payloads Suspended by Cables from Mul.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{villa_cooperative_2021}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=7d1ec1af5721b7ae42a31643d53b3737}{%
+           family={Villa},
+           familyi={V\bibinitperiod},
+           given={Daniel\bibnamedelimb Khede\bibnamedelima Dourado},
+           giveni={D\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=a23122e4aa590eebfd84c6c6443a9b75}{%
+           family={Brandão},
+           familyi={B\bibinitperiod},
+           given={Alexandre\bibnamedelima Santos},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=d8234f13ed65556de8aa8f3a27059ff1}{%
+           family={Carelli},
+           familyi={C\bibinitperiod},
+           given={Ricardo},
+           giveni={R\bibinitperiod}}}%
+        {{hash=2264d152c01d5502e1a526c0efd3d274}{%
+           family={Sarcinelli-Filho},
+           familyi={S\bibinithyphendelim F\bibinitperiod},
+           given={Mário},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{ca10bc0861b2eaf30a1929a02e7bd897}
+      \strng{fullhash}{a7257f238b29b1c11a40f253f742c98c}
+      \strng{fullhashraw}{a7257f238b29b1c11a40f253f742c98c}
+      \strng{bibnamehash}{a7257f238b29b1c11a40f253f742c98c}
+      \strng{authorbibnamehash}{a7257f238b29b1c11a40f253f742c98c}
+      \strng{authornamehash}{ca10bc0861b2eaf30a1929a02e7bd897}
+      \strng{authorfullhash}{a7257f238b29b1c11a40f253f742c98c}
+      \strng{authorfullhashraw}{a7257f238b29b1c11a40f253f742c98c}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The problem of carrying a bar-shaped payload suspended by flexible cables attached to two quadrotors is analyzed in this work. The aerial vehicles and the load are dealt with as a single system, whose kinematics is described as a multi-robot formation using the virtual structure approach. The dynamic effects caused by the tethered load over the quadrotors, as well as those caused by each quadrotor over the other, are treated by an adaptive dynamic compensator. To validate the proposal, experiments were run testing the system in adverse conditions: transportation far from quasi-static motion, high payload-to-quadrotor weight ratio, 20\% of error in the robot model parameters, transportation under wind disturbances, and payload weight changes during flight. The good performance of the proposed control system in all these tests allows concluding that the proposed system is able to accomplish payload positioning, orientation, and trajectory tracking under adverse conditions, with accelerations up to 1.6 m/s2.}
+      \field{issn}{2169-3536}
+      \field{journaltitle}{{IEEE} Access}
+      \field{title}{Cooperative Load Transportation With Two Quadrotors Using Adaptive Control}
+      \field{volume}{9}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{pages}{129148\bibrangedash 129160}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2021.3113466
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/viktorlorentz/Zotero/storage/TZSTFIV7/Villa et al. - 2021 - Cooperative Load Transportation With Two Quadrotors Using Adaptive Control.pdf:application/pdf;IEEE Xplore Abstract Record:/Users/viktorlorentz/Zotero/storage/S2TGNJMA/9540662.html:text/html
+      \endverb
+    \endentry
+    \entry{lee_geometric_2018}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=86bc5919d49028a59b2e0a8cf7ffc3c4}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Taeyoung},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{86bc5919d49028a59b2e0a8cf7ffc3c4}
+      \strng{fullhash}{86bc5919d49028a59b2e0a8cf7ffc3c4}
+      \strng{fullhashraw}{86bc5919d49028a59b2e0a8cf7ffc3c4}
+      \strng{bibnamehash}{86bc5919d49028a59b2e0a8cf7ffc3c4}
+      \strng{authorbibnamehash}{86bc5919d49028a59b2e0a8cf7ffc3c4}
+      \strng{authornamehash}{86bc5919d49028a59b2e0a8cf7ffc3c4}
+      \strng{authorfullhash}{86bc5919d49028a59b2e0a8cf7ffc3c4}
+      \strng{authorfullhashraw}{86bc5919d49028a59b2e0a8cf7ffc3c4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper is focused on tracking control for a rigid body payload that is connected to an arbitrary number of quadrotor unmanned aerial vehicles via rigid links. An intrinsic form of the equations of motion is derived on the nonlinear configuration manifold, and a geometric controller is constructed such that the payload asymptotically follows a given desired trajectory for its position and attitude in the presence of uncertainties. The unique feature is that the coupled dynamics between the rigid body payload, links, and quadrotors are explicitly incorporated into control system design and stability analysis. These are developed in a coordinate-free fashion to avoid singularities and complexities that are associated with local parameterizations. The desirable features of the proposed control system are illustrated by a numerical example.}
+      \field{issn}{1558-0865}
+      \field{journaltitle}{{IEEE} Transactions on Control Systems Technology}
+      \field{month}{1}
+      \field{title}{Geometric Control of Quadrotor {UAVs} Transporting a Cable-Suspended Rigid Body}
+      \field{volume}{26}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{pages}{255\bibrangedash 264}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/TCST.2017.2656060
+      \endverb
+      \verb{file}
+      \verb IEEE Xplore Abstract Record:/Users/viktorlorentz/Zotero/storage/ZCJJ2A9J/7843619.html:text/html
+      \endverb
+    \endentry
+    \entry{tognon_aerial_2018}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=455ee97f44ee168186b70a4e53920cb1}{%
+           family={Tognon},
+           familyi={T\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7b69863c2b0d8dccaa10009f821679ad}{%
+           family={Gabellieri},
+           familyi={G\bibinitperiod},
+           given={Chiara},
+           giveni={C\bibinitperiod}}}%
+        {{hash=4542e6bcdf21fa4a66186107250bedce}{%
+           family={Pallottino},
+           familyi={P\bibinitperiod},
+           given={Lucia},
+           giveni={L\bibinitperiod}}}%
+        {{hash=e2d5101dede6f001543008c6863bd385}{%
+           family={Franchi},
+           familyi={F\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ea63d774e58f83f74fbda106177077f9}
+      \strng{fullhash}{936576a522b73b441dbec44dcd8fd1f4}
+      \strng{fullhashraw}{936576a522b73b441dbec44dcd8fd1f4}
+      \strng{bibnamehash}{936576a522b73b441dbec44dcd8fd1f4}
+      \strng{authorbibnamehash}{936576a522b73b441dbec44dcd8fd1f4}
+      \strng{authornamehash}{ea63d774e58f83f74fbda106177077f9}
+      \strng{authorfullhash}{936576a522b73b441dbec44dcd8fd1f4}
+      \strng{authorfullhashraw}{936576a522b73b441dbec44dcd8fd1f4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{This letter considers the cooperative manipulation of a cable-suspended load with two generic aerial robots without the need of explicit communication. The role of the internal force for the asymptotic stability of the beam position-and-attitude equilibria is analyzed in depth. Using a nonlinear Lyapunov-based approach, we prove that if a nonzero internal force is chosen, then the asymptotic stabilization of any desired beam attitude can be achieved with a decentralized and communicationless master–slave admittance controller. If, conversely, a zero internal force is chosen, as done in the majority of the state-of-the-art algorithms, the attitude of the beam is not controllable without communication. Furthermore, we formally proof the output-strictly passivity of the system with respect to an energy-like storage function and a certain input–output pair. This proves the stability and the robustness of the method during motion and in nonideal. The theoretical findings are validated through extensive simulations.}
+      \field{issn}{2377-3766}
+      \field{journaltitle}{{IEEE} Robotics and Automation Letters}
+      \field{month}{7}
+      \field{shorttitle}{Aerial Co-Manipulation With Cables}
+      \field{title}{Aerial Co-Manipulation With Cables: The Role of Internal Force for Equilibria, Stability, and Passivity}
+      \field{volume}{3}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{pages}{2577\bibrangedash 2583}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/LRA.2018.2803811
+      \endverb
+      \verb{file}
+      \verb IEEE Xplore Abstract Record:/Users/viktorlorentz/Zotero/storage/VK5YJM2L/8286868.html:text/html;Submitted Version:/Users/viktorlorentz/Zotero/storage/4DEWYJ6I/Tognon et al. - 2018 - Aerial Co-Manipulation With Cables The Role of Internal Force for Equilibria, Stability, and Passiv.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{tagliabue_robust_2017}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=21e25a9fbcffcc05d506dc40e01b4181}{%
+           family={Tagliabue},
+           familyi={T\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6cca95d38079b9dc9975f20d44d419e1}{%
+           family={Kamel},
+           familyi={K\bibinitperiod},
+           given={Mina},
+           giveni={M\bibinitperiod}}}%
+        {{hash=6ee8958bbf32527489012d8ca7c95ee3}{%
+           family={Siegwart},
+           familyi={S\bibinitperiod},
+           given={Roland},
+           giveni={R\bibinitperiod}}}%
+        {{hash=44ee630ad5dff2cf640763571fdbfe10}{%
+           family={Nieto},
+           familyi={N\bibinitperiod},
+           given={Juan\bibnamedelima I.},
+           giveni={J\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{73aa130ca1a528b4182ba07cac748dc7}
+      \strng{fullhash}{971f19afbd6c50efe99dc66709867105}
+      \strng{fullhashraw}{971f19afbd6c50efe99dc66709867105}
+      \strng{bibnamehash}{971f19afbd6c50efe99dc66709867105}
+      \strng{authorbibnamehash}{971f19afbd6c50efe99dc66709867105}
+      \strng{authornamehash}{73aa130ca1a528b4182ba07cac748dc7}
+      \strng{authorfullhash}{971f19afbd6c50efe99dc66709867105}
+      \strng{authorfullhashraw}{971f19afbd6c50efe99dc66709867105}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Int. J. Robotics Res.}
+      \field{number}{9}
+      \field{title}{Robust collaborative object transportation using multiple MAVs}
+      \field{volume}{38}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1177/0278364919854131
+      \endverb
+    \endentry
+    \entry{sun_nonlinear_2023}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=0fe236fed49efc5e9f26884ac82a3b18}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Sihao},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e2d5101dede6f001543008c6863bd385}{%
+           family={Franchi},
+           familyi={F\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{9f5843a357964b5cf2a3a93804e8cb19}
+      \strng{fullhash}{9f5843a357964b5cf2a3a93804e8cb19}
+      \strng{fullhashraw}{9f5843a357964b5cf2a3a93804e8cb19}
+      \strng{bibnamehash}{9f5843a357964b5cf2a3a93804e8cb19}
+      \strng{authorbibnamehash}{9f5843a357964b5cf2a3a93804e8cb19}
+      \strng{authornamehash}{9f5843a357964b5cf2a3a93804e8cb19}
+      \strng{authorfullhash}{9f5843a357964b5cf2a3a93804e8cb19}
+      \strng{authorfullhashraw}{9f5843a357964b5cf2a3a93804e8cb19}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this work, we propose a centralized control method based on nonlinear model predictive control to let multiple {UAVs} manipulate the full pose of an object via cables. At the best of the authors knowledge this is the first method that takes into account the full nonlinear model of the load-{UAV} system, and ensures all the feasibility constraints concerning the {UAV} maximumum and minimum thrusts, the collision avoidance between the {UAVs}, cables and load, and the tautness and maximum tension of the cables. By taking into account the above factors, the proposed control algorithm can fully exploit the performance of {UAVs} and facilitate the speed of operation. Simulations are conducted to validate the algorithm to achieve fast and safe manipulation of the pose of a rigid-body payload using multiple {UAVs}. We demonstrate that the computational time of the proposed method is sufficiently small ({<}100 ms) for {UAV} teams composed by up to 10 units, which makes it suitable for a huge variety of future industrial applications, such as autonomous building construction and heavy-load transportation.}
+      \field{booktitle}{2023 International Conference on Unmanned Aircraft Systems ({ICUAS})}
+      \field{eventtitle}{2023 International Conference on Unmanned Aircraft Systems ({ICUAS})}
+      \field{month}{6}
+      \field{title}{Nonlinear {MPC} for Full-Pose Manipulation of a Cable-Suspended Load using Multiple {UAVs}}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{pages}{969\bibrangedash 975}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/ICUAS57906.2023.10156031
+      \endverb
+      \verb{file}
+      \verb IEEE Xplore Abstract Record:/Users/viktorlorentz/Zotero/storage/UX7W8J7P/10156031.html:text/html;Submitted Version:/Users/viktorlorentz/Zotero/storage/DFYSACLS/Sun and Franchi - 2023 - Nonlinear MPC for Full-Pose Manipulation of a Cable-Suspended Load using Multiple UAVs.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{li_nonlinear_2023}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=db6286f0d1e1fe51357736e3287cdf31}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Guanrui},
+           giveni={G\bibinitperiod}}}%
+        {{hash=43621feced2cb49592fb38277ac77477}{%
+           family={Loianno},
+           familyi={L\bibinitperiod},
+           given={Giuseppe},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{2c65e4b7d6c6f969b287ee591b88741d}
+      \strng{fullhash}{2c65e4b7d6c6f969b287ee591b88741d}
+      \strng{fullhashraw}{2c65e4b7d6c6f969b287ee591b88741d}
+      \strng{bibnamehash}{2c65e4b7d6c6f969b287ee591b88741d}
+      \strng{authorbibnamehash}{2c65e4b7d6c6f969b287ee591b88741d}
+      \strng{authornamehash}{2c65e4b7d6c6f969b287ee591b88741d}
+      \strng{authorfullhash}{2c65e4b7d6c6f969b287ee591b88741d}
+      \strng{authorfullhashraw}{2c65e4b7d6c6f969b287ee591b88741d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Autonomous Micro Aerial Vehicles ({MAVs}) such as quadrotors equipped with manipulation mechanisms have the potential to assist humans in tasks such as construction and package delivery. Cables are a promising option for manipulation mechanisms due to their low weight, low cost, and simple design. However, designing control and planning strategies for cable mechanisms presents challenges due to indirect load actuation, nonlinear configuration space, and highly coupled system dynamics. In this paper, we propose a novel Nonlinear Model Predictive Control ({NMPC}) method that enables a team of quadrotors to manipulate a rigid-body payload in all 6 degrees of freedom via suspended cables. Our approach can concurrently exploit, as part of the receding horizon optimization, the available mechanical system redundancies to perform additional tasks such as inter-robot separation and obstacle avoidance while respecting payload dynamics and actuator constraints. To address real-time computational requirements and scalability, we employ a lightweight state vector parametrization that includes only payload states in all six degrees of freedom. This also enables the planning of trajectories on the {SE} (3) manifold load configuration space, thereby also reducing planning complexity. We validate the proposed approach through simulation and real-world experiments.}
+      \field{booktitle}{2023 {IEEE}/{RSJ} International Conference on Intelligent Robots and Systems ({IROS})}
+      \field{eventtitle}{2023 {IEEE}/{RSJ} International Conference on Intelligent Robots and Systems ({IROS})}
+      \field{month}{10}
+      \field{title}{Nonlinear Model Predictive Control for Cooperative Transportation and Manipulation of Cable Suspended Payloads with Multiple Quadrotors}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{pages}{5034\bibrangedash 5041}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/IROS55552.2023.10341785
+      \endverb
+      \verb{eprint}
+      \verb 2303.06165
+      \endverb
+      \verb{file}
+      \verb IEEE Xplore Abstract Record:/Users/viktorlorentz/Zotero/storage/PUNS9G3F/10341785.html:text/html;Submitted Version:/Users/viktorlorentz/Zotero/storage/CMRNZFHI/Li and Loianno - 2023 - Nonlinear Model Predictive Control for Cooperative Transportation and Manipulation of Cable Suspende.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{jackson_scalable_2020}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=7a1a63a4631bcd99c6ac5e6777926f10}{%
+           family={Jackson},
+           familyi={J\bibinitperiod},
+           given={Brian\bibnamedelima E.},
+           giveni={B\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=2277e386ab16e1d6af63d6d52686edad}{%
+           family={Howell},
+           familyi={H\bibinitperiod},
+           given={Taylor\bibnamedelima A.},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=6390637c73c6d681dc3c2b2a0592a4ba}{%
+           family={Shah},
+           familyi={S\bibinitperiod},
+           given={Kunal},
+           giveni={K\bibinitperiod}}}%
+        {{hash=c54985d67e300fac8041d549c20bb2f0}{%
+           family={Schwager},
+           familyi={S\bibinitperiod},
+           given={Mac},
+           giveni={M\bibinitperiod}}}%
+        {{hash=80368904822b04c7e38316bb5a9dfd29}{%
+           family={Manchester},
+           familyi={M\bibinitperiod},
+           given={Zachary},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{a15a77b9d2e1ec1cb683d7fd178d8fe9}
+      \strng{fullhash}{13264c655a7b34fee223c76739ace96a}
+      \strng{fullhashraw}{13264c655a7b34fee223c76739ace96a}
+      \strng{bibnamehash}{13264c655a7b34fee223c76739ace96a}
+      \strng{authorbibnamehash}{13264c655a7b34fee223c76739ace96a}
+      \strng{authornamehash}{a15a77b9d2e1ec1cb683d7fd178d8fe9}
+      \strng{authorfullhash}{13264c655a7b34fee223c76739ace96a}
+      \strng{authorfullhashraw}{13264c655a7b34fee223c76739ace96a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Most approaches to multi-robot control either rely on local decentralized control policies that scale well in the number of agents, or on centralized methods that can handle constraints and produce rich system-level behavior, but are typically computationally expensive and scale poorly in the number of agents, relegating them to offline planning. This work presents a scalable approach that uses distributed trajectory optimization to parallelize computation over a group of computationally-limited agents while handling general nonlinear dynamics and non-convex constraints. The approach, including near-real-time onboard trajectory generation, is demonstrated in hardware on a cable-suspended load problem with a team of quadrotors automatically reconfiguring to transport a heavy load through a doorway.}
+      \field{issn}{2377-3766}
+      \field{journaltitle}{{IEEE} Robotics and Automation Letters}
+      \field{month}{4}
+      \field{title}{Scalable Cooperative Transport of Cable-Suspended Loads With {UAVs} Using Distributed Trajectory Optimization}
+      \field{volume}{5}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{pages}{3368\bibrangedash 3374}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/LRA.2020.2975956
+      \endverb
+      \verb{file}
+      \verb IEEE Xplore Abstract Record:/Users/viktorlorentz/Zotero/storage/QI9MW8ZA/9007450.html:text/html
+      \endverb
+    \endentry
+    \entry{gabellieri_equilibria_2023}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=7b69863c2b0d8dccaa10009f821679ad}{%
+           family={Gabellieri},
+           familyi={G\bibinitperiod},
+           given={Chiara},
+           giveni={C\bibinitperiod}}}%
+        {{hash=455ee97f44ee168186b70a4e53920cb1}{%
+           family={Tognon},
+           familyi={T\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9efa7e074da3c977aec9d0b3ccd72652}{%
+           family={Sanalitro},
+           familyi={S\bibinitperiod},
+           given={Dario},
+           giveni={D\bibinitperiod}}}%
+        {{hash=e2d5101dede6f001543008c6863bd385}{%
+           family={Franchi},
+           familyi={F\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{b3ab25d936ce4707e50544ac5d78e5ac}
+      \strng{fullhash}{e779b4b1d55b232ca5270806e6b4a722}
+      \strng{fullhashraw}{e779b4b1d55b232ca5270806e6b4a722}
+      \strng{bibnamehash}{e779b4b1d55b232ca5270806e6b4a722}
+      \strng{authorbibnamehash}{e779b4b1d55b232ca5270806e6b4a722}
+      \strng{authornamehash}{b3ab25d936ce4707e50544ac5d78e5ac}
+      \strng{authorfullhash}{e779b4b1d55b232ca5270806e6b4a722}
+      \strng{authorfullhashraw}{e779b4b1d55b232ca5270806e6b4a722}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This article studies how parametric uncertainties affect the cooperative manipulation of a cable-suspended beam-shaped load by means of two aerial robots not explicitly communicating with each other. In particular, this article sheds light on the impact of the uncertain knowledge of the model parameters available to an established communicationless force-based controller. First, we find the closed-loop equilibrium configurations in the presence of the aforementioned uncertainties, and then, we study their stability. Hence, we show the fundamental role played in the robustness of the load attitude control by the internal force induced in the manipulated object by nonvertical cables. Furthermore, we formally study the sensitivity of the attitude error to such parametric variations, and we provide a method to act on the load position error in the presence of uncertainties. Eventually, we validate the results through an extensive set of numerical tests in a realistic simulation environment, including underactuated aerial vehicles and sagging-prone cables, and through hardware experiments.}
+      \field{issn}{1941-0468}
+      \field{journaltitle}{{IEEE} Transactions on Robotics}
+      \field{month}{10}
+      \field{title}{Equilibria, Stability, and Sensitivity for the Aerial Suspended Beam Robotic System Subject to Parameter Uncertainty}
+      \field{volume}{39}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{pages}{3977\bibrangedash 3993}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1109/TRO.2023.3279033
+      \endverb
+      \verb{eprint}
+      \verb 2302.07031
+      \endverb
+      \verb{file}
+      \verb IEEE Xplore Abstract Record:/Users/viktorlorentz/Zotero/storage/3D74UXU3/10149811.html:text/html;Submitted Version:/Users/viktorlorentz/Zotero/storage/3TAI7ZA5/Gabellieri et al. - 2023 - Equilibria, Stability, and Sensitivity for the Aerial Suspended Beam Robotic System Subject to Param.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{Wang2025SafeAA}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=aa28ffb67f873c20ddea4707cdf1aa61}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yongchao},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=0311431642470a7b59cea4fbf9543da7}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Junjie},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1dcba240991b5ed09bd6fd2d9501e775}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Xiaobin},
+           giveni={X\bibinitperiod}}}%
+        {{hash=644c033b63f3dbb0e8b8799edf13c1dc}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Tiankai},
+           giveni={T\bibinitperiod}}}%
+        {{hash=e51bd353d330d0203232b51fcbc2b64a}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Chao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=0be48a9daf13fde579d9d51375cfee5b}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Fei},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{591f14c73f19b054c33153897027f1da}
+      \strng{fullhash}{98c7be78b1e9e7779395c74580eb7ce7}
+      \strng{fullhashraw}{98c7be78b1e9e7779395c74580eb7ce7}
+      \strng{bibnamehash}{98c7be78b1e9e7779395c74580eb7ce7}
+      \strng{authorbibnamehash}{98c7be78b1e9e7779395c74580eb7ce7}
+      \strng{authornamehash}{591f14c73f19b054c33153897027f1da}
+      \strng{authorfullhash}{98c7be78b1e9e7779395c74580eb7ce7}
+      \strng{authorfullhashraw}{98c7be78b1e9e7779395c74580eb7ce7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Safe and Agile Transportation of Cable-Suspended Payload via Multiple Aerial Robots}
+      \field{volume}{abs/2501.15272}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.48550/ARXIV.2501.15272
+      \endverb
+      \verb{eprint}
+      \verb 2501.15272
+      \endverb
+    \endentry
+    \entry{Koch2018ReinforcementLF}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=314b4105468c3d48e78b20ec3ed39833}{%
+           family={Koch},
+           familyi={K\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+        {{hash=f103dae7ca07788797ecab82326e3290}{%
+           family={Mancuso},
+           familyi={M\bibinitperiod},
+           given={Renato},
+           giveni={R\bibinitperiod}}}%
+        {{hash=f360779c23a4beea5cbecf6c057d3404}{%
+           family={West},
+           familyi={W\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+        {{hash=96e5f5be5d20db7fb5ab9382376af24b}{%
+           family={Bestavros},
+           familyi={B\bibinitperiod},
+           given={Azer},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c6e49e73f875135abfc3208cfa630a17}
+      \strng{fullhash}{0e9b6a412564c457837a4ade8c876417}
+      \strng{fullhashraw}{0e9b6a412564c457837a4ade8c876417}
+      \strng{bibnamehash}{0e9b6a412564c457837a4ade8c876417}
+      \strng{authorbibnamehash}{0e9b6a412564c457837a4ade8c876417}
+      \strng{authornamehash}{c6e49e73f875135abfc3208cfa630a17}
+      \strng{authorfullhash}{0e9b6a412564c457837a4ade8c876417}
+      \strng{authorfullhashraw}{0e9b6a412564c457837a4ade8c876417}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM Transactions on Cyber-Physical Systems}
+      \field{title}{Reinforcement Learning for UAV Attitude Control}
+      \field{volume}{3}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{pages}{1\bibrangedash 21}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.48550/arxiv.1804.04154
+      \endverb
+      \verb{eprint}
+      \verb 1804.04154
+      \endverb
+    \endentry
+    \entry{Lillicrap2015ContinuousCW}{article}{}{}
+      \name{author}{8}{}{%
+        {{hash=2a321a868e44d49baf52b5e2d816fb71}{%
+           family={Lillicrap},
+           familyi={L\bibinitperiod},
+           given={Timothy\bibnamedelima P.},
+           giveni={T\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=e0c5cec59a932511b2af6220473fad61}{%
+           family={Hunt},
+           familyi={H\bibinitperiod},
+           given={Jonathan\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=4295e4094c426f01903ac60155866130}{%
+           family={Pritzel},
+           familyi={P\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4aeb1b63102b19604441a03a35f90bf4}{%
+           family={Heess},
+           familyi={H\bibinitperiod},
+           given={Nicolas\bibnamedelimb Manfred\bibnamedelima Otto},
+           giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=3b79ca47f08451987877fd8682e971e5}{%
+           family={Erez},
+           familyi={E\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+        {{hash=58112cb88a80c1bc045b6eaab26a8695}{%
+           family={Tassa},
+           familyi={T\bibinitperiod},
+           given={Yuval},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=89dbd30410c2085cd059f32c57d4593e}{%
+           family={Silver},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=d7805381550fb5f8360345f7f72c0b49}{%
+           family={Wierstra},
+           familyi={W\bibinitperiod},
+           given={Daan},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{e9929f8db9dd2c08064f17b4d9a7c551}
+      \strng{fullhash}{da381b4673825bf48090e87162f6e4de}
+      \strng{fullhashraw}{da381b4673825bf48090e87162f6e4de}
+      \strng{bibnamehash}{e9929f8db9dd2c08064f17b4d9a7c551}
+      \strng{authorbibnamehash}{e9929f8db9dd2c08064f17b4d9a7c551}
+      \strng{authornamehash}{e9929f8db9dd2c08064f17b4d9a7c551}
+      \strng{authorfullhash}{da381b4673825bf48090e87162f6e4de}
+      \strng{authorfullhashraw}{da381b4673825bf48090e87162f6e4de}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{CoRR}
+      \field{title}{Continuous control with deep reinforcement learning}
+      \field{volume}{abs/1509.02971}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arxiv.1509.02971
+      \endverb
+      \verb{eprint}
+      \verb 1509.02971
+      \endverb
+    \endentry
+    \entry{Schulman2015TrustRP}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=3e09bd2a25d237ebdaed560a07c0451e}{%
+           family={Schulman},
+           familyi={S\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c9545da54b33744da25943cdf66eadac}{%
+           family={Levine},
+           familyi={L\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a901fd78fe1108cfa7d11129644967c7}{%
+           family={Moritz},
+           familyi={M\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod}}}%
+        {{hash=8a36116840c7ee55901618c95fd08a58}{%
+           family={Jordan},
+           familyi={J\bibinitperiod},
+           given={Michael\bibnamedelima I.},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=e28d4ee199593959d8c29980a64f1974}{%
+           family={Abbeel},
+           familyi={A\bibinitperiod},
+           given={Pieter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{8d6613ae59595910252a86a61babf6c8}
+      \strng{fullhash}{945251de1d41bc2767a541a8148f51da}
+      \strng{fullhashraw}{945251de1d41bc2767a541a8148f51da}
+      \strng{bibnamehash}{945251de1d41bc2767a541a8148f51da}
+      \strng{authorbibnamehash}{945251de1d41bc2767a541a8148f51da}
+      \strng{authornamehash}{8d6613ae59595910252a86a61babf6c8}
+      \strng{authorfullhash}{945251de1d41bc2767a541a8148f51da}
+      \strng{authorfullhashraw}{945251de1d41bc2767a541a8148f51da}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Trust Region Policy Optimization}
+      \field{volume}{abs/1502.05477}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arxiv.1502.05477
+      \endverb
+      \verb{eprint}
+      \verb 1502.05477
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1502.05477
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1502.05477
+      \endverb
+    \endentry
+    \entry{schulman2017proximal}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=3e09bd2a25d237ebdaed560a07c0451e}{%
+           family={Schulman},
+           familyi={S\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=674ede0b9cd02a2bf5fc662972efb9f0}{%
+           family={Wolski},
+           familyi={W\bibinitperiod},
+           given={Filip},
+           giveni={F\bibinitperiod}}}%
+        {{hash=4164e43d8cf919f5e3f8d80f5ea23f36}{%
+           family={Dhariwal},
+           familyi={D\bibinitperiod},
+           given={Prafulla},
+           giveni={P\bibinitperiod}}}%
+        {{hash=a812c46caad94fc8701be37871f303ba}{%
+           family={Radford},
+           familyi={R\bibinitperiod},
+           given={Alec},
+           giveni={A\bibinitperiod}}}%
+        {{hash=be38507da6ab98e7ac01ac2c6b7e13eb}{%
+           family={Klimov},
+           familyi={K\bibinitperiod},
+           given={Oleg},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{8d6613ae59595910252a86a61babf6c8}
+      \strng{fullhash}{a6c6ed5a5aeb74e536f16291276ae392}
+      \strng{fullhashraw}{a6c6ed5a5aeb74e536f16291276ae392}
+      \strng{bibnamehash}{a6c6ed5a5aeb74e536f16291276ae392}
+      \strng{authorbibnamehash}{a6c6ed5a5aeb74e536f16291276ae392}
+      \strng{authornamehash}{8d6613ae59595910252a86a61babf6c8}
+      \strng{authorfullhash}{a6c6ed5a5aeb74e536f16291276ae392}
+      \strng{authorfullhashraw}{a6c6ed5a5aeb74e536f16291276ae392}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We propose a new family of policy gradient methods for reinforcement learning, which alternate between sampling data through interaction with the environment, and optimizing a "surrogate" objective function using stochastic gradient ascent. Whereas standard policy gradient methods perform one gradient update per data sample, we propose a novel objective function that enables multiple epochs of minibatch updates. The new methods, which we call proximal policy optimization ({PPO}), have some of the benefits of trust region policy optimization ({TRPO}), but they are much simpler to implement, more general, and have better sample complexity (empirically). Our experiments test {PPO} on a collection of benchmark tasks, including simulated robotic locomotion and Atari game playing, and we show that {PPO} outperforms other online policy gradient methods, and overall strikes a favorable balance between sample complexity, simplicity, and wall-time.}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Proximal Policy Optimization Algorithms}
+      \field{volume}{abs/1707.06347}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arxiv.1707.06347
+      \endverb
+      \verb{eprint}
+      \verb 1707.06347
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1707.06347
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1707.06347
+      \endverb
+    \endentry
+    \entry{xing_multi-task_2024}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=833ad50c43aaa61447eb370a6d2844d0}{%
+           family={Xing},
+           familyi={X\bibinitperiod},
+           given={Jiaxu},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2bdc7c60c40880bdae40b0443a60d1a0}{%
+           family={Geles},
+           familyi={G\bibinitperiod},
+           given={Ismail},
+           giveni={I\bibinitperiod}}}%
+        {{hash=2cf9aadafe81136ce6f72094a85347b6}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Yunlong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=1630906e7e1cac1d27601d5ad9f93766}{%
+           family={Aljalbout},
+           familyi={A\bibinitperiod},
+           given={Elie},
+           giveni={E\bibinitperiod}}}%
+        {{hash=dac21ab4ede215439fcc6b051be53a11}{%
+           family={Scaramuzza},
+           familyi={S\bibinitperiod},
+           given={Davide},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{c14d5cb1c3e95d5523ecba8e50ba9ab1}
+      \strng{fullhash}{a77534662bbb1fdecf0d70fc0ea13a71}
+      \strng{fullhashraw}{a77534662bbb1fdecf0d70fc0ea13a71}
+      \strng{bibnamehash}{a77534662bbb1fdecf0d70fc0ea13a71}
+      \strng{authorbibnamehash}{a77534662bbb1fdecf0d70fc0ea13a71}
+      \strng{authornamehash}{c14d5cb1c3e95d5523ecba8e50ba9ab1}
+      \strng{authorfullhash}{a77534662bbb1fdecf0d70fc0ea13a71}
+      \strng{authorfullhashraw}{a77534662bbb1fdecf0d70fc0ea13a71}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Reinforcement learning ({RL}) has shown great effectiveness in quadrotor control, enabling specialized policies to develop even human-champion-level performance in single-task scenarios. However, these specialized policies often struggle with novel tasks, requiring a complete retraining of the policy from scratch. To address this limitation, this paper presents a novel multi-task reinforcement learning ({MTRL}) framework tailored for quadrotor control, leveraging the shared physical dynamics of the platform to enhance sample efficiency and task performance. By employing a multi-critic architecture and shared task encoders, our framework facilitates knowledge transfer across tasks, enabling a single policy to execute diverse maneuvers, including high-speed stabilization, velocity tracking, and autonomous racing. Our experimental results, validated both in simulation and real-world scenarios, demonstrate that our framework outperforms baseline approaches in terms of sample efficiency and overall task performance. Video: https://youtu.be/{HfK}9UT1OVnY.}
+      \field{issn}{2377-3766}
+      \field{journaltitle}{{IEEE} Robotics and Automation Letters}
+      \field{title}{Multi-Task Reinforcement Learning for Quadrotors}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/LRA.2024.3520894
+      \endverb
+      \verb{file}
+      \verb IEEE Xplore Abstract Record:/Users/viktorlorentz/Zotero/storage/HWLYWRMH/10812062.html:text/html
+      \endverb
+    \endentry
+    \entry{molchanov_sim--multi-real_2019}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{hash=4dd6d20389d143002afdb3dd8e9b7dfa}{%
+           family={Molchanov},
+           familyi={M\bibinitperiod},
+           given={Artem},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ec9dc7e666340951d9b64f07cb87b025}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Tao},
+           giveni={T\bibinitperiod}}}%
+        {{hash=c78a99ce702300cef14d551ea01dbc5b}{%
+           family={Hönig},
+           familyi={H\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod}}}%
+        {{hash=19b68b1560247695c557ee3fb79377e5}{%
+           family={Preiss},
+           familyi={P\bibinitperiod},
+           given={James\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=1c307d9b859cf07f7eb1337ae5ac9f78}{%
+           family={Ayanian},
+           familyi={A\bibinitperiod},
+           given={Nora},
+           giveni={N\bibinitperiod}}}%
+        {{hash=6d430fe2b65c3d9fedd6f2d351604092}{%
+           family={Sukhatme},
+           familyi={S\bibinitperiod},
+           given={Gaurav\bibnamedelima S.},
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{1ab015fa2c5bf6c2709c54c2e63ca2c0}
+      \strng{fullhash}{a23152b4f175d2a9de10e16f4774203d}
+      \strng{fullhashraw}{a23152b4f175d2a9de10e16f4774203d}
+      \strng{bibnamehash}{a23152b4f175d2a9de10e16f4774203d}
+      \strng{authorbibnamehash}{a23152b4f175d2a9de10e16f4774203d}
+      \strng{authornamehash}{1ab015fa2c5bf6c2709c54c2e63ca2c0}
+      \strng{authorfullhash}{a23152b4f175d2a9de10e16f4774203d}
+      \strng{authorfullhashraw}{a23152b4f175d2a9de10e16f4774203d}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Quadrotor stabilizing controllers often require careful, model-specific tuning for safe operation. We use reinforcement learning to train policies in simulation that transfer remarkably well to multiple different physical quadrotors. Our policies are low-level, i.e., we map the rotorcrafts' state directly to the motor outputs. The trained control policies are very robust to external disturbances and can withstand harsh initial conditions such as throws. We show how different training methodologies (change of the cost function, modeling of noise, use of domain randomization) might affect flight performance. To the best of our knowledge, this is the first work that demonstrates that a simple neural network can learn a robust stabilizing low-level quadrotor controller (without the use of a stabilizing {PD} controller) that is shown to generalize to multiple quadrotors. The video of our experiments can be found at https://sites.google.com/view/sim-to-multi-quad.}
+      \field{booktitle}{2019 {IEEE}/{RSJ} International Conference on Intelligent Robots and Systems ({IROS})}
+      \field{eventtitle}{2019 {IEEE}/{RSJ} International Conference on Intelligent Robots and Systems ({IROS})}
+      \field{month}{11}
+      \field{shorttitle}{Sim-to-(Multi)-Real}
+      \field{title}{Sim-to-(Multi)-Real: Transfer of Low-Level Robust Control Policies to Multiple Quadrotors}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{pages}{59\bibrangedash 66}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/IROS40897.2019.8967695
+      \endverb
+      \verb{file}
+      \verb IEEE Xplore Abstract Record:/Users/viktorlorentz/Zotero/storage/5MMNKWRE/8967695.html:text/html;Submitted Version:/Users/viktorlorentz/Zotero/storage/GGY77L2R/Molchanov et al. - 2019 - Sim-to-(Multi)-Real Transfer of Low-Level Robust Control Policies to Multiple Quadrotors.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{kaufmann_benchmark_2022}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=67c97d80868fd6b133dedb6e929aac2d}{%
+           family={Kaufmann},
+           familyi={K\bibinitperiod},
+           given={Elia},
+           giveni={E\bibinitperiod}}}%
+        {{hash=59afafcd8a1882db2ba4f6af81e0f01a}{%
+           family={Bauersfeld},
+           familyi={B\bibinitperiod},
+           given={Leonard},
+           giveni={L\bibinitperiod}}}%
+        {{hash=dac21ab4ede215439fcc6b051be53a11}{%
+           family={Scaramuzza},
+           familyi={S\bibinitperiod},
+           given={Davide},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{92409b57e303bc9e6aa9740c5b8df0de}
+      \strng{fullhash}{09154f81ab94b9eb9011a2aeb6f13d5a}
+      \strng{fullhashraw}{09154f81ab94b9eb9011a2aeb6f13d5a}
+      \strng{bibnamehash}{09154f81ab94b9eb9011a2aeb6f13d5a}
+      \strng{authorbibnamehash}{09154f81ab94b9eb9011a2aeb6f13d5a}
+      \strng{authornamehash}{92409b57e303bc9e6aa9740c5b8df0de}
+      \strng{authorfullhash}{09154f81ab94b9eb9011a2aeb6f13d5a}
+      \strng{authorfullhashraw}{09154f81ab94b9eb9011a2aeb6f13d5a}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Quadrotors are highly nonlinear dynamical systems that require carefully tuned controllers to be pushed to their physical limits. Recently, learning-based control policies have been proposed for quadrotors, as they would potentially allow learning direct mappings from high-dimensional raw sensory observations to actions. Due to sample inefficiency, training such learned controllers on the real platform is impractical or even impossible. Training in simulation is attractive but requires to transfer policies between domains, which demands trained policies to be robust to such domain gap. In this work, we make two contributions: (i) we perform the first benchmark comparison of existing learned control policies for agile quadrotor flight and show that training a control policy that commands body-rates and thrust results in more robust sim-to-real transfer compared to a policy that directly specifies individual rotor thrusts, (ii) we demonstrate for the first time that such a control policy trained via deep reinforcement learning can control a quadrotor in real-world experiments at speeds over 45 km/h.}
+      \field{booktitle}{2022 International Conference on Robotics and Automation ({ICRA})}
+      \field{eventtitle}{2022 International Conference on Robotics and Automation ({ICRA})}
+      \field{month}{5}
+      \field{title}{A Benchmark Comparison of Learned Control Policies for Agile Quadrotor Flight}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{pages}{10504\bibrangedash 10510}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/ICRA46639.2022.9811564
+      \endverb
+      \verb{file}
+      \verb Accepted Version:/Users/viktorlorentz/Zotero/storage/KJH9PQJ7/Kaufmann et al. - 2022 - A Benchmark Comparison of Learned Control Policies for Agile Quadrotor Flight.pdf:application/pdf;IEEE Xplore Abstract Record:/Users/viktorlorentz/Zotero/storage/BGUIK98J/9811564.html:text/html
+      \endverb
+    \endentry
+    \entry{gronauer_using_2022}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{hash=ae0518f1e8f7a634269e7864240c575f}{%
+           family={Gronauer},
+           familyi={G\bibinitperiod},
+           given={Sven},
+           giveni={S\bibinitperiod}}}%
+        {{hash=aec23e5554dac0c3bb1b8b8d402e003a}{%
+           family={Kissel},
+           familyi={K\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5074a5044fefab6ef14fe9573e33bcfb}{%
+           family={Sacchetto},
+           familyi={S\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod}}}%
+        {{hash=464291a0c1b8c3031136e630e0f7d97a}{%
+           family={Korte},
+           familyi={K\bibinitperiod},
+           given={Mathias},
+           giveni={M\bibinitperiod}}}%
+        {{hash=82d927455f03a14711dd2326b1fc9146}{%
+           family={Diepold},
+           familyi={D\bibinitperiod},
+           given={Klaus},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{50764899c5258100af7ac5a399d37a6d}
+      \strng{fullhash}{a57e75ee4ae60e2c01681eba2d77243c}
+      \strng{fullhashraw}{a57e75ee4ae60e2c01681eba2d77243c}
+      \strng{bibnamehash}{a57e75ee4ae60e2c01681eba2d77243c}
+      \strng{authorbibnamehash}{a57e75ee4ae60e2c01681eba2d77243c}
+      \strng{authornamehash}{50764899c5258100af7ac5a399d37a6d}
+      \strng{authorfullhash}{a57e75ee4ae60e2c01681eba2d77243c}
+      \strng{authorfullhashraw}{a57e75ee4ae60e2c01681eba2d77243c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this work, we propose a data-driven approach to optimize the parameters of a simulation such that control policies can be directly transferred from simulation to a real-world quadrotor. Our neural network-based policies take only onboard sensor data as input and run entirely on the embed-ded hardware. In real-world experiments, we compare low-level Pulse-Width Modulated control with higher-level control structures such as Attitude Rate and Attitude, which utilize Proportional-Integral-Derivative controllers to output motor commands. Our experiments show that low-level controllers trained with Reinforcement Learning require a more accurate simulation than higher-level control policies at the expense of being less robust towards parameter uncertainties.}
+      \field{booktitle}{2022 {IEEE}/{RSJ} International Conference on Intelligent Robots and Systems ({IROS})}
+      \field{eventtitle}{2022 {IEEE}/{RSJ} International Conference on Intelligent Robots and Systems ({IROS})}
+      \field{month}{10}
+      \field{title}{Using Simulation Optimization to Improve Zero-shot Policy Transfer of Quadrotors}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{pages}{10170\bibrangedash 10176}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/IROS47612.2022.9981229
+      \endverb
+      \verb{eprint}
+      \verb 2201.01369
+      \endverb
+      \verb{file}
+      \verb IEEE Xplore Abstract Record:/Users/viktorlorentz/Zotero/storage/XTCQ8T9D/9981229.html:text/html;Submitted Version:/Users/viktorlorentz/Zotero/storage/9NVQPD6L/Gronauer et al. - 2022 - Using Simulation Optimization to Improve Zero-shot Policy Transfer of Quadrotors.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{ma2024skilltransfer}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=9647a2d26400433dc04bc3bfefc2d9dc}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Haitong},
+           giveni={H\bibinitperiod}}}%
+        {{hash=d83b76ca8bd6022b50a8ff3353de62a3}{%
+           family={Ren},
+           familyi={R\bibinitperiod},
+           given={Zhaolin},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=3e97152a548f1af74e08b5e0c377ef9b}{%
+           family={Dai},
+           familyi={D\bibinitperiod},
+           given={Bo},
+           giveni={B\bibinitperiod}}}%
+        {{hash=0c3bb2625d92599a7df7d96021e7219d}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Na},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{f2368bdf45d748cc8e343e1ceed64f3d}
+      \strng{fullhash}{4c3d940018209e116ac98bd93faac1b2}
+      \strng{fullhashraw}{4c3d940018209e116ac98bd93faac1b2}
+      \strng{bibnamehash}{4c3d940018209e116ac98bd93faac1b2}
+      \strng{authorbibnamehash}{4c3d940018209e116ac98bd93faac1b2}
+      \strng{authornamehash}{f2368bdf45d748cc8e343e1ceed64f3d}
+      \strng{authorfullhash}{4c3d940018209e116ac98bd93faac1b2}
+      \strng{authorfullhashraw}{4c3d940018209e116ac98bd93faac1b2}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{technical report}
+      \field{title}{Skill Transfer and Discovery for Sim-to-Real Learning: A Representation-Based Viewpoint}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arxiv.2404.05051
+      \endverb
+      \verb{eprint}
+      \verb 2404.05051
+      \endverb
+    \endentry
+    \entry{huang_quadswarm_2023}{article}{}{}
+      \name{author}{10}{}{%
+        {{hash=db38615bbc2278290c8ceecb85139fa1}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Zhehui},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=0f28242a9a47ed168e208df6c35c7b2e}{%
+           family={Batra},
+           familyi={B\bibinitperiod},
+           given={Sumeet},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ec9dc7e666340951d9b64f07cb87b025}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Tao},
+           giveni={T\bibinitperiod}}}%
+        {{hash=06a6fd82eb20f6f5fc68369dcb4b628b}{%
+           family={Krupani},
+           familyi={K\bibinitperiod},
+           given={Rahul},
+           giveni={R\bibinitperiod}}}%
+        {{hash=4dfe6c562912f270f509083615b969e1}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Tushar},
+           giveni={T\bibinitperiod}}}%
+        {{hash=4dd6d20389d143002afdb3dd8e9b7dfa}{%
+           family={Molchanov},
+           familyi={M\bibinitperiod},
+           given={Artem},
+           giveni={A\bibinitperiod}}}%
+        {{hash=cab90f05d188bce5ec8ee8998fc48d47}{%
+           family={Petrenko},
+           familyi={P\bibinitperiod},
+           given={Aleksei},
+           giveni={A\bibinitperiod}}}%
+        {{hash=19b68b1560247695c557ee3fb79377e5}{%
+           family={Preiss},
+           familyi={P\bibinitperiod},
+           given={James\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=87208ea424fe9d9e3f0b52ffd8a4e417}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Zhaojing},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=6d430fe2b65c3d9fedd6f2d351604092}{%
+           family={Sukhatme},
+           familyi={S\bibinitperiod},
+           given={Gaurav\bibnamedelima S.},
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{8bf696165924dd3e702c4342b0bcac3b}
+      \strng{fullhash}{21826ad2b267ddad6341ee49bc8ecf68}
+      \strng{fullhashraw}{21826ad2b267ddad6341ee49bc8ecf68}
+      \strng{bibnamehash}{8bf696165924dd3e702c4342b0bcac3b}
+      \strng{authorbibnamehash}{8bf696165924dd3e702c4342b0bcac3b}
+      \strng{authornamehash}{8bf696165924dd3e702c4342b0bcac3b}
+      \strng{authorfullhash}{21826ad2b267ddad6341ee49bc8ecf68}
+      \strng{authorfullhashraw}{21826ad2b267ddad6341ee49bc8ecf68}
+      \field{extraname}{2}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{QuadSwarm: {A} Modular Multi-Quadrotor Simulator for Deep Reinforcement Learning with Direct Thrust Control}
+      \field{volume}{abs/2306.09537}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.48550/ARXIV.2306.09537
+      \endverb
+      \verb{eprint}
+      \verb 2306.09537
+      \endverb
+    \endentry
+    \entry{belkhale_model-based_2021}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=f3a3286a75c71087643176681ed6ca83}{%
+           family={Belkhale},
+           familyi={B\bibinitperiod},
+           given={Suneel},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a369afa748944632df8d046195faa8e9}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Rachel},
+           giveni={R\bibinitperiod}}}%
+        {{hash=acbaa87733872bf9abe4b715d4765857}{%
+           family={Kahn},
+           familyi={K\bibinitperiod},
+           given={Gregory},
+           giveni={G\bibinitperiod}}}%
+        {{hash=b4f598eab77331a1e5a5f3c9ce3ed17d}{%
+           family={{McAllister}},
+           familyi={M\bibinitperiod},
+           given={Rowan},
+           giveni={R\bibinitperiod}}}%
+        {{hash=864584c60b808b517f2a06c664ec116a}{%
+           family={Calandra},
+           familyi={C\bibinitperiod},
+           given={Roberto},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c9545da54b33744da25943cdf66eadac}{%
+           family={Levine},
+           familyi={L\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{c19359f525711d49d54f8e4502fcb7b9}
+      \strng{fullhash}{b9cd0a67e998091f71cdf3ba95806d41}
+      \strng{fullhashraw}{b9cd0a67e998091f71cdf3ba95806d41}
+      \strng{bibnamehash}{b9cd0a67e998091f71cdf3ba95806d41}
+      \strng{authorbibnamehash}{b9cd0a67e998091f71cdf3ba95806d41}
+      \strng{authornamehash}{c19359f525711d49d54f8e4502fcb7b9}
+      \strng{authorfullhash}{b9cd0a67e998091f71cdf3ba95806d41}
+      \strng{authorfullhashraw}{b9cd0a67e998091f71cdf3ba95806d41}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Transporting suspended payloads is challenging for autonomous aerial vehicles because the payload can cause significant and unpredictable changes to the robot's dynamics. These changes can lead to suboptimal flight performance or even catastrophic failure. Although adaptive control and learning-based methods can in principle adapt to changes in these hybrid robot-payload systems, rapid mid-flight adaptation to payloads that have a priori unknown physical properties remains an open problem. We propose a meta-learning approach that "learns how to learn" models of altered dynamics within seconds of post-connection flight data. Our experiments demonstrate that our online adaptation approach outperforms non-adaptive methods on a series of challenging suspended payload transportation tasks. Videos and other supplemental material are available on our website: https://sites.google.com/view/meta-rl-for-flight}
+      \field{issn}{2377-3766, 2377-3774}
+      \field{journaltitle}{{IEEE} Robotics and Automation Letters}
+      \field{month}{4}
+      \field{shortjournal}{{IEEE} Robot. Autom. Lett.}
+      \field{title}{Model-Based Meta-Reinforcement Learning for Flight with Suspended Payloads}
+      \field{volume}{6}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{pages}{1471\bibrangedash 1478}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/LRA.2021.3057046
+      \endverb
+      \verb{eprint}
+      \verb 2004.11345
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/viktorlorentz/Zotero/storage/EB6VM7KN/Belkhale et al. - 2021 - Model-Based Meta-Reinforcement Learning for Flight with Suspended Payloads.pdf:application/pdf;Snapshot:/Users/viktorlorentz/Zotero/storage/3F9IBRDX/2004.html:text/html
+      \endverb
+    \endentry
+    \entry{hua_new_2022}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=4dc0009daec783e65164701a5540cd0a}{%
+           family={Hua},
+           familyi={H\bibinitperiod},
+           given={Hean},
+           giveni={H\bibinitperiod}}}%
+        {{hash=1be285bc5a26052b9d905788e8b8e650}{%
+           family={Fang},
+           familyi={F\bibinitperiod},
+           given={Yongchun},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=21e9a46a901d9445f24e25973a84bf92}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Xuetao},
+           giveni={X\bibinitperiod}}}%
+        {{hash=1ffd5ac527f73d08c2f438dc04a7623f}{%
+           family={Qian},
+           familyi={Q\bibinitperiod},
+           given={Chen},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{3cef507e8ece2d939f814b539137f99e}
+      \strng{fullhash}{04ffc557c0e9b49575d2029e37027bc5}
+      \strng{fullhashraw}{04ffc557c0e9b49575d2029e37027bc5}
+      \strng{bibnamehash}{04ffc557c0e9b49575d2029e37027bc5}
+      \strng{authorbibnamehash}{04ffc557c0e9b49575d2029e37027bc5}
+      \strng{authornamehash}{3cef507e8ece2d939f814b539137f99e}
+      \strng{authorfullhash}{04ffc557c0e9b49575d2029e37027bc5}
+      \strng{authorfullhashraw}{04ffc557c0e9b49575d2029e37027bc5}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this article, a reinforcement learning ({RL})-based controller is proposed for a multirotor-based transportation system, guaranteeing that the trained {RL} controller is effective in both simulation and practical experiments. The main novelty lies in that, as far as we know, this is the first attempt of combining the advantages of nonlinear and intelligent control techniques to derive a practice-oriented {RL} controller for the multirotor-based transportation system, where the high-dimensional complicated dynamics are fully considered in the framework. Specifically, inspired by the physical insight of the system, a new nonlinear control approach is proposed, in which the underactuated properties and the nontrivial couplings are well handled. On this basis, an {RL} network is proposed to parameterize the nonlinear controller, where the obtained algorithm presents the features of strong reliability and fast convergence even in complicated working conditions (e.g., model uncertainties, parameters drift, external disturbances, and so on). Subsequently, the states are proven to asymptotically converge to the equilibrium point by Lyapunov analysis and {RL} techniques. A series of simulation and real world experiments are implemented to verify satisfactory positioning accuracy and robustness of the proposed algorithm.}
+      \field{issn}{1941-014X}
+      \field{journaltitle}{{IEEE}/{ASME} Transactions on Mechatronics}
+      \field{month}{4}
+      \field{title}{A New Nonlinear Control Strategy Embedded With Reinforcement Learning for a Multirotor Transporting a Suspended Payload}
+      \field{volume}{27}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{pages}{1174\bibrangedash 1184}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1109/TMECH.2021.3082897
+      \endverb
+      \verb{file}
+      \verb IEEE Xplore Abstract Record:/Users/viktorlorentz/Zotero/storage/5RXNKV7S/9439850.html:text/html
+      \endverb
+    \endentry
+    \entry{Dimmig2023SurveyOS}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=7f9e93822d8e0481007a6982589694a1}{%
+           family={Dimmig},
+           familyi={D\bibinitperiod},
+           given={Cora\bibnamedelima A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=2c66bbdb5d1cf10fc5562308c9453db2}{%
+           family={Silano},
+           familyi={S\bibinitperiod},
+           given={Giuseppe},
+           giveni={G\bibinitperiod}}}%
+        {{hash=14379f4eabc7202aeb6c47cc547876c2}{%
+           family={McGuire},
+           familyi={M\bibinitperiod},
+           given={Kimberly},
+           giveni={K\bibinitperiod}}}%
+        {{hash=7b69863c2b0d8dccaa10009f821679ad}{%
+           family={Gabellieri},
+           familyi={G\bibinitperiod},
+           given={Chiara},
+           giveni={C\bibinitperiod}}}%
+        {{hash=c78a99ce702300cef14d551ea01dbc5b}{%
+           family={Hönig},
+           familyi={H\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod}}}%
+        {{hash=ef64e4380d0a66a001230b9b32a8ba7e}{%
+           family={Moore},
+           familyi={M\bibinitperiod},
+           given={Joseph\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=9134ef66ad86791788196f99b13b3505}{%
+           family={Kobilarov},
+           familyi={K\bibinitperiod},
+           given={Marin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{6412f081025db4288ce1441090ca5d31}
+      \strng{fullhash}{6fbc68b48311babae3816d3ce8507dce}
+      \strng{fullhashraw}{6fbc68b48311babae3816d3ce8507dce}
+      \strng{bibnamehash}{6412f081025db4288ce1441090ca5d31}
+      \strng{authorbibnamehash}{6412f081025db4288ce1441090ca5d31}
+      \strng{authornamehash}{6412f081025db4288ce1441090ca5d31}
+      \strng{authorfullhash}{6fbc68b48311babae3816d3ce8507dce}
+      \strng{authorfullhashraw}{6fbc68b48311babae3816d3ce8507dce}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{{IEEE} Robotics Autom. Mag.}
+      \field{number}{2}
+      \field{title}{Survey of Simulators for Aerial Robots: An Overview and In-Depth Systematic Comparisons [Survey]}
+      \field{volume}{32}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{pages}{153\bibrangedash 166}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1109/MRA.2024.3433171
+      \endverb
+      \verb{eprint}
+      \verb 2311.02296
+      \endverb
+    \endentry
+    \entry{Li2022RotorTMAF}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=db6286f0d1e1fe51357736e3287cdf31}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Guanrui},
+           giveni={G\bibinitperiod}}}%
+        {{hash=148a6eadaa9e59ad64d8d0d145a0d4a5}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Xinyang},
+           giveni={X\bibinitperiod}}}%
+        {{hash=43621feced2cb49592fb38277ac77477}{%
+           family={Loianno},
+           familyi={L\bibinitperiod},
+           given={Giuseppe},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{4d2823ac9e3ac6b3eed4c91b498a236f}
+      \strng{fullhash}{8f18b6065be93395636b1541eafad0ca}
+      \strng{fullhashraw}{8f18b6065be93395636b1541eafad0ca}
+      \strng{bibnamehash}{8f18b6065be93395636b1541eafad0ca}
+      \strng{authorbibnamehash}{8f18b6065be93395636b1541eafad0ca}
+      \strng{authornamehash}{4d2823ac9e3ac6b3eed4c91b498a236f}
+      \strng{authorfullhash}{8f18b6065be93395636b1541eafad0ca}
+      \strng{authorfullhashraw}{8f18b6065be93395636b1541eafad0ca}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Robotics}
+      \field{title}{RotorTM: A Flexible Simulator for Aerial Transportation and Manipulation}
+      \field{volume}{40}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{pages}{831\bibrangedash 850}
+      \range{pages}{20}
+    \endentry
+    \entry{aerial_gym_simulator}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=9f06b956b039e1a9411a0c69a375ea05}{%
+           family={Kulkarni},
+           familyi={K\bibinitperiod},
+           given={Mihir},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ec8d0fb37b36367a236b6fb94c9a187a}{%
+           family={Rehberg},
+           familyi={R\bibinitperiod},
+           given={Welf},
+           giveni={W\bibinitperiod}}}%
+        {{hash=607eea23552518c3e54a04a592995738}{%
+           family={Alexis},
+           familyi={A\bibinitperiod},
+           given={Kostas},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{39b7ddd24dc521df986c6dee1c43a126}
+      \strng{fullhash}{ab9f33911b0bf074232243482ded1406}
+      \strng{fullhashraw}{ab9f33911b0bf074232243482ded1406}
+      \strng{bibnamehash}{ab9f33911b0bf074232243482ded1406}
+      \strng{authorbibnamehash}{ab9f33911b0bf074232243482ded1406}
+      \strng{authornamehash}{39b7ddd24dc521df986c6dee1c43a126}
+      \strng{authorfullhash}{ab9f33911b0bf074232243482ded1406}
+      \strng{authorfullhashraw}{ab9f33911b0bf074232243482ded1406}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Robotics and Automation Letters}
+      \field{title}{Aerial Gym Simulator: A Framework for Highly Parallelized Simulation of Aerial Robots}
+      \field{volume}{10}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{pages}{4093\bibrangedash 4100}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/LRA.2025.3548507
+      \endverb
+    \endentry
+    \entry{xu_omnidrones_2024}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=f930055b72dff225196945580b193647}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Botian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=c8c5bb9f8ba6ff0df0521ea75cae9bda}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Feng},
+           giveni={F\bibinitperiod}}}%
+        {{hash=a10237d1d57fbf19311761320dafceb5}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Chao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=0f32e3bc14ac7a0b49b45ce004adb2b3}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Ruize},
+           giveni={R\bibinitperiod}}}%
+        {{hash=e2101a0f6a72a2fb022cd3e2d45461e1}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Yi},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=b2eccb185095fccfeb40fdffd8b2105f}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ffa2c186ac3445fc534b0107fc4fcb1}
+      \strng{fullhash}{8a976a30da4c4e671616bef175958252}
+      \strng{fullhashraw}{8a976a30da4c4e671616bef175958252}
+      \strng{bibnamehash}{8a976a30da4c4e671616bef175958252}
+      \strng{authorbibnamehash}{8a976a30da4c4e671616bef175958252}
+      \strng{authornamehash}{6ffa2c186ac3445fc534b0107fc4fcb1}
+      \strng{authorfullhash}{8a976a30da4c4e671616bef175958252}
+      \strng{authorfullhashraw}{8a976a30da4c4e671616bef175958252}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{In this letter, we introduce {OmniDrones}, an efficient and flexible platform tailored for reinforcement learning in drone control, built on Nvidia's Omniverse Isaac Sim. It employs a bottom-up design approach that allows users to easily design and experiment with various application scenarios on top of {GPU}-parallelized simulations. It also offers a range of benchmark tasks, presenting challenges ranging from single-drone hovering to over-actuated system tracking. In summary, we propose an open-sourced drone simulation platform, equipped with an extensive suite of tools for drone learning. It includes 4 drone models, 5 sensor modalities, 4 control modes, over 10 benchmark tasks, and a selection of widely used {RL} baselines. To showcase the capabilities of {OmniDrones} and to support future research, we also provide preliminary results on these benchmark tasks. We hope this platform will encourage further studies on applying {RL} to practical drone systems.}
+      \field{issn}{2377-3766}
+      \field{journaltitle}{{IEEE} Robotics and Automation Letters}
+      \field{month}{3}
+      \field{shorttitle}{{OmniDrones}}
+      \field{title}{{OmniDrones}: An Efficient and Flexible Platform for Reinforcement Learning in Drone Control}
+      \field{volume}{9}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{pages}{2838\bibrangedash 2844}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/LRA.2024.3356168
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/viktorlorentz/Zotero/storage/TFDXMY3J/Xu et al. - 2024 - OmniDrones An Efficient and Flexible Platform for Reinforcement Learning in Drone Control.pdf:application/pdf;IEEE Xplore Abstract Record:/Users/viktorlorentz/Zotero/storage/VFVBN5GE/10409589.html:text/html
+      \endverb
+    \endentry
+    \entry{Lowe2017MultiAgentAF}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=7be01fa6277ef22b804ff6cc54c87b72}{%
+           family={Lowe},
+           familyi={L\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod}}}%
+        {{hash=e2101a0f6a72a2fb022cd3e2d45461e1}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Yi},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=41ea42ab7e09607e91466632ce419d8c}{%
+           family={Tamar},
+           familyi={T\bibinitperiod},
+           given={Aviv},
+           giveni={A\bibinitperiod}}}%
+        {{hash=5de1025172ba2cd90c9f04ae0ba17006}{%
+           family={Harb},
+           familyi={H\bibinitperiod},
+           given={Jean},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e28d4ee199593959d8c29980a64f1974}{%
+           family={Abbeel},
+           familyi={A\bibinitperiod},
+           given={Pieter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=7570e7c3fc2c13d59af4d7cdb9962a4d}{%
+           family={Mordatch},
+           familyi={M\bibinitperiod},
+           given={Igor},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{dde2b308cb02077d5b0dcf690cd4ea7e}
+      \strng{fullhash}{d649a4bfdfab1502cd7ae45ec8e10355}
+      \strng{fullhashraw}{d649a4bfdfab1502cd7ae45ec8e10355}
+      \strng{bibnamehash}{d649a4bfdfab1502cd7ae45ec8e10355}
+      \strng{authorbibnamehash}{d649a4bfdfab1502cd7ae45ec8e10355}
+      \strng{authornamehash}{dde2b308cb02077d5b0dcf690cd4ea7e}
+      \strng{authorfullhash}{d649a4bfdfab1502cd7ae45ec8e10355}
+      \strng{authorfullhashraw}{d649a4bfdfab1502cd7ae45ec8e10355}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments}
+      \field{volume}{abs/1706.02275}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arxiv.1706.02275
+      \endverb
+      \verb{eprint}
+      \verb 1706.02275
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1706.02275
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1706.02275
+      \endverb
+    \endentry
+    \entry{yu_surprising_2022}{inproceedings}{}{}
+      \name{author}{7}{}{%
+        {{hash=a10237d1d57fbf19311761320dafceb5}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Chao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=113762107382f1db1aebbc7a01ac3084}{%
+           family={Velu},
+           familyi={V\bibinitperiod},
+           given={Akash},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c8a6a2cc029452189ac51ad8cb0d6d0b}{%
+           family={Vinitsky},
+           familyi={V\bibinitperiod},
+           given={Eugene},
+           giveni={E\bibinitperiod}}}%
+        {{hash=48e044f1d97f0e7b51746a59b87dbf49}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Jiaxuan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b2eccb185095fccfeb40fdffd8b2105f}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=22fce57660cf7cfb60f22c85ea5ceeb5}{%
+           family={Bayen},
+           familyi={B\bibinitperiod},
+           given={Alexandre\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=e2101a0f6a72a2fb022cd3e2d45461e1}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Yi},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \name{editor}{6}{}{%
+        {{hash=f54c36f6a12344c77fdc9680b4927f0f}{%
+           family={Koyejo},
+           familyi={K\bibinitperiod},
+           given={Sanmi},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f9e146884d45b458408eba9ec6ba0cc9}{%
+           family={Mohamed},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1cc9a6fef261c6c620d53b6fe154022a}{%
+           family={Agarwal},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=7f3ef0da73f2d49b1dfdfa9a8c5b37d3}{%
+           family={Belgrave},
+           familyi={B\bibinitperiod},
+           given={Danielle},
+           giveni={D\bibinitperiod}}}%
+        {{hash=0f841893a4e03c6a159374cc7136b961}{%
+           family={Cho},
+           familyi={C\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=6d9c5f3daf57997af27b3617ec7d1fe9}{%
+           family={Oh},
+           familyi={O\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{e8e7ddbab774078659f78cda4aa60fe4}
+      \strng{fullhash}{8b60964c7ae2644b8594dd3e1607ac3b}
+      \strng{fullhashraw}{8b60964c7ae2644b8594dd3e1607ac3b}
+      \strng{bibnamehash}{e8e7ddbab774078659f78cda4aa60fe4}
+      \strng{authorbibnamehash}{e8e7ddbab774078659f78cda4aa60fe4}
+      \strng{authornamehash}{e8e7ddbab774078659f78cda4aa60fe4}
+      \strng{authorfullhash}{8b60964c7ae2644b8594dd3e1607ac3b}
+      \strng{authorfullhashraw}{8b60964c7ae2644b8594dd3e1607ac3b}
+      \strng{editorbibnamehash}{b5eef3c3e16de31d8611aa758177085a}
+      \strng{editornamehash}{77ef5d938829c6e3eda9d65d6ca2ad05}
+      \strng{editorfullhash}{b5eef3c3e16de31d8611aa758177085a}
+      \strng{editorfullhashraw}{b5eef3c3e16de31d8611aa758177085a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems 35: Annual Conference on Neural Information Processing Systems 2022, NeurIPS 2022, New Orleans, LA, USA, November 28 - December 9, 2022}
+      \field{title}{The Surprising Effectiveness of {PPO} in Cooperative Multi-Agent Games}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://papers.nips.cc/paper_files/paper/2022/hash/9c1535a02f0ce079433344e14d910597-Abstract-Datasets_and_Benchmarks.html
+      \endverb
+      \verb{url}
+      \verb http://papers.nips.cc/paper_files/paper/2022/hash/9c1535a02f0ce079433344e14d910597-Abstract-Datasets_and_Benchmarks.html
+      \endverb
+    \endentry
+    \entry{witt_is_2020}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=d92aca4e550960a6daf9626b9553bd58}{%
+           family={Witt},
+           familyi={W\bibinitperiod},
+           given={Christian\bibnamedelima Schröder},
+           giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=1e5b7c791fc5dcf5799dff44cfa6705e}{%
+           family={Gupta},
+           familyi={G\bibinitperiod},
+           given={Tarun},
+           giveni={T\bibinitperiod}}}%
+        {{hash=600fffd871568e2c04c8fc864359604a}{%
+           family={Makoviichuk},
+           familyi={M\bibinitperiod},
+           given={Denys},
+           giveni={D\bibinitperiod}}}%
+        {{hash=b2920c1e5c13f9f9448bc7ad484b44ed}{%
+           family={Makoviychuk},
+           familyi={M\bibinitperiod},
+           given={Viktor},
+           giveni={V\bibinitperiod}}}%
+        {{hash=3269ee96fb4b61a52f4c01b02fc0751c}{%
+           family={Torr},
+           familyi={T\bibinitperiod},
+           given={Philip\bibnamedelimb H.\bibnamedelimi S.},
+           giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=709c3aa92386ace0c21c1eec7c2ab736}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Mingfei},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0d05819cf2b4fe22ba972c9b2b5d8c9d}{%
+           family={Whiteson},
+           familyi={W\bibinitperiod},
+           given={Shimon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{5c32b67d68dd883d8183c49af7898eca}
+      \strng{fullhash}{07e818932f96a5003662d089e203a43a}
+      \strng{fullhashraw}{07e818932f96a5003662d089e203a43a}
+      \strng{bibnamehash}{5c32b67d68dd883d8183c49af7898eca}
+      \strng{authorbibnamehash}{5c32b67d68dd883d8183c49af7898eca}
+      \strng{authornamehash}{5c32b67d68dd883d8183c49af7898eca}
+      \strng{authorfullhash}{07e818932f96a5003662d089e203a43a}
+      \strng{authorfullhashraw}{07e818932f96a5003662d089e203a43a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Most recently developed approaches to cooperative multi-agent reinforcement learning in the {\textbackslash}emph\{centralized training with decentralized execution\} setting involve estimating a centralized, joint value function. In this paper, we demonstrate that, despite its various theoretical shortcomings, Independent {PPO} ({IPPO}), a form of independent learning in which each agent simply estimates its local value function, can perform just as well as or better than state-of-the-art joint learning approaches on popular multi-agent benchmark suite {SMAC} with little hyperparameter tuning. We also compare {IPPO} to several variants; the results suggest that {IPPO}'s strong performance may be due to its robustness to some forms of environment non-stationarity.}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Is Independent Learning All You Need in the StarCraft Multi-Agent Challenge?}
+      \field{volume}{abs/2011.09533}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arxiv.2011.09533
+      \endverb
+      \verb{eprint}
+      \verb 2011.09533
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2011.09533
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2011.09533
+      \endverb
+    \endentry
+    \entry{Papoudakis2020BenchmarkingMD}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=d0631db9b5ca2e6150a04082663ca08d}{%
+           family={Papoudakis},
+           familyi={P\bibinitperiod},
+           given={Georgios},
+           giveni={G\bibinitperiod}}}%
+        {{hash=f355421623a9ce0d54965817f05f6ad0}{%
+           family={Christianos},
+           familyi={C\bibinitperiod},
+           given={Filippos},
+           giveni={F\bibinitperiod}}}%
+        {{hash=c32fcecebc45af27f83fbcfea1c93b31}{%
+           family={Schäfer},
+           familyi={S\bibinitperiod},
+           given={Lukas},
+           giveni={L\bibinitperiod}}}%
+        {{hash=9da4f3f413d514d731efe34067976909}{%
+           family={Albrecht},
+           familyi={A\bibinitperiod},
+           given={Stefano\bibnamedelima V.},
+           giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{f2473647f2bd5df0777ba1def078b0af}
+      \strng{fullhash}{fb48708063b34a78b84029004ce47bdb}
+      \strng{fullhashraw}{fb48708063b34a78b84029004ce47bdb}
+      \strng{bibnamehash}{fb48708063b34a78b84029004ce47bdb}
+      \strng{authorbibnamehash}{fb48708063b34a78b84029004ce47bdb}
+      \strng{authornamehash}{f2473647f2bd5df0777ba1def078b0af}
+      \strng{authorfullhash}{fb48708063b34a78b84029004ce47bdb}
+      \strng{authorfullhashraw}{fb48708063b34a78b84029004ce47bdb}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{NeurIPS Datasets and Benchmarks}
+      \field{title}{Benchmarking Multi-Agent Deep Reinforcement Learning Algorithms in Cooperative Tasks}
+      \field{year}{2020}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Chen2022TowardsHBA}{article}{}{}
+      \name{author}{10}{}{%
+        {{hash=35c6426bc1bb09aa07895f148943f02e}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yuanpei},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=616d3b0b19e3536f5c65dfab2a48a659}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Yaodong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=67026dda42a3f4e378c02a75ea2cca4d}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Tianhao},
+           giveni={T\bibinitperiod}}}%
+        {{hash=b4498581d8d507b44c4979ecbd5ef4cd}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Shengjie},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0e1c640014bac9108baa5a3600006e86}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Xidong},
+           giveni={X\bibinitperiod}}}%
+        {{hash=2ea6e8cedcd932c133a68181f36d6f99}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Jiechuang},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c6cfaecd03283febb38730301d7e45de}{%
+           family={McAleer},
+           familyi={M\bibinitperiod},
+           given={Stephen\bibnamedelima Marcus},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=e16b03661fdfbcf39546885a68509604}{%
+           family={Dong},
+           familyi={D\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod}}}%
+        {{hash=dea2c2578afbc5a7cccf4998878bbb94}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Zongqing},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=9b4356508155ef61bbcbb2e10e2c918b}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Song{-}Chun},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{2203c6c64df6f35e6835b3e8765363a4}
+      \strng{fullhash}{80d9d7332873ca4ed676acc3fc0d823f}
+      \strng{fullhashraw}{80d9d7332873ca4ed676acc3fc0d823f}
+      \strng{bibnamehash}{2203c6c64df6f35e6835b3e8765363a4}
+      \strng{authorbibnamehash}{2203c6c64df6f35e6835b3e8765363a4}
+      \strng{authornamehash}{2203c6c64df6f35e6835b3e8765363a4}
+      \strng{authorfullhash}{80d9d7332873ca4ed676acc3fc0d823f}
+      \strng{authorfullhashraw}{80d9d7332873ca4ed676acc3fc0d823f}
+      \field{extraname}{3}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Towards Human-Level Bimanual Dexterous Manipulation with Reinforcement Learning}
+      \field{volume}{abs/2206.08686}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.48550/ARXIV.2206.08686
+      \endverb
+      \verb{eprint}
+      \verb 2206.08686
+      \endverb
+    \endentry
+    \entry{Pandit2024LearningDM}{inproceedings}{}{}
+      \name{author}{8}{}{%
+        {{hash=06cfb4ec1451aef692bca08eea23ed63}{%
+           family={Pandit},
+           familyi={P\bibinitperiod},
+           given={Bikram},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8fad0bc983cc4ac8e7b88fc559bce19f}{%
+           family={Gupta},
+           familyi={G\bibinitperiod},
+           given={Ashutosh},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0b4b29a429b3959b5eb7c7d11696b1e7}{%
+           family={Gadde},
+           familyi={G\bibinitperiod},
+           given={Mohitvishnu\bibnamedelima S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=b3ea4cc3fb4c8f48006c8203e426406f}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={Addison},
+           giveni={A\bibinitperiod}}}%
+        {{hash=34af34d95d5927d91af5ca236f7b2ddb}{%
+           family={Shrestha},
+           familyi={S\bibinitperiod},
+           given={Aayam},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1cd11692e9dc6863963c9583afb5b406}{%
+           family={Duan},
+           familyi={D\bibinitperiod},
+           given={Helei},
+           giveni={H\bibinitperiod}}}%
+        {{hash=5e1ff01c8dbe4a028feb56afb07f848f}{%
+           family={Dao},
+           familyi={D\bibinitperiod},
+           given={Jeremy},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b95adb6034de42a9e024e9e4dab80197}{%
+           family={Fern},
+           familyi={F\bibinitperiod},
+           given={Alan},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{8d1955e991d210e13fe6ed92bdd4aade}
+      \strng{fullhash}{11c2a55abf8d704e614eb6fcd4c6d673}
+      \strng{fullhashraw}{11c2a55abf8d704e614eb6fcd4c6d673}
+      \strng{bibnamehash}{8d1955e991d210e13fe6ed92bdd4aade}
+      \strng{authorbibnamehash}{8d1955e991d210e13fe6ed92bdd4aade}
+      \strng{authornamehash}{8d1955e991d210e13fe6ed92bdd4aade}
+      \strng{authorfullhash}{11c2a55abf8d704e614eb6fcd4c6d673}
+      \strng{authorfullhashraw}{11c2a55abf8d704e614eb6fcd4c6d673}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Conference on Robot Learning}
+      \field{title}{Learning Decentralized Multi-Biped Control for Payload Transport}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arxiv.2406.17279
+      \endverb
+      \verb{eprint}
+      \verb 2406.17279
+      \endverb
+    \endentry
+    \entry{Ji2021ReinforcementLF}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=b856b5447f9fa3c5aa0f4be69818c0ce}{%
+           family={Ji},
+           familyi={J\bibinitperiod},
+           given={Yandong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=10f232028bc4c4cbb3979d871fe86047}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Bike},
+           giveni={B\bibinitperiod}}}%
+        {{hash=ae04632bf598bc33ad7db75e6aad2a41}{%
+           family={Sreenath},
+           familyi={S\bibinitperiod},
+           given={Koushil},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{cbe3aa678f48e3e659f420eda241c774}
+      \strng{fullhash}{71d9daa03e61b61971ae3972727c6b43}
+      \strng{fullhashraw}{71d9daa03e61b61971ae3972727c6b43}
+      \strng{bibnamehash}{71d9daa03e61b61971ae3972727c6b43}
+      \strng{authorbibnamehash}{71d9daa03e61b61971ae3972727c6b43}
+      \strng{authornamehash}{cbe3aa678f48e3e659f420eda241c774}
+      \strng{authorfullhash}{71d9daa03e61b61971ae3972727c6b43}
+      \strng{authorfullhashraw}{71d9daa03e61b61971ae3972727c6b43}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2021 IEEE 17th International Conference on Automation Science and Engineering (CASE)}
+      \field{title}{Reinforcement Learning for Collaborative Quadrupedal Manipulation of a Payload over Challenging Terrain}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{pages}{899\bibrangedash 904}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/case49439.2021.9551481
+      \endverb
+    \endentry
+    \entry{Chen2025DecentralizedNO}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=73fd5ea4f9a2c68072b2f9fc69b8d1f4}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Wen{-}Tse},
+           giveni={W\bibinitperiod}}}%
+        {{hash=11aef84bc550d2f165f50488ad806d19}{%
+           family={Nguyen},
+           familyi={N\bibinitperiod},
+           given={Minh},
+           giveni={M\bibinitperiod}}}%
+        {{hash=dd4321d687428681a60046f671f9e1cc}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Zhongyu},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=3b0aa65432c3016e0fe196d8bd38a31c}{%
+           family={Sue},
+           familyi={S\bibinitperiod},
+           given={Guo\bibnamedelima Ning},
+           giveni={G\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=ae04632bf598bc33ad7db75e6aad2a41}{%
+           family={Sreenath},
+           familyi={S\bibinitperiod},
+           given={Koushil},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{bb80c803a8b30b008b9b6d72cc18d4f7}
+      \strng{fullhash}{0c24d633d8e1ff02e2c6f791a8e324ed}
+      \strng{fullhashraw}{0c24d633d8e1ff02e2c6f791a8e324ed}
+      \strng{bibnamehash}{0c24d633d8e1ff02e2c6f791a8e324ed}
+      \strng{authorbibnamehash}{0c24d633d8e1ff02e2c6f791a8e324ed}
+      \strng{authornamehash}{bb80c803a8b30b008b9b6d72cc18d4f7}
+      \strng{authorfullhash}{0c24d633d8e1ff02e2c6f791a8e324ed}
+      \strng{authorfullhashraw}{0c24d633d8e1ff02e2c6f791a8e324ed}
+      \field{extraname}{4}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Decentralized Navigation of a Cable-Towed Load using Quadrupedal Robot Team via {MARL}}
+      \field{volume}{abs/2503.18221}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.48550/ARXIV.2503.18221
+      \endverb
+      \verb{eprint}
+      \verb 2503.18221
+      \endverb
+    \endentry
+    \entry{xie_multi-uav_2024}{article}{}{}
+      \name{author}{10}{}{%
+        {{hash=91bfe32419cb38263af0598710ef58c9}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Yuqing},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=a10237d1d57fbf19311761320dafceb5}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Chao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=3ad814cda1e0a2d9d15f29baf81c7607}{%
+           family={Zang},
+           familyi={Z\bibinitperiod},
+           given={Hongzhi},
+           giveni={H\bibinitperiod}}}%
+        {{hash=c8c5bb9f8ba6ff0df0521ea75cae9bda}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Feng},
+           giveni={F\bibinitperiod}}}%
+        {{hash=60c85d9a998b53ed3bd31832db8e0790}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Wenhao},
+           giveni={W\bibinitperiod}}}%
+        {{hash=57d8176bbfb41aafe73396ea282533a7}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Jingyi},
+           giveni={J\bibinitperiod}}}%
+        {{hash=72bf8b2616c173d3477e4806536f1ef7}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Jiayu},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f930055b72dff225196945580b193647}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Botian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=e2101a0f6a72a2fb022cd3e2d45461e1}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Yi},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=b2eccb185095fccfeb40fdffd8b2105f}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{1366f2df420f1f56585568fcedd3446e}
+      \strng{fullhash}{6c3b2bdcb74838ef43a24c79a8c9577e}
+      \strng{fullhashraw}{6c3b2bdcb74838ef43a24c79a8c9577e}
+      \strng{bibnamehash}{1366f2df420f1f56585568fcedd3446e}
+      \strng{authorbibnamehash}{1366f2df420f1f56585568fcedd3446e}
+      \strng{authornamehash}{1366f2df420f1f56585568fcedd3446e}
+      \strng{authorfullhash}{6c3b2bdcb74838ef43a24c79a8c9577e}
+      \strng{authorfullhashraw}{6c3b2bdcb74838ef43a24c79a8c9577e}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Multi-UAV Behavior-based Formation with Static and Dynamic Obstacles Avoidance via Reinforcement Learning}
+      \field{volume}{abs/2410.18495}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.48550/ARXIV.2410.18495
+      \endverb
+      \verb{eprint}
+      \verb 2410.18495
+      \endverb
+    \endentry
+    \entry{diao_efficient_2024}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=60fec00be88626058aa0ebfcffaf9c63}{%
+           family={Diao},
+           familyi={D\bibinitperiod},
+           given={Xingrong},
+           giveni={X\bibinitperiod}}}%
+        {{hash=c4b2e1dab6e5ffcdda4140982f915f09}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Jiankun},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{8bffef891e25010b6996b7544bd1b1eb}
+      \strng{fullhash}{8bffef891e25010b6996b7544bd1b1eb}
+      \strng{fullhashraw}{8bffef891e25010b6996b7544bd1b1eb}
+      \strng{bibnamehash}{8bffef891e25010b6996b7544bd1b1eb}
+      \strng{authorbibnamehash}{8bffef891e25010b6996b7544bd1b1eb}
+      \strng{authornamehash}{8bffef891e25010b6996b7544bd1b1eb}
+      \strng{authorfullhash}{8bffef891e25010b6996b7544bd1b1eb}
+      \strng{authorfullhashraw}{8bffef891e25010b6996b7544bd1b1eb}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Efficient Multi-agent Navigation with Lightweight {DRL} Policy}
+      \field{volume}{abs/2408.16370}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.48550/ARXIV.2408.16370
+      \endverb
+      \verb{eprint}
+      \verb 2408.16370
+      \endverb
+    \endentry
+    \entry{zhao_deep_2024}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=7858de9af397d40564ad8e2521fbd3e1}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Zipeng},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=dd4145400a917eb4b58620770e210fa1}{%
+           family={Wan},
+           familyi={W\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=7608dbf6c54dadf166f77046db3c64a6}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yong},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{78acaf24d9ca1d7d64b1c97bffa43737}
+      \strng{fullhash}{6aa44d770a2b4af58fe30b8c722e555a}
+      \strng{fullhashraw}{6aa44d770a2b4af58fe30b8c722e555a}
+      \strng{bibnamehash}{6aa44d770a2b4af58fe30b8c722e555a}
+      \strng{authorbibnamehash}{6aa44d770a2b4af58fe30b8c722e555a}
+      \strng{authornamehash}{78acaf24d9ca1d7d64b1c97bffa43737}
+      \strng{authorfullhash}{6aa44d770a2b4af58fe30b8c722e555a}
+      \strng{authorfullhashraw}{6aa44d770a2b4af58fe30b8c722e555a}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{With the rapid advancement of {UAV} technology, the utilization of multi-{UAV} cooperative operations has become increasingly prevalent in various domains, including military and civilian applications. However, achieving efficient coordinated rounding-up of multiple {UAVs} remains a challenging problem. This paper addresses the issue of collaborative drone hunting by proposing a decision-making control model based on deep reinforcement learning. Additionally, a shared experience data pool is established to facilitate communication between drones. Each drone possesses independent decision-making and control capabilities while also considering the presence of other drones in the environment to collaboratively accomplish obstacle avoidance and rounding-up tasks. Furthermore, we redefine and design the reward function of reinforcement learning to achieve precise control of drone swarms in diverse environments. Simulation experiments demonstrate the feasibility of the proposed method, showcasing its successful completion of obstacle avoidance, tracking, and rounding-up tasks in an obstacle environment.}
+      \field{issn}{2504-446X}
+      \field{journaltitle}{Drones}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{title}{Deep Reinforcement Learning-Driven Collaborative Rounding-Up for Multiple Unmanned Aerial Vehicles in Obstacle Environments}
+      \field{volume}{8}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{pages}{464}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/drones8090464
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/viktorlorentz/Zotero/storage/YR38DQEG/Zhao et al. - 2024 - Deep Reinforcement Learning-Driven Collaborative Rounding-Up for Multiple Unmanned Aerial Vehicles i.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{Lin2024PayloadTW}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=b848efdee2faa5974b6558a4f2ed7626}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Dasheng},
+           giveni={D\bibinitperiod}}}%
+        {{hash=fb786d34cacce8da4b7678384857f4e2}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={Jianda},
+           giveni={J\bibinitperiod}}}%
+        {{hash=7112bd5b38def4a55168243f6bc5e41b}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Kun},
+           giveni={K\bibinitperiod}}}%
+        {{hash=d63489bd71f96430fd181f651663891c}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Jianlei},
+           giveni={J\bibinitperiod}}}%
+        {{hash=cf9658ac91ef4a355a095fb192d0402c}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Chun-yan},
+           giveni={C\bibinithyphendelim y\bibinitperiod}}}%
+      }
+      \strng{namehash}{3223c9c7a5b2d5066d49d78f8c5d42c6}
+      \strng{fullhash}{cf2f6b6fedf9126f1af02bd9c3dba8eb}
+      \strng{fullhashraw}{cf2f6b6fedf9126f1af02bd9c3dba8eb}
+      \strng{bibnamehash}{cf2f6b6fedf9126f1af02bd9c3dba8eb}
+      \strng{authorbibnamehash}{cf2f6b6fedf9126f1af02bd9c3dba8eb}
+      \strng{authornamehash}{3223c9c7a5b2d5066d49d78f8c5d42c6}
+      \strng{authorfullhash}{cf2f6b6fedf9126f1af02bd9c3dba8eb}
+      \strng{authorfullhashraw}{cf2f6b6fedf9126f1af02bd9c3dba8eb}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Aerospace and Electronic Systems}
+      \field{title}{Payload Transporting With Two Quadrotors by Centralized Reinforcement Learning Method}
+      \field{volume}{60}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{pages}{239\bibrangedash 251}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1109/taes.2023.3321260
+      \endverb
+    \endentry
+    \entry{Estevez2024Reinforcement}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=49c27557c62e01847efcdac3a016476d}{%
+           family={Estevez},
+           familyi={E\bibinitperiod},
+           given={Julian},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c2ecf29a71c034c95f694d3cdc73b619}{%
+           family={Manuel\bibnamedelima Lopez-Guede},
+           familyi={M\bibinitperiod\bibinitdelim L\bibinithyphendelim G\bibinitperiod},
+           given={Jose},
+           giveni={J\bibinitperiod}}}%
+        {{hash=79cd41e6a7aaa025fdbf656ca11cad1d}{%
+           family={Valle-Echavarri},
+           familyi={V\bibinithyphendelim E\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod},
+           prefix={del},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=40cb66f9878546f4175c81d594672ba8}{%
+           family={Graña},
+           familyi={G\bibinitperiod},
+           given={Manuel},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{1ca866c897d20f15a64fcfe14b9dc357}
+      \strng{fullhash}{525741160d515cc57d7739304c8cdf93}
+      \strng{fullhashraw}{525741160d515cc57d7739304c8cdf93}
+      \strng{bibnamehash}{525741160d515cc57d7739304c8cdf93}
+      \strng{authorbibnamehash}{525741160d515cc57d7739304c8cdf93}
+      \strng{authornamehash}{1ca866c897d20f15a64fcfe14b9dc357}
+      \strng{authorfullhash}{525741160d515cc57d7739304c8cdf93}
+      \strng{authorfullhashraw}{525741160d515cc57d7739304c8cdf93}
+      \field{extraname}{2}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{Reinforcement Learning Based Trajectory Planning for Multi-UAV Load Transportation}
+      \field{volume}{12}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{pages}{144009\bibrangedash 144016}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2024.3470509
+      \endverb
+    \endentry
+    \entry{mnih2015human}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=f7d23cfe4ca0e6bf7a8c251bfa78aca6}{%
+           family={Mnih},
+           familyi={M\bibinitperiod},
+           given={Volodymyr},
+           giveni={V\bibinitperiod}}}%
+        {{hash=481308b301166b521c74fde6566e97e6}{%
+           family={Kavukcuoglu},
+           familyi={K\bibinitperiod},
+           given={Koray},
+           giveni={K\bibinitperiod}}}%
+        {{hash=89dbd30410c2085cd059f32c57d4593e}{%
+           family={Silver},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=677dfee41a39b5ac7e138f5ce14467e9}{%
+           family={Rusu},
+           familyi={R\bibinitperiod},
+           given={Andrei\bibnamedelima A},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=1cbd91f7404b2298b46bb46c47c08251}{%
+           family={Veness},
+           familyi={V\bibinitperiod},
+           given={Joel},
+           giveni={J\bibinitperiod}}}%
+        {{hash=eae3aa0ab9cb8b33a1ade80739e79e57}{%
+           family={Bellemare},
+           familyi={B\bibinitperiod},
+           given={Marc\bibnamedelima G},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=dfca94b0427da7f9088af596e23b46c0}{%
+           family={Graves},
+           familyi={G\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9449802bcb467309c0ebced658096818}{%
+           family={Riedmiller},
+           familyi={R\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=be3d55306c5ab7ee716f96f137dddba6}{%
+           family={Fidjeland},
+           familyi={F\bibinitperiod},
+           given={Andreas\bibnamedelima K},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=46cc21fb5dec973c05ceb0f321e02ca0}{%
+           family={Ostrovski},
+           familyi={O\bibinitperiod},
+           given={Georg},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{aff24b211b34cdd515b2fd148ce0c920}
+      \strng{fullhash}{f89e15532af48684e334fe55cc553021}
+      \strng{fullhashraw}{f89e15532af48684e334fe55cc553021}
+      \strng{bibnamehash}{aff24b211b34cdd515b2fd148ce0c920}
+      \strng{authorbibnamehash}{aff24b211b34cdd515b2fd148ce0c920}
+      \strng{authornamehash}{aff24b211b34cdd515b2fd148ce0c920}
+      \strng{authorfullhash}{f89e15532af48684e334fe55cc553021}
+      \strng{authorfullhashraw}{f89e15532af48684e334fe55cc553021}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{nature}
+      \field{title}{Human-level control through deep reinforcement learning}
+      \field{volume}{518}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{pages}{529\bibrangedash 533}
+      \range{pages}{5}
+    \endentry
+    \entry{SuttonBarto2018}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=eb920e5277d3d5fd0903f3cd41e11871}{%
+           family={Sutton},
+           familyi={S\bibinitperiod},
+           given={Richard\bibnamedelima S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=32a0a208f8bcf56a13b0a8e618aa806a}{%
+           family={Barto},
+           familyi={B\bibinitperiod},
+           given={Andrew\bibnamedelima G.},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {{MIT} Press}%
+      }
+      \strng{namehash}{c6212f1a1407d96a3d9f4fefbb07eade}
+      \strng{fullhash}{c6212f1a1407d96a3d9f4fefbb07eade}
+      \strng{fullhashraw}{c6212f1a1407d96a3d9f4fefbb07eade}
+      \strng{bibnamehash}{c6212f1a1407d96a3d9f4fefbb07eade}
+      \strng{authorbibnamehash}{c6212f1a1407d96a3d9f4fefbb07eade}
+      \strng{authornamehash}{c6212f1a1407d96a3d9f4fefbb07eade}
+      \strng{authorfullhash}{c6212f1a1407d96a3d9f4fefbb07eade}
+      \strng{authorfullhashraw}{c6212f1a1407d96a3d9f4fefbb07eade}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Reinforcement learning - an introduction, 2nd Edition}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://www.incompleteideas.net/book/the-book-2nd.html
+      \endverb
+      \verb{url}
+      \verb http://www.incompleteideas.net/book/the-book-2nd.html
+      \endverb
+    \endentry
+    \entry{oliehoek_concise_2016}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=a7f913e6cd9e032f9e0ee682d8ebbb0b}{%
+           family={Oliehoek},
+           familyi={O\bibinitperiod},
+           given={Frans\bibnamedelima A.},
+           giveni={F\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=fa9a6826b3f1170680cb17b160340e97}{%
+           family={Amato},
+           familyi={A\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{33174eecf6106b5115e1f510939c400d}
+      \strng{fullhash}{33174eecf6106b5115e1f510939c400d}
+      \strng{fullhashraw}{33174eecf6106b5115e1f510939c400d}
+      \strng{bibnamehash}{33174eecf6106b5115e1f510939c400d}
+      \strng{authorbibnamehash}{33174eecf6106b5115e1f510939c400d}
+      \strng{authornamehash}{33174eecf6106b5115e1f510939c400d}
+      \strng{authorfullhash}{33174eecf6106b5115e1f510939c400d}
+      \strng{authorfullhashraw}{33174eecf6106b5115e1f510939c400d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-319-28927-4}
+      \field{langid}{english}
+      \field{series}{Springer Briefs in Intelligent Systems}
+      \field{title}{A Concise Introduction to Decentralized POMDPs}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1007/978-3-319-28929-8
+      \endverb
+    \endentry
+    \entry{goodarzi_dynamics_2015}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=569b4fb92d2445ee774bf734e004e752}{%
+           family={Goodarzi},
+           familyi={G\bibinitperiod},
+           given={Farhad\bibnamedelima A.},
+           giveni={F\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=86bc5919d49028a59b2e0a8cf7ffc3c4}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Taeyoung},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{f2f5291b37f26d5a58a0dbb9ff150e89}
+      \strng{fullhash}{f2f5291b37f26d5a58a0dbb9ff150e89}
+      \strng{fullhashraw}{f2f5291b37f26d5a58a0dbb9ff150e89}
+      \strng{bibnamehash}{f2f5291b37f26d5a58a0dbb9ff150e89}
+      \strng{authorbibnamehash}{f2f5291b37f26d5a58a0dbb9ff150e89}
+      \strng{authornamehash}{f2f5291b37f26d5a58a0dbb9ff150e89}
+      \strng{authorfullhash}{f2f5291b37f26d5a58a0dbb9ff150e89}
+      \strng{authorfullhashraw}{f2f5291b37f26d5a58a0dbb9ff150e89}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper is focused on the dynamics and control of arbitrary number of quadrotor {UAVs} transporting a rigid body payload. The rigid body payload is connected to quadrotors via flexible cables where each flexible cable is modeled as a system of serially-connected links. It is shown that a coordinate-free form of equations of motion can be derived for arbitrary numbers of quadrotors and links according to Lagrangian mechanics on a manifold. A geometric nonlinear controller is presented to transport the rigid body to a fixed desired position while aligning all of the links along the vertical direction. Numerical results are provided to illustrate the desirable features of the proposed control system.}
+      \field{booktitle}{2015 American Control Conference ({ACC})}
+      \field{eventtitle}{2015 American Control Conference ({ACC})}
+      \field{month}{7}
+      \field{title}{Dynamics and control of quadrotor {UAVs} transporting a rigid body connected via flexible cables}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{pages}{4677\bibrangedash 4682}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ACC.2015.7172066
+      \endverb
+      \verb{file}
+      \verb Snapshot:/Users/viktorlorentz/Zotero/storage/SW9FQLBI/7172066.html:text/html;Submitted Version:/Users/viktorlorentz/Zotero/storage/QMHG5P44/Goodarzi and Lee - 2015 - Dynamics and control of quadrotor UAVs transporting a rigid body connected via flexible cables.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{todorov2012mujoco}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=b8e6506859bb7959c60c94c70a288a87}{%
+           family={Todorov},
+           familyi={T\bibinitperiod},
+           given={Emanuel},
+           giveni={E\bibinitperiod}}}%
+        {{hash=3b79ca47f08451987877fd8682e971e5}{%
+           family={Erez},
+           familyi={E\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+        {{hash=58112cb88a80c1bc045b6eaab26a8695}{%
+           family={Tassa},
+           familyi={T\bibinitperiod},
+           given={Yuval},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{86d57b0cbccc148b681566d51203ede9}
+      \strng{fullhash}{abe7dc5f7371f04e3c8e93075cd4d474}
+      \strng{fullhashraw}{abe7dc5f7371f04e3c8e93075cd4d474}
+      \strng{bibnamehash}{abe7dc5f7371f04e3c8e93075cd4d474}
+      \strng{authorbibnamehash}{abe7dc5f7371f04e3c8e93075cd4d474}
+      \strng{authornamehash}{86d57b0cbccc148b681566d51203ede9}
+      \strng{authorfullhash}{abe7dc5f7371f04e3c8e93075cd4d474}
+      \strng{authorfullhashraw}{abe7dc5f7371f04e3c8e93075cd4d474}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We describe a new physics engine tailored to model-based control. Multi-joint dynamics are represented in generalized coordinates and computed via recursive algorithms. Contact responses are computed via efficient new algorithms we have developed, based on the modern velocity-stepping approach which avoids the difficulties with spring-dampers. Models are specified using either a high-level C++ {API} or an intuitive {XML} file format. A built-in compiler transforms the user model into an optimized data structure used for runtime computation. The engine can compute both forward and inverse dynamics. The latter are well-defined even in the presence of contacts and equality constraints. The model can include tendon wrapping as well as actuator activation states (e.g. pneumatic cylinders or muscles). To facilitate optimal control applications and in particular sampling and finite differencing, the dynamics can be evaluated for different states and controls in parallel. Around 400,000 dynamics evaluations per second are possible on a 12-core machine, for a 3D homanoid with 18 dofs and 6 active contacts. We have already used the engine in a number of control applications. It will soon be made publicly available.}
+      \field{booktitle}{2012 IEEE/RSJ international conference on intelligent robots and systems}
+      \field{eventtitle}{2012 {IEEE}/{RSJ} International Conference on Intelligent Robots and Systems}
+      \field{month}{10}
+      \field{shorttitle}{{MuJoCo}}
+      \field{title}{Mujoco: A physics engine for model-based control}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \field{pages}{5026\bibrangedash 5033}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/IROS.2012.6386109
+      \endverb
+    \endentry
+    \entry{flair2023jaxmarl}{inproceedings}{}{}
+      \name{author}{21}{}{%
+        {{hash=f9e27c5b8951f846d92d37eb396da771}{%
+           family={Rutherford},
+           familyi={R\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8013a1eb9ec691ea154fb9523884e3b2}{%
+           family={Ellis},
+           familyi={E\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=eb367d842390c5ef01bc6b3e451bab16}{%
+           family={Gallici},
+           familyi={G\bibinitperiod},
+           given={Matteo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a071fde4f0800a3a8483eed7d8a4381f}{%
+           family={Cook},
+           familyi={C\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=89b81451635166fcb37197f8034c95d9}{%
+           family={Lupu},
+           familyi={L\bibinitperiod},
+           given={Andrei},
+           giveni={A\bibinitperiod}}}%
+        {{hash=fba7763822c3108fb8fe28b795b49327}{%
+           family={Ingvarsson},
+           familyi={I\bibinitperiod},
+           given={Gar{ð}ar},
+           giveni={G\bibinitperiod}}}%
+        {{hash=12fbe38b54197a785f62cdad8cc25489}{%
+           family={Willi},
+           familyi={W\bibinitperiod},
+           given={Timon},
+           giveni={T\bibinitperiod}}}%
+        {{hash=209ad9f59caef06589d3c70d034d2bbf}{%
+           family={Hammond},
+           familyi={H\bibinitperiod},
+           given={Ravi},
+           giveni={R\bibinitperiod}}}%
+        {{hash=88c18330092f6235ea218c58a5b0249f}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Akbir},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d92aca4e550960a6daf9626b9553bd58}{%
+           family={Witt},
+           familyi={W\bibinitperiod},
+           given={Christian\bibnamedelima Schröder},
+           giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=cb15b86f80171d9bf956f535654e1be9}{%
+           family={Souly},
+           familyi={S\bibinitperiod},
+           given={Alexandra},
+           giveni={A\bibinitperiod}}}%
+        {{hash=58dc57d6df21703f958727b114c0e6b9}{%
+           family={Bandyopadhyay},
+           familyi={B\bibinitperiod},
+           given={Saptarashmi},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c76172ee0c2ebda81796624b4a81ae54}{%
+           family={Samvelyan},
+           familyi={S\bibinitperiod},
+           given={Mikayel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=754eae2a0a1be7bc80aeaa872bb0154f}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Minqi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=719a40e95637a7e49b4b6c4d7353b59a}{%
+           family={Lange},
+           familyi={L\bibinitperiod},
+           given={Robert\bibnamedelima T.},
+           giveni={R\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=0d05819cf2b4fe22ba972c9b2b5d8c9d}{%
+           family={Whiteson},
+           familyi={W\bibinitperiod},
+           given={Shimon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7191d5738229718fe891c52a6cd9102b}{%
+           family={Lacerda},
+           familyi={L\bibinitperiod},
+           given={Bruno},
+           giveni={B\bibinitperiod}}}%
+        {{hash=ae82b1782be057db351b013d9858dade}{%
+           family={Hawes},
+           familyi={H\bibinitperiod},
+           given={Nick},
+           giveni={N\bibinitperiod}}}%
+        {{hash=b3ff4029884ead9928954ea33714192c}{%
+           family={Rocktäschel},
+           familyi={R\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+        {{hash=afa2a5ce23786b5a25addca9177bb418}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d02e0768e79bc374c7db58661d344e29}{%
+           family={Foerster},
+           familyi={F\bibinitperiod},
+           given={Jakob\bibnamedelima N.},
+           giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \name{editor}{7}{}{%
+        {{hash=e00b31dbefcb34060b2bc3336d2c37a3}{%
+           family={Globersons},
+           familyi={G\bibinitperiod},
+           given={Amir},
+           giveni={A\bibinitperiod}}}%
+        {{hash=cd367b2be7bf64c1563bf3d2a5584b5b}{%
+           family={Mackey},
+           familyi={M\bibinitperiod},
+           given={Lester},
+           giveni={L\bibinitperiod}}}%
+        {{hash=7f3ef0da73f2d49b1dfdfa9a8c5b37d3}{%
+           family={Belgrave},
+           familyi={B\bibinitperiod},
+           given={Danielle},
+           giveni={D\bibinitperiod}}}%
+        {{hash=277117db6b938bd36379979ac719cc02}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Angela},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3f4edf388f37681e40b60b4673c8b12a}{%
+           family={Paquet},
+           familyi={P\bibinitperiod},
+           given={Ulrich},
+           giveni={U\bibinitperiod}}}%
+        {{hash=55defc0f4c0419ceb9d0d1350c2c0cb2}{%
+           family={Tomczak},
+           familyi={T\bibinitperiod},
+           given={Jakub\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=57f7f0240f141850db99567185d1a24c}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Cheng},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{de0ef6d9285c0909f6269022001d8038}
+      \strng{fullhash}{824c4a7d072b202089bed302a71cbd7e}
+      \strng{fullhashraw}{824c4a7d072b202089bed302a71cbd7e}
+      \strng{bibnamehash}{de0ef6d9285c0909f6269022001d8038}
+      \strng{authorbibnamehash}{de0ef6d9285c0909f6269022001d8038}
+      \strng{authornamehash}{de0ef6d9285c0909f6269022001d8038}
+      \strng{authorfullhash}{824c4a7d072b202089bed302a71cbd7e}
+      \strng{authorfullhashraw}{824c4a7d072b202089bed302a71cbd7e}
+      \strng{editorbibnamehash}{96ffd32ac0b75362343245c2cd45c1c7}
+      \strng{editornamehash}{96ffd32ac0b75362343245c2cd45c1c7}
+      \strng{editorfullhash}{584cd7e59ebfd4517fe9c34dc6a74ed1}
+      \strng{editorfullhashraw}{584cd7e59ebfd4517fe9c34dc6a74ed1}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems 38: Annual Conference on Neural Information Processing Systems 2024, NeurIPS 2024, Vancouver, BC, Canada, December 10 - 15, 2024}
+      \field{title}{JaxMARL: Multi-Agent {RL} Environments and Algorithms in {JAX}}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://papers.nips.cc/paper_files/paper/2024/hash/5aee125f052c90e326dcf6f380df94f6-Abstract-Datasets_and_Benchmarks_Track.html
+      \endverb
+      \verb{url}
+      \verb http://papers.nips.cc/paper_files/paper/2024/hash/5aee125f052c90e326dcf6f380df94f6-Abstract-Datasets_and_Benchmarks_Track.html
+      \endverb
+    \endentry
+    \entry{gymnax2022github}{software}{}{}
+      \name{author}{1}{}{%
+        {{hash=c8a31592280c5d36c233b1765b3bc813}{%
+           family={Lange},
+           familyi={L\bibinitperiod},
+           given={Robert\bibnamedelima Tjarko},
+           giveni={R\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{c8a31592280c5d36c233b1765b3bc813}
+      \strng{fullhash}{c8a31592280c5d36c233b1765b3bc813}
+      \strng{fullhashraw}{c8a31592280c5d36c233b1765b3bc813}
+      \strng{bibnamehash}{c8a31592280c5d36c233b1765b3bc813}
+      \strng{authorbibnamehash}{c8a31592280c5d36c233b1765b3bc813}
+      \strng{authornamehash}{c8a31592280c5d36c233b1765b3bc813}
+      \strng{authorfullhash}{c8a31592280c5d36c233b1765b3bc813}
+      \strng{authorfullhashraw}{c8a31592280c5d36c233b1765b3bc813}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{gymnax}: A {JAX}-based Reinforcement Learning Environment Library}
+      \field{version}{0.0.4}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://github.com/RobertTLange/gymnax
+      \endverb
+      \verb{url}
+      \verb http://github.com/RobertTLange/gymnax
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,26 @@
+\babel@toc {american}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \glsxtrlong {rl} Framework}}{13}{figure.caption.4}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Quadrotor Frames}}{18}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Cable Modeling Approaches}}{21}{figure.caption.13}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Simulation Environment}}{25}{figure.caption.14}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Initial States}}{28}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Reward Components}}{31}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Action Regularization}}{34}{figure.caption.31}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Training Metrics}}{36}{figure.caption.33}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Recovery Error Comparison}}{40}{figure.caption.35}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Single Quadrotor Harsh Recovery Trajectory}}{41}{figure.caption.36}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Single Quadrotor Figure-Eight Tracking}}{42}{figure.caption.37}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Two Quadrotor Harsh Recovery Trajectory}}{44}{figure.caption.38}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Two Quadrotor Figure-Eight Tracking}}{45}{figure.caption.39}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Three Quadrotor Harsh Recovery Trajectory}}{47}{figure.caption.40}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Three Quadrotor Figure-Eight Tracking}}{48}{figure.caption.41}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Baseline vs \gls {rl} Performance}}{50}{figure.caption.42}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Baseline vs Learned Two Quadrotor Recovery}}{52}{figure.caption.43}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Policy Generalization}}{53}{figure.caption.44}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }

@@ -1,90 +1,116 @@
-
+```latex
 \thispagestyle{empty}
 \parindent=0pt
 
-\newcommand{\hsfont}    {\intermedium}
-\newcommand{\hsheadfont}{\intersemibold}
+\newcommand{\hsfont}      {\intermedium}
+\newcommand{\hsheadfont}  {\intersemibold}
 
+% Formal, thinner font for all field titles/headings.
+% If your template defines \interlight, this keeps the visual style consistent.
+\newcommand{\hstitlefont} {\interlight}
 
+\hsfont
+
+% ---------------------------------------------------------------------------
+% Header image/logo block
+% The image is kept as-is, since it is already formatted correctly.
+% ---------------------------------------------------------------------------
+\begin{center}
+\hspace*{-2.5cm}\raisebox{-1cm}[0pt][0pt]{%
+    \includegraphics[height=.27\textwidth]{title/thi_promo_logo.png}%
+}
+\end{center}
+
+\vspace*{2.2cm}
+
+% ---------------------------------------------------------------------------
+% Title block
+% ---------------------------------------------------------------------------
+\begin{center}
+{\hstitlefont\LARGE Exposé of the doctoral thesis}\\[-0.2ex]
+{\hstitlefont\large Exposé der Dissertation}
+\end{center}
+
+\vspace*{1.8cm}
+
+% ---------------------------------------------------------------------------
+% Dissertation information block
+% ---------------------------------------------------------------------------
+\hspace*{1.2cm}
+\begin{minipage}{0.78\textwidth}
+
+{\hstitlefont\large Title of the doctoral thesis (working title):}\\[-0.2ex]
+{\hstitlefont Titel der Dissertation (Arbeitstitel):}
+
+\vspace*{0.7cm}
 
 \begin{center}
-\hsfont
-\includegraphics[height=.12\textwidth]{title/thi_logo.png}\quad
-\includegraphics[height=.18\textwidth]{title/aimotion_logo.jpg}
-
-
-
-\ \\[1ex]
-Technische Hochschule Ingolstadt\\
-
-Promotionszentrum Kuenstliche Intelligenz/Informatik\\
-
-Cluster unbemanntes Fliegen\\[8ex]
-
-
-\large{Expose der Dissertation}\\[1ex]
-\begin{hsheadfont}
-
-    \Huge Titel der Dissertation ist folgendermassen, undzwar geht hier um extrem relevante und wichtige Forschritte in Wissunschaft und Technik\\[1 ex]
-    
-\end{hsheadfont}
-
-
-
-\ \\[3ex]
-\normalsize
-presented by\\[2ex]
-{\hsheadfont\LARGE Max Klemens }\\[2ex]
-
-Intelligent autonomous Flight Control
-\\[2cm]
-Date of submission: \today
-\\[2cm]
-
-
-
-
-
-  
-
-
-\hsfont
-
-
-
-
-\begin{minipage}[b]{0.25\textwidth}
-\end{minipage}
-\begin{minipage}[b]{0.4\textwidth}
-    
-
-    Supervisor:               \\
-    \begin{hsheadfont}
-    Herr Dr. Loesel \\
-    \end{hsheadfont}
-\end{minipage}
-\begin{minipage}[b]{0.35\textwidth}
-  
-
-    Secondary Supervisor:              \\
-    \begin{hsheadfont}
-    Prof. Dr. Christian Seidel \\ 
-    \end{hsheadfont}
-\end{minipage}
+{\hsfont\Large
+Tracking and Trajectory Prediction of Non-Cooperative Drones from Sparse Airborne LiDAR
+}
 \end{center}
-    
 
+\vspace*{1.0cm}
 
+{\hstitlefont\large Doctoral candidate:}
+{\hsfont\large Max Klemens}\\[-0.2ex]
+{\hstitlefont Promovierender}
 
+\vspace*{0.8cm}
 
+{\hstitlefont\large Supervisor:}
+{\hsfont\large Herr Dr. Loesel}\\[-0.2ex]
+{\hstitlefont Erstbetreuer}
 
+\vspace*{0.8cm}
 
+{\hstitlefont\large Secondary Supervisor:}
+{\hsfont\large Prof. Dr. Christian Seidel}\\[-0.2ex]
+{\hstitlefont Zweitbetreuer}
 
+\vspace*{0.8cm}
 
+{\hstitlefont\large Doctoral College:}
+{\hsfont\large Künstliche Intelligenz/Informatik}\\[-0.2ex]
+{\hstitlefont Promotionszentrum}
 
+\end{minipage}
 
+\vfill
+\vspace*{0.8cm}
 
+% ---------------------------------------------------------------------------
+% Signature fields instead of table of contents
+% ---------------------------------------------------------------------------
+\hspace*{1.2cm}
+\begin{minipage}{0.78\textwidth}
+\begin{center}
 
+\begin{minipage}[t]{0.30\textwidth}
+\centering
+\rule{\textwidth}{0.4pt}\\[-0.2ex]
+{\hstitlefont\small Doctoral candidate}\\
+{\hstitlefont\footnotesize Promovierender}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.30\textwidth}
+\centering
+\rule{\textwidth}{0.4pt}\\[-0.2ex]
+{\hstitlefont\small Supervisor}\\
+{\hstitlefont\footnotesize Erstbetreuer}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.30\textwidth}
+\centering
+\rule{\textwidth}{0.4pt}\\[-0.2ex]
+{\hstitlefont\small Secondary Supervisor}\\
+{\hstitlefont\footnotesize Zweitbetreuer}
+\end{minipage}
 
+\end{center}
+\end{minipage}
+
+\vspace*{0.8cm}
 
 \restoregeometry
+

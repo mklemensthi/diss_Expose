@@ -1,428 +1,173 @@
-\addtocontents{toc}{\protect\newpage}
-\chapter{Training \glsxtrlong{marl} Policies for Quadrotors with Payload}
+\chapter{Methodology}
 
-This chapter presents our methodology for training decentralized \gls{marl} policies that enable a team of Crazyflie quadrotors to transport a cable-suspended payload cooperatively. We begin by formulating the cooperative transport task as a \gls{dec-pomdp}, defining the state, action, and observation structures. We then describe our high-performance simulation and training pipeline, and finally present the modular reward design used to train our policies.
-\section{Problem Formulation}
+\section{Overview}
 
-We model a team of $Q$ Crazyflie quadrotors collaboratively carrying a cable-suspended payload as the \gls{dec-pomdp} $(\mathcal{Q}, \mathcal{S}, \{\mathcal{A}^i\}_{i=1}^Q, P, r, \{\Omega^i\}_{i=1}^Q, O, \rho_0, \gamma)$, where $\mathcal{Q} = \{1,2,\dots,Q\}$ is the set of agents. At each discrete timestep $t$, the global state 
-\begin{equation}
-\mathbf{s}_t = \bigl(\{\mathbf{p}^i_t,\mathbf{v}^i_t,\mathbf{R}^i_t,\boldsymbol{\omega}^i_t\}_{i=1}^Q,\; \mathbf{p}^P_t,\mathbf{v}^P_t\bigr)
-\end{equation}
-encapsulates each quadrotor's position $\mathbf{p}^i_t \in \mathbb{R}^3$, velocity $\mathbf{v}^i_t \in \mathbb{R}^3$, attitude $\mathbf{R}^i_t \in SO(3)$, angular velocity $\boldsymbol{\omega}^i_t \in \mathbb{R}^3$, and the payload's position $\mathbf{p}^P_t \in \mathbb{R}^3$ and velocity $\mathbf{v}^P_t \in \mathbb{R}^3$. The transition model $P(\mathbf{s}_{t+1}\mid \mathbf{s}_t, \mathbf{a}_t)$ corresponds to a single simulation step in MuJoCo MJX, which approximates the continuous quadrotor and payload dynamics (including cables) over the fixed interval $\Delta t$.
+The methodology is organized around three main research components that correspond to the identified research gap:
 
-The initial state is sampled from a distribution $\rho_0$. In our case $\rho_0$ defines harsh initial conditions, such that the policies must learn to recover from them.
+\begin{enumerate}
+\item construction of a LiDAR drone data and benchmark framework,
+\item development of a tracking and state-estimation pipeline from sparse LiDAR detections,
+\item development and evaluation of short-horizon trajectory prediction methods.
+\end{enumerate}
 
-Each agent $i$ selects an action 
-\begin{equation}
-  \mathbf{a}^i_t = (f^i_{1,t},f^i_{2,t},f^i_{3,t},f^i_{4,t}) \in \mathbb{R}^4
-\end{equation}
-where $f^i_{j,t}$ is the thrust of rotor~$j$. The joint action of all agents is $\mathbf{a}_t = (\mathbf{a}^1_t,\dots,\mathbf{a}^Q_t)$. 
+These components form a pipeline. The first component provides realistic and controllable data. The second component transforms per-frame detections into temporally consistent drone tracks. The third component predicts future drone motion from these tracks. The overall goal is to evaluate how sparse LiDAR observations can be transformed into safety-relevant state and trajectory information for helicopter detect-and-avoid perception.
 
-We define the payload position tracking error as
-$
-\mathbf{e}^P_t = \mathbf{p}^P_t - \mathbf{p}^P_{\mathrm{des},t},
-$
-so that $e^P_t = \|\mathbf{e}^P_t\|$ represents the tracking error at time $t$. The primary objective is to minimize this error while maintaining system stability. This gives us a rough reward structure of:
-\begin{equation}
- r(\mathbf{s}_t,\mathbf{a}_t) \approx\; - e^P_t \;-\; \text{(stability penalties)}
-\end{equation}
-We penalize payload tracking error and include additional terms to discourage large payload swing or cable-tension imbalance.
+\section{Component 1: LiDAR Drone Data and Benchmark Framework}
 
-Each agent must observe its own state as well as the payload's state and the position of the other agents to be able to avoid them. Therefore agent $i$ observes
-\begin{equation}
-    \label{eq:obs}
-    \tilde{\mathbf{o}}^i_t 
-    = \Bigl(
-      \hat{\mathbf{p}}^i_t,\;
-      \hat{\mathbf{v}}^i_t,\;
-      \hat{\mathbf{R}}^i_t,\;
-      \hat{\boldsymbol{\omega}}^i_t,\;
-      \mathbf{e}^P_t,\;
-      \mathbf{v}^P_t,\;
-      \{\hat{\mathbf{p}}^j_t\}_{j \in \mathcal{Q}\setminus\{i\}}
-    \Bigr).
-\end{equation}
-\emph{Note that \(\tilde{\mathbf{o}}^i_t\) is a simplified observation. The exact observation model is defined below.}
+\subsection{Purpose}
 
-Here $\hat{\mathbf{p}}^i_t,\hat{\mathbf{v}}^i_t,\hat{\mathbf{R}}^i_t,\hat{\boldsymbol{\omega}}^i_t$ are \gls{ekf} estimates of its own state and $\mathbf{e}^P_t,\mathbf{v}^P_t$ are the payload state from \gls{mocap}. To reduce notational complexity, we will denote the observation component without $\hat{\cdot}$ as $\mathbf{p}^i_t,\mathbf{v}^i_t,\mathbf{R}^i_t,\boldsymbol{\omega}^i_t$. The observation function $O(\mathbf{o}^i_t \mid \mathbf{s}_t)$ models sensor noise and maps the global state $\mathbf{s}_t$ to each $\mathbf{o}^i_t$. Finally, $\gamma \in [0,1)$ is the discount factor.
+The first methodological component establishes the data basis for the dissertation. Since public LiDAR datasets for small airborne drone encounters are limited, a controlled data generation and benchmarking framework is required. The purpose of this component is to generate datasets that contain realistic sparse point-cloud observations, accurate ground-truth object states, and temporally consistent instance annotations.
 
-Agents share a single policy conditioned on their current observation \(\mathbf{o}^i_t\) and the previous action \(\mathbf{a}^i_{t-1}\) and parameterized by \(\theta\). The actions are sampled as
-\begin{equation}
-  \mathbf{a}^i_t \sim \pi_{\theta}\bigl(\mathbf{a}^i_t \mid \mathbf{o}^i_t,\;\mathbf{a}^i_{t-1}\bigr)
-  \quad\text{for }i=1,\dots,Q.
-\end{equation}
+The benchmark must support three tasks simultaneously: object detection, multi-object tracking, and trajectory prediction. Therefore, the data must include not only point clouds and 3D bounding boxes, but also object identities, timestamps, scene structure, and temporally linked annotations.
 
+\subsection{Synthetic LiDAR Data Generation}
 
-For multiple agent scenarios, we sample the actions independently for each agent, so that the joint action is given by $\mathbf{a}_t = (\mathbf{a}^1_t,\dots,\mathbf{a}^Q_t)$.
+A simulation environment will be used to generate LiDAR observations of drone encounters. The sensor model will include parameters such as maximum range, vertical field of view, angular resolution, range noise, dropout, and intensity variation. The purpose is not to create visually realistic scenes alone, but to create point-cloud statistics that are useful for studying sparse airborne object perception.
 
+The generated scenarios will vary the number of drones, distance to the sensor, relative altitude, crossing angle, approach speed, and trajectory type. Special attention will be given to altitude variation because flying drones are not constrained to the ground plane. This is important because many efficient 3D detectors use bird's-eye-view or pillar-based representations, which can be strong in horizontal localization but weaker in vertical localization \cite{lang2019pointpillars,shi2022pillarnet}. The dataset will therefore deliberately include scenarios where drones occupy similar horizontal positions but different heights.
 
-We seek the shared parameters \(\theta\) that maximize the expected discounted return
-\begin{equation}
-\begin{aligned}
-\text{maximize}\quad & J(\theta) = \mathbb{E}\Bigl[\sum_{t=0}^\infty \gamma^t\,r(\mathbf{s}_t,\mathbf{a}_t)\Bigr],\\
-\text{subject to}\quad &\mathbf{s}_0 \sim \rho_0,\\
-&\mathbf{s}_{t+1} \sim P\bigl(\cdot\mid \mathbf{s}_t,\mathbf{a}_t\bigr),\\
-&\mathbf{o}^i_t \sim O\bigl(\cdot\mid \mathbf{s}_t\bigr),\\
-&\mathbf{a}^i_t \sim \pi_{\theta}\bigl(\cdot\mid \mathbf{o}^i_t,\mathbf{a}^i_{t-1}\bigr)
-\quad\forall i.
-\end{aligned}
-\end{equation}
-By maximizing \(J(\theta)\), the agents learn to jointly minimize payload tracking error \(e^P_t\) while maintaining stability throughout the cooperative transport task.
+The data generation process will also include negative and hard-negative examples. Empty scenes, background clutter, distant drones with few returns, and partial visibility cases are necessary to evaluate false positives and robustness. This is important because a detect-and-avoid perception system must be reliable not only in ideal target-present cases, but also under uncertainty and absence of targets.
 
-We have now formalized the problem as a \gls{dec-pomdp}, which allows us to apply decentralized \gls{marl} algorithms to learn policies that can handle the complexities of multi-agent coordination in cable-suspended payload transport tasks. The following section describes the CrazyMARL framework, which provides the necessary simulation and training infrastructure to implement this efficiently.
-%\todo{maybe add fig wit multiple agents and env...}
+\subsection{Dataset Format and Splitting}
 
-\section{CrazyMARL}
-We present \textbf{CrazyMARL}, an end-to-end JAX-based pipeline for training \gls{marl} policies on teams of Crazyflie quadrotors. Our extendable framework implements both learning for a single quadrotor without payload, as well as single-vehicle and cooperative multi-agent cable-suspended payload transport tasks. At its core, the simulation leverages the high-performance MJX backend of the MuJoCo physics engine \cite{todorov2012mujoco}, interfaced through the Brax library for highly parallelized training. Our environments and algorithms are based on JaxMARL introduced by \autocite{flair2023jaxmarl}. We expose the simulator as a \texttt{JAXMARL.Mabrax} environment, providing a drop-in \gls{api} for JAX-based RL algorithms and other research algorithms implementing the JaxMARL \gls{api}.
+The generated data will be organized in a nuScenes-like format because this structure is supported by common LiDAR detection toolchains and allows temporal linking of samples, sample data, ego poses, and annotations \cite{caesar2020nuscenes,openpcdet2020}. Each frame will contain a LiDAR point cloud, sensor pose, 3D object annotations, instance identifiers, and timestamps. Annotation chains will be preserved so that drone trajectories can be reconstructed from the dataset.
 
-\subsection{Simulation Environment}
+The dataset will be split at the level of runs or scenarios rather than individual frames. This prevents temporally adjacent frames from appearing in both training and test data. The intended split consists of:
 
-Our framework provides a configurable environment generator for simulating multi-agent cable-suspended payload transport tasks, as well as swarm control of single quadrotors. The environment is designed to be modular and extensible, allowing for easy definition of new scenarios. The environment can be initialized with a configuration that defines the number of quadrotors, the payload mass, cable length, and other relevant parameters. The environment supports both single-agent and multi-agent scenarios, where each agent is a quadrotor with its own observations and actions.
-\begin{figure}
-\centering
-\includegraphics[width=0.6\textwidth]{figs/quad_env.png}
-\caption[Simulation Environment]{Rendering of the MuJoCo simulation with three quadrotors carrying a cable-suspended payload.}
-\label{fig:crazyflie_env}
-\end{figure}
+\begin{itemize}
+\item a training set for model fitting,
+\item a validation set for parameter selection,
+\item an unseen benchmark set for final performance assessment.
+\end{itemize}
 
-Figure~\ref{fig:crazyflie_env} shows a rendering of the simulation environment with three quadrotors carrying a cable-suspended payload. The environment is built upon the MuJoCo physics engine, which provides accurate and efficient simulation of rigid body dynamics, including contact and friction. The MJX solver is used to compute the physics updates in parallel on the GPU, allowing for high-performance training of \gls{rl} policies with up to 32k parallel environments. We can also visualize the simulation using MuJoCo's rendering capabilities, which provide a realistic representation of the quadrotors, payload, and cables.
+This scenario-level separation is essential because trajectory prediction and tracking must be evaluated on unseen motion patterns, not merely on neighboring frames from the same sequence.
 
-The quadrotors are modeled as rigid bodies with four rotors, each producing thrust and a small torque. We optionally reduce the quadrotor's collision mesh to a rectangular prism to speed up collision detection. The payload is modeled as a rigid body sphere suspended by cables, which are represented as tendons in MuJoCo. The shape and attachment points of the payload are configurable. The cables connect the quadrotors to the payload and can be configured with different lengths and properties. The environment also supports obstacles, which have not yet been further utilized in our work, but could be a good basis for future work on obstacle avoidance or dynamic interactions with the environment.
+\subsection{Baseline Detection Models}
 
-We implement the JaxMARL \gls{api} for multi-agent environments based on Gymnax \autocite{gymnax2022github}. This wraps our environment in a standardized interface that can be used with any compatible \gls{rl} algorithm. The wrapper adds an abstraction layer to the simulation. At each timestep, we call a step function with a set of actions for each quadrotor, and the environment returns the updated state, which is then used to compute the rewards and observations for each agent.
+The first experimental baseline will use established LiDAR 3D object detection architectures. Pillar-based models such as PointPillars and PillarNet are particularly relevant because of their computational efficiency and suitability for real-time applications \cite{lang2019pointpillars,shi2022pillarnet}. Voxel- and point-based alternatives such as SECOND, PV-RCNN, and CenterPoint will be considered as comparison points because they represent different trade-offs between computational efficiency and 3D geometric expressiveness \cite{yan2018second,shi2020pvrcnn,yin2021centerpoint}.
 
-\subsection{Observation Mapping}
-In practice, we slightly adjust the observation structure defined in Equation~\eqref{eq:obs}. Each agent \(i\) still receives a local observation vector \(\mathbf{o}^i_t\) that contains its own state, the payload's state, and the relative positions of other agents. This ensures that each agent can act based on its measurements and the shared payload information, while not directly observing other agents' internal states. To define the observation space, we first define the global observation vector \(\mathbf{o}_t\) that contains all relevant information about the system state at time \(t\). This also serves as the basis for computing rewards and termination conditions and allows for a centralized training setup.
-\subsubsection{Global Observations}
-At each control step \(t\), the simulation environment produces a high-dimensional state vector. We map this to a global observation vector 
-\begin{equation}
-\mathbf{o}_t \;=\; \bigl[\;\underbrace{\mathbf{e}^P_t}_{3},\;\underbrace{\mathbf{v}^P_t}_{3},\;\underbrace{\{\;\mathbf{r}^i_t,\;\mathrm{vec}(\mathbf{R}^i_t),\;\mathbf{v}^i_t,\;\boldsymbol{\omega}^i_t,\;\mathbf{a}^i_t\}_{i=1}^Q}_{Q(3+9+3+3+4)}\bigr] \;\in\;\mathbb{R}^{6 + 22Q}
-\end{equation}
-Here \(\mathbf{e}^P_t = (\mathbf{p}^P_{\mathrm{des},t}-\mathbf{p}^P_t)/\max(\|\mathbf{p}^P_{\mathrm{des},t}-\mathbf{p}^P_t\|,1)\) is the normalized payload tracking error and \(\mathbf{v}^P_t\) its velocity. Giving the error as observation instead of an absolute position allows us to give a position setpoint and track trajectories. We normalize the error to have the policy automatically generalize to a target at any distance. For each quadrotor \(i\), \(\mathbf{r}^i_t=\mathbf{p}^i_t-\mathbf{p}^P_t\) denotes its position relative to the payload, \(\mathrm{vec}(\mathbf{R}^i_t)\in\mathbb{R}^9\) the row-major flattening of its rotation matrix, \(\mathbf{v}^i_t\) is the linear velocity in world frame, \(\boldsymbol{\omega}^i_t\) its body-frame angular velocities and \(\mathbf{a}^i_{t-1}\) the agents previous action. By construction, this global observation vector contains all information required to compute rewards and termination conditions. It can be easily adjusted to include additional information or other mappings.
+Detection performance will be evaluated using standard metrics such as precision, recall, and average precision. In addition, the dissertation will report center-position error, horizontal error, vertical error, size error, and detection performance as a function of distance and point count. These additional metrics are necessary because average precision alone does not show whether detections are accurate enough for tracking and trajectory prediction.
 
-\subsubsection{Local Observations}
-Since we want to train our policy in a \gls{ctde} fashion, we map the global observation vector to each agent's local observation space. During decentralized execution, each agent \(i\) receives only the subset of entries corresponding to the payload terms, its own dynamic state block, and the other quadrotors' relative positions. Concretely, agent \(i\) observes
-\begin{equation}
-\mathbf{o}^i_t 
-\;=\;
-\bigl[\,
-\mathbf{e}^P_t,\;\mathbf{v}^P_t,\;\mathbf{r}^i_t,\;\mathrm{vec}(\mathbf{R}^i_t),\;\mathbf{v}^i_t,\;\boldsymbol{\omega}^i_t,\;\mathbf{a}^i_{t-1},\;
-\{\mathbf{r}^j_t\}_{j \in \mathcal{Q}\setminus\{i\}}
-\,\bigr]\;\in\;\mathbb{R}^{6 + 22 + Q - 1}\,,
-\end{equation}
-so that each policy conditions on the payload's error and velocity, the agent's full pose and velocity, and its previous action. This restriction enforces the \gls{dec-pomdp} structure, by hiding other agents' internal states, coordination must emerge through the shared reward alone.
+\section{Component 2: Tracking and State Estimation from Sparse LiDAR Detections}
 
-The observation structure can also be used for a scenario without a payload, where the team observations containing payload position and velocity are omitted.
-\subsubsection{Observation Noise}
-To account for sensor imperfections, we can inject structured Gaussian noise into the global observation vector at each timestep. Concretely, given an observation $\mathbf{o}$, we draw a standard normal vector $\bm{\eta}\sim\mathcal{N}(\mathbf{0},\mathbf{I})$ of the same dimension and compute
-\begin{equation}
-    \mathbf{o}' = \mathbf{o} + \sigma_{\mathrm{obs}}\,\bm{\Lambda}\,\bm{\eta}\,,
-\end{equation}
-where $\sigma_{\mathrm{obs}}$ is a tunable noise amplitude and $\bm{\Lambda}\in\mathbb{R}^{6+22Q}$ is a diagonal scaling vector to tune the noise level for each observation component. We chose each scale factor by examining the typical range of values for its corresponding observation component and setting the noise magnitude accordingly. This ensures that each component of the observation is corrupted by noise proportional both to its typical magnitude and the global noise level.
-\subsection{Action Space}
-The policy of each agent \(i\) outputs a four-dimensional vector \(\mathbf{a}^i_t\in[-1,1]^4\), representing normalized thrust commands for its rotors. By adopting the \gls{srt} model, we retain the full dynamic fidelity of the quadrotor, enabling capable agile maneuvers.
- These are mapped to physical rotor forces via
-\begin{equation}
-f^i_{j,t}
-\;=\;
-\frac{a^i_{j,t} + 1}{2}\;f_{\max}^i,
-\qquad
-j=1,\dots,4,
-\end{equation}
-where \(f_{\max}^i\) is the agent-specific maximum thrust, randomly perturbed at the start of each episode to improve robustness. Optionally, zero-mean Gaussian noise proportional to \(f_{\max}^i\) may be added to each \(f^i_{j,t}\) to model actuator uncertainty. We always constrain \(\mathbf{a}^i_t\in[-1,1]^4\) and sample \(f_{\max}^i\) within a known bound to produce safe thrust profiles. The resulting thrust vector \(\mathbf{f}^i_t\) is then applied in the physics simulator with the proportional torque component.
-%\todo{maybe talk about the motor delay model...}
-\subsection{Randomization}
-To train a robust policy that can handle a wide range of initial conditions and disturbances, we apply several randomization techniques during training.
-\subsubsection{Initial-State Randomization}
-\label{sec:reset}
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{experiments/initial_states.pdf}
-    \caption[Initial States]{Randomly sampled initial configurations for the payload and quadrotors. We show configurations for Q = 1, 2, 3, and 6 quadrotors. For visualization purposes, we reduce the number of different runs (N) visualized. Here, the payload position is sampled uniformly without target bias. The payload is positioned at the center of each configuration, while quadrotors are uniformly distributed in a spherical shell around it. A lot of configurations start with slack cables. Some configurations start on the ground.}
-    \label{fig:reset_config}
-\end{figure}
-A key aspect of our approach is the initial-state randomization $s_0\sim\rho_0$, which generates diverse initial configurations for the payload and quadrotors. This helps the policy learn to handle a wide range of challenging scenarios, including starting from the ground, hovering, disturbance rejection, modeswitch of the payload cable, and strong payload swing. The initial conditions are sampled at each reset of the environment, ensuring that the policy is exposed to a variety of situations during training. This is crucial for learning robust behaviors. 
-At each reset, the payload center~$\mathbf{p}^P$ is sampled uniformly around the target at $[0,0,1.5]$ in
-\begin{equation}
-    \mathbf{p}^P_{xy}\sim\mathcal{U}([-1.5,1.5]),\quad p^P_z\sim\mathcal{U}([-1,3]),
-\end{equation}
-where the $z$-coordinate is clipped to ensure the payload is above the ground, allowing us to adjust the ratio of ground-takeoff starting positions. We additionally add a subset initializations near the payload with $\mathbf{p}^P\sim\mathcal{N}(\mathbf{0},0.02\mathbf{I})$. This ratio of target initializations is usually set to 20\% in training to help with learning accurate tracking.
+\subsection{Purpose}
 
-We can then use the payload position $\mathbf{p}^P$ as the center point and randomly sample $Q$ quadrotors in a spherical shell around the payload. The radius $r_i$ of each quadrotor is sampled from a normal distribution with mean $\mu_r$ and standard deviation $\sigma_r$, and then clipped to cable length. The angles $\theta_i$ and $\phi_i$ are sampled from normal distributions with means $\mu_\theta$ and $\phi_{\mathrm{offset}}$ respectively, and standard deviations $\sigma_\theta$ and $\sigma_\phi$. The angles are then adjusted to ensure they are within the range $[0, 2\pi]$. The equations for sampling the quadrotor positions are as follows:
-\begin{equation}
-r_i = \mathrm{clip}\bigl(\mu_r+\sigma_r\varepsilon_i^{(r)},\,r_{\min},\,r_{\max}\bigr),\quad
-\theta_i = \mu_\theta+\sigma_\theta\varepsilon_i^{(\theta)},\quad
-\phi_i = \tfrac{2\pi(i-1)}{Q} + \phi_{\mathrm{offset}} + \sigma_\phi\varepsilon_i^{(\phi)},
-\end{equation}
-where we found these parameters to work well in practice across different numbers of quadrotors. $c$ is the length of the cable, which is also the maximum radius for the quadrotors.
-\begin{equation}
-\begin{aligned}
-\varepsilon_i^{(r)},\,\varepsilon_i^{(\theta)},\,\varepsilon_i^{(\phi)}
-    &\sim \mathcal{N}(0,1), \quad
-\phi_{\mathrm{offset}} \sim \mathcal{U}(-\pi,\pi),\\
-\mu_r &= c,\quad
-\sigma_r = \tfrac{c}{3},\quad
-r_{\min} = 0.05,\quad
-r_{\max} = c,\\
-\mu_\theta &= \tfrac{\pi}{7},\quad
-\sigma_\theta = \tfrac{\pi}{8},\quad
-\sigma_\phi = \tfrac{\pi}{N+1}\,.
-\end{aligned}
-\end{equation}
+The second methodological component transforms per-frame detections into temporally stable object tracks. This is necessary because single-frame detections can be noisy, may disappear for short periods, and do not directly provide persistent object identity or velocity. A tracking module estimates the state of each drone over time and provides the input for trajectory prediction.
 
-These are converted to Cartesian positions with the $z$-coordinate clipped.
-\begin{equation}
-\mathbf{q}_i = \mathbf{p}^P + r_i
+\subsection{Tracking-by-Detection Pipeline}
+
+The tracking pipeline follows the tracking-by-detection paradigm. In each frame, the detector produces a set of 3D bounding boxes and confidence scores. The center of each predicted box is interpreted as a noisy measurement of a drone position. Existing tracks are predicted forward to the current timestamp, detections are assigned to tracks, and matched tracks are updated with the new measurements.
+
+The first baseline will use nearest-neighbor association and a constant-velocity motion model. This provides a transparent reference implementation and helps identify the effect of detection noise and missed detections. The second baseline will use a Kalman filter for recursive state estimation \cite{kalman1960newApproach}. For each track, the state vector is defined as
+\begin{math}
+[
+\mathbf{x}_t =
 \begin{bmatrix}
-\sin\theta_i\cos\phi_i\\
-\sin\theta_i\sin\phi_i\\
-\cos\theta_i
-\end{bmatrix},
-\end{equation}
-We oversample configurations with this strategy and filter out all configurations where the quadrotors are initially in collision. This results in an even distribution of valid initial configurations with some very harsh initial conditions for any number of quadrotors as shown in \autoref{fig:reset_config}. This also includes starting from the ground. 
+p_x & p_y & p_z & v_x & v_y & v_z
+\end{bmatrix}^{\top},
+]
+\end{math}
 
-We also randomize the quadrotor's attitude. Roll and pitch angles are drawn from $\mathcal{N}(0,10^\circ)$ and clipped to $\pm90^\circ$, while yaw is sampled uniformly from $[-180^\circ,180^\circ]$.
+where ($p_x$, $p_y$, $p_z$) denote three-dimensional position and ($v_x$, $v_y$, $v_z$) denote velocity. A constant-velocity transition model predicts the next state, while the detector provides noisy position measurements. The Kalman filter then combines prediction and measurement correction to obtain a smoothed state estimate.
 
-Each component of the linear velocity vector $\mathbf{v}$ is sampled from a zero-mean Gaussian with a standard deviation of $0.2\,m/s$. Each component of the angular velocity (body-rate) vector $\boldsymbol{\omega}$ is sampled similarly with a standard deviation of $20^\circ/s$.
+For multi-drone scenarios, detection-to-track association will first be implemented with distance-based nearest-neighbor matching. It will then be extended to an assignment formulation using the Hungarian algorithm \cite{kuhn1955hungarian}. This allows simultaneous association of multiple detections and tracks. The tracking design is inspired by efficient tracking-by-detection systems such as SORT and AB3DMOT, while adapting the state and measurement assumptions to sparse airborne LiDAR drone observations \cite{bewley2016sort,weng2020ab3dmot}.
 
-This creates a wide range of initial conditions, including starting from the ground, hovering, and various disturbances. A lot of them are very challenging to recover from. The policy must learn this recovery behavior. The Gaussian shaping of the randomization parameters is chosen to ensure that there are also sufficient easier initial conditions, such that the policy can learn the basic hover behavior.
-\subsubsection{Domain Randomization}
-To further improve robustness, we apply domain randomization techniques during training. For most experiments, we focus on randomizing the quadrotor's maximum thrust $f_{\max}^i$ within a range of $[0.8,1.0]$ times the nominal value, with some small Gaussian offset for each motor. This not only ensures that the policy can adapt to variations in the quadrotor's battery level and motor performance, but also brings a certain level of generalization to payload and quadrotor mass.
+\subsection{Uncertainty Handling}
 
-We also provide the option to randomize the payload mass, cable length, and other parameters, but these were not used in our experiments, since recent work \cite{Eschmann2024} has shown that zero-shot transfer without domain randomization is possible for the Crazyflie platform. Future work could explore the impact of these additional randomizations on policy robustness, generalization, and sim-to-real transfer.
+A key methodological element is uncertainty handling. Sparse LiDAR detections of small drones can vary strongly in quality depending on range, viewing angle, and number of returns. Therefore, the tracking module will investigate whether measurement uncertainty can be adapted using detection confidence, number of LiDAR points inside the detection, or estimated spatial spread of the observed points.
 
+In a Kalman-filter setting, this can be represented through the measurement covariance. A high-confidence detection with many supporting points can be treated as a more reliable measurement, while a low-confidence detection or a detection with very few points can be assigned higher measurement uncertainty. This allows the tracker to rely more strongly on the motion model when detections are weak, and more strongly on measurements when detections are reliable.
 
+Missed detections will be handled by prediction-only updates for a limited number of frames. If no detection is associated with a track, the state will be propagated using the motion model and the uncertainty will increase. After a configurable number of missed frames, the track will be terminated. This mechanism is important because small drones may disappear temporarily due to sparse point returns, but tracks should not be kept indefinitely without evidence.
 
+\subsection{Tracking Evaluation}
 
-\subsection{Reward Design}
-A key aspect of our approach is a modular reward design for multiple quadrotors with and without cable-suspended payloads.
-We initially replicated reward structures from prior work for single quadrotors and swarms of quadrotors. The usual reward structure is a tracking reward, penalizing or rewarding the distance to the target, and varying terms to encourage learning of stable flight. The most common ones are an attitude reward component, an angular velocity, and a linear velocity penalty. Depending on the application, this is also extended with a collision penalty and other auxiliary reward terms \autocite{molchanov_sim--multi-real_2019,Eschmann2024,kaufmann_benchmark_2022, huang_collision_2024}.
+Tracking will be evaluated both independently and as input to prediction. The metrics will include:
 
-Through an iterative process, experimenting with different extensions of these core terms, we found a very effective reward structure. The final reward structure is modular, allowing for easy adjustments and extensions. It consists of several components that encourage the desired behaviors in the quadrotors while maintaining a stable formation and effectively transporting the payload.
-The goal of our reward is to encourage flight behaviors that recover the cable-suspended payload to its target at a safe speed, while simultaneously minimizing payload swing and vehicle tilt, maintaining a taut suspension cable, enforcing safe spacing between quadrotors, and promoting gentle, low-frequency thrust commands for robust sim-to-real transfer. 
+\begin{itemize}
+\item track recall and track precision,
+\item number of identity switches,
+\item average track duration,
+\item position error over time,
+\item velocity estimation error,
+\item robustness to missed detections,
+\item runtime per frame.
+\end{itemize}
 
-Harsh penalties can induce learning-to-terminate behaviors or unstable gradients. In order to prevent this, we shape our unbounded errors inside a smooth, bounded envelope with the exponential function instead of penalties. This is a common reward shaping technique in \gls{rl}, already applied in work on single quadrotors like \cite{kaufmann_champion-level_2023}.
-\begin{equation}
-\Phi_s(x) = \exp\bigl(-s\,\lvert x\rvert\bigr),
-\qquad
-\Phi(x) = \Phi_2(x).
-\end{equation}
- This keeps the magnitude bounded and makes the derivative taper off rather than spike. Figure~\ref{fig:reward_details} visualizes this function, showing how it rewards values close to zero. Here $s$ is a scaling factor that determines the steepness of the exponential decay. This function is bounded between $0$ and $1$, ensuring that the reward remains positive and bounded. This function has a strong peak at 1, decaying rapidly. The exponential decay ensures that the reward approaches zero as the error increases, but never becomes negative. This allows us to use the same reward structure for both positive and negative errors, without introducing instability in the learning process. A major benefit of this design is that it reduces the need for coefficient balancing in the reward function, as is common in previous methods. Our reward consists of the following components:
-\begin{figure}
+The evaluation will compare raw detector centers, nearest-neighbor tracking, Kalman-filter tracking, and assignment-based multi-object tracking. The purpose is to determine whether temporal filtering improves state estimation sufficiently to support trajectory prediction.
 
-  \centering
-  \begin{subfigure}[t]{0.49\textwidth}
-    \centering
-    \includegraphics[width=0.96\textwidth]{figs/phi.pdf}
-    \caption{}
-  \end{subfigure}
-  \begin{subfigure}[t]{0.49\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{figs/reward_heatmap.pdf}
-    \caption{}
-  \end{subfigure}
-  \caption[Reward Components]{
-    (a) The reward shaping function \(\Phi_s\) used to shape reward components. The steepness factor \(s\) determines the decay rate of the function.
-    (b) Plot visualization of the product of payload position and velocity reward. The reward is highest when the payload is close to the target and has very low velocity. A maximum velocity of 1.5m/s is encouraged.
-  }
-  \label{fig:reward_details}
-\end{figure}
-\subsubsection{Payload Position Error}
-We define the payload position error \(\mathbf{e}^P = \mathbf{p}^P - \mathbf{p}^P_{\mathrm{des},t}\). The main objective is to minimize this error, so we define a payload tracking reward
-\begin{equation}
-r_{\mathrm{pos}} = \Phi\bigl(\|\mathbf{e}^P\|\bigr)
-\end{equation}
-We now add multiple auxiliary reward terms to aid learning of hover and stable safe behaviors.
-\subsubsection{Payload Velocity Alignment}
-To guide the quadrotor to the target, we add an auxiliary velocity alignment reward.
-\begin{equation}
-\mathbf{v}_{\rm dir} =
-\begin{cases}
-\dfrac{\mathbf{v}^P}{\lVert \mathbf{v}^P\rVert},  v > \varepsilon,\\[4pt]
-\mathbf{0},  \text{else}
-\end{cases}
-\quad
-s_{\rm align} = \min(40\,\|\mathbf{e}^P\|,2), \quad
-\mathbf{e}_{\rm dir} = \dfrac{\mathbf{e}^P}{\|\mathbf{e}^P\| + \varepsilon},
-\end{equation}
-\begin{equation}
-r_{\rm dir} = \Phi_{s_{\rm align}}\!\Bigl(1 - \mathbf{v}_{\rm dir}\cdot\mathbf{e}_{\rm dir}\Bigr).
-\end{equation}
-This reward encourages the quadrotors to align their velocity with the direction of the payload error, which helps to reduce the tracking error more quickly in a straight line trajectory. We shape $\Phi$ with a steepness factor $s_{\rm align}$ that decreases closer to the target. This leads to the direction guidance being more pronounced at larger distances.
+\section{Component 3: Short-Horizon Trajectory Prediction}
 
-We combine this velocity guidance with the payload position error to form a combined tracking reward
-\begin{equation}
-r_{\mathrm{track}} =(r_{\mathrm{pos}} + r_{\rm dir})/2
-\end{equation}
+\subsection{Purpose}
 
-We then define multiple stability and safety rewards to ensure the quadrotors maintain a stable flight and avoid collisions with each other.
+The third methodological component predicts future drone positions from the estimated tracks. In a helicopter detect-and-avoid context, short-horizon prediction is necessary because avoidance decisions depend not only on where an intruder is now, but also on where it is likely to be in the near future. The dissertation therefore investigates how reliable future trajectory estimates can be produced from sparse LiDAR-derived tracks.
 
-\subsubsection{Velocities}
+\subsection{Model-Based Prediction Baselines}
 
-To encourage the quadrotors to maintain a stable velocity, we discourage large velocities of the quadrotors and the payload. We define a maximum desired velocity $v_{\max}$ for the payload and quadrotors, allowing us to define a safe velocity range for the payload and quadrotors. We shrink this range as the payload quadrotors approach the target, to ensure they slow down as they get closer. The maximum velocity is set to $v_{\max}=2\,m/s$ in our experiments. The velocity reward for the payload is defined as
-\begin{equation}
-r_{\mathrm{velP}}
-= \exp\!\Biggl(-\biggl(\frac{\lVert \mathbf{v}^P\rVert}{\bigl(\min(3\,d,1)+0.02\bigr)\,0.75v_{\max}}\biggr)^{8}\Biggr)
-\end{equation}
-For the quadrotors' velocity, we apply the same shaping and calculate the mean over all quadrotors.
-\begin{equation}
-r_{\mathrm{velQ}}
-= \frac{1}{Q}\sum_{i=1}^Q \exp\!\Biggl(-\biggl(\frac{\lVert \mathbf{v}^i\rVert}{\bigl(\min(3\,d,1)+0.02\bigr)\,v_{\max}}\biggr)^{8}\Biggr) 
-\end{equation}
-Figure~\ref{fig:reward_details} shows the interplay of the payload position and velocity reward. The product of these two rewards is essential for good tracking performance. Their combination allows the policy to learn perfect deceleration and stopping at the target, while also keeping velocities in a safe range.
-\subsubsection{Yaw Rate}
-We want to strongly discourage large yaw rates, as they can lead to unstable flight and payload swing. We define a yaw rate reward as
-\begin{equation}
-r_{yaw}
-= \frac{1}{Q}\sum_{i=1}^{Q}\phi\bigl(\omega_z^i\bigr).
-\end{equation}
-\subsubsection{Inter-Agent Safe-Distance}
-For $Q>1$ quadrotors, we define a reward that encourages a safe distance between quadrotors. We take the mean of the shaped pairwise distances between all quadrotors, normalized to a maximum of 1. The reward is 0 for our minimum distance of $d_{min}= 0.15 m$, which is the minimum safe distance we want to enforce between quadrotors. We then increase the reward to 1 when we reach our safe distance of $d_{safe}=0.18 m$. The reward is defined as
-\begin{equation}
-r_{\mathrm{dist}} =
-\begin{cases}
-\displaystyle
-\frac{1}{Q(Q-1)} \sum_{i \neq j}
-\mathrm{clip}\bigl(\dfrac{1}{d_{safe}-d_{\min}}\,\|\mathbf{p}^i - \mathbf{p}^j\| - d_{\min},\,0),\,1\bigr),
-& Q > 1,\\[1.5ex]
-1, & Q = 1.
-\end{cases}
-\end{equation}
+The first prediction methods will be simple model-based baselines. These include constant-position, constant-velocity, and Kalman-based prediction. A constant-velocity predictor estimates future position according to
+\begin{math}
+[
+\mathbf{p}{t}
++
+\mathbf{v}{t}\Delta t.
+]
+\end{math}
 
-\subsubsection{Orientation}
-We calculate the tilt angle \(\theta^i\) between each quadrotor's body-frame z-axis and the world z-axis. We take the mean over all quadrotors and apply a shaping function \(\Phi\) to discourage large roll or pitch angles that can lead to instability and payload swing. The reward is defined as
-\begin{equation}
-r_{\mathrm{up}}
-= \frac{1}{Q}\sum_{i=1}^Q \Phi\bigl(\theta^i\bigr).
-\end{equation}
+Here, ($\mathbf{p}{t}$) and ($\mathbf{v}{t}$) are provided by the tracking module. The Kalman-based variant additionally propagates the state covariance, which provides an estimate of prediction uncertainty. These baselines are computationally efficient, interpretable, and suitable for short prediction horizons. They also provide a necessary reference point for evaluating whether more complex learned models are justified.
 
-\subsubsection{Taut-String Maintenance}
-We want to encourage the quadrotors to keep the cables taut, to remain in control of the payload. We therefore encourage an increase in the distance of the quadrotors to the payload. Let \(d^{P,i}=\lVert\mathbf{p}^i-\mathbf{p}^P\rVert\) and \(h^i=(\mathbf{p}^i)_z-(\mathbf{p}^P)_z\). A taut cable of length \(L\) is encouraged by maximizing both terms via
-\begin{equation}
-r_{\mathrm{taut}}
-= \frac{1}{L}\Bigl(\frac{1}{Q}\sum_{i=1}^Q d^{P,i} + \frac{1}{Q}\sum_{i=1}^Q h^i\Bigr).
-\end{equation}
+\subsection{Learning-Based Prediction Models}
 
+In a second step, learning-based predictors will be investigated. These models receive a sequence of past drone states and predict a sequence of future positions. The input may consist of positions only, or it may include velocities, detection confidence, point-count information, and track uncertainty. The first learning-based baselines will use simple sequence models trained on ground-truth trajectories. Later experiments will use tracks generated by the detection and tracking pipeline to evaluate robustness under realistic perception errors.
 
-\subsubsection{Collision and Boundary Penalties}
-We penalize collisions between quadrotors and the ground. Additionally, we define some out-of-bound conditions for large payload error and very large quadrotor angular velocities.
-With the indicators \(\mathbb{I}_{\mathrm{coll}}\), \(\mathbb{I}_{\mathrm{oob}}\) we simply calculate a penalty for collisions and out-of-bounds conditions as
-\begin{equation}
-r_{\mathrm{coll}} = -10,\mathbb{I}_{\mathrm{coll}}, 
-\quad
-r_{\mathrm{oob}} = -10\,\mathbb{I}_{\mathrm{oob}}.
-\end{equation}
+Existing work on non-cooperative UAV trajectory prediction shows that future motion can be predicted online from observed flight behavior \cite{xie2022noncooperativeUAVPrediction}. General multi-agent trajectory prediction methods such as Social-LSTM and Trajectron++ demonstrate how temporal history and interaction structure can be incorporated into learned forecasting models \cite{alahi2016socialLSTM,salzmann2020trajectronpp}. In this dissertation, such ideas will be adapted cautiously, with a focus on short-horizon prediction and sparse LiDAR-derived input rather than idealized ground-truth trajectories.
 
-\subsubsection{Smoothness and Energy Cost}
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=\textwidth]{experiments/actions_comparison.pdf}
-    \caption[Action Regularization]{Comparison of policy trained with and without the action regularization reward. The left plot shows the actions over time of the policy with regularization, while the right plot shows the actions of the policy without regularization. The regularized policy produces smoother and more stable actions, while the unregularized policy exhibits large fluctuations in thrust commands jumping between the action limits.}
-    \label{fig:actions_comparison}  
-\end{figure}
-With high-frequency continuous control tasks, we often observe that the policy learns to produce very aggressive actions, saturating the action range. To encourage smoother actions and reduce energy consumption, we introduce two regularization terms. One discourages actions at the limits of the action range, while the other penalizes large changes in rotor thrust and variations between rotors. Let \(\mathbf{a}_t^i,\mathbf{a}_{t-1}^i\) be consecutive normalized thrust vectors. The action smoothness reward is calculated as the difference between consecutive actions and the mean thrust of the four rotors
-\begin{equation}
-r_{\rm smooth} = 20
-\Biggl(
-\frac{1}{Q}\sum_{i=1}^Q \bigl\lVert \mathbf{a}_t^i - \mathbf{a}_{t-1}^i \bigr\rVert_1
-\;+\;
-\frac{1}{Q}\sum_{i=1}^Q \bigl\lVert \mathbf{a}_t^i - \bar a_t^i\,\mathbf{1}\bigr\rVert_1
-\Biggr), \quad \bar a_t^i = \frac{1}{4}\sum_{j=1}^4 a_{t,j}^i
-\end{equation}
+A central comparison will be made between predictors trained on clean ground-truth tracks and predictors evaluated on noisy detector-based tracks. This distinction is essential because a model that performs well on perfect trajectories may fail when the input contains missed detections, identity switches, or noisy height estimates.
 
-This term encourages smooth, low-frequency thrust commands and penalizes large changes in rotor thrust. Additionally, we penalize actions that are close to the action limits, which can lead to aggressive behavior and instability. We define the energy cost as
-\begin{equation}
-r_{\mathrm{energy}} = \frac{1}{4Q}
-\sum_{i=1}^{Q}\sum_{j=1}^{4}\exp\bigl(-50\,|a_{t,j}^i|\bigr)\;+\;\exp\bigl(50\,(a_{t,j}^i-1)\bigr)
-\end{equation}
+\subsection{Prediction Uncertainty}
 
-The first term discourages abrupt changes in thrust, while the second term penalizes high rotor speeds, which can lead to excessive energy consumption and instability. The exponential shaping ensures that the penalty is more pronounced for larger deviations, promoting smoother actions. 
+For safety-relevant perception, a single deterministic future trajectory may be insufficient. A drone may maneuver unexpectedly, and the perception system may be uncertain about its current state. Therefore, the methodology will include uncertainty-aware prediction. For Kalman-based methods, uncertainty is obtained through covariance propagation. For learning-based models, uncertainty may be estimated through probabilistic outputs, model ensembles, or sampling-based prediction.
 
-Figure~\ref{fig:actions_comparison} shows the difference in actions between a policy trained with and without these two action regularization terms. The policy with regularization produces smoother and more stable actions, while the unregularized policy exhibits large fluctuations in thrust commands, jumping between the action limits. This regularization is crucial for stable training and sim-to-real transfer.
+The purpose of uncertainty estimation is not to solve the final avoidance problem, but to provide a richer input to a future conflict assessment module. A predicted position with high uncertainty should be interpreted differently from a predicted position with low uncertainty. This distinction is important for safety-oriented decision making.
 
-\subsubsection{Aggregate Reward}
-We combine the individual reward components into a single reward signal for each agent. The reward components for stability are grouped as
-\begin{equation}
-r_{\mathrm{stab}}
-= \frac{1}{5}\bigl(r_{\mathrm{velP}} + r_{\mathrm{velQ}} + r_{\mathrm{yaw}} + r_{\mathrm{up}} + r_{\mathrm{taut}}\bigr).
-\end{equation}
-The safety components that should always be enforced are grouped as
-\begin{equation}
-r_{\mathrm{safety}}
-= \frac{1}{5}\bigl(r_{\mathrm{coll}} + r_{\mathrm{oob}} + r_{\mathrm{smooth}} + r_{\mathrm{energy}} + r_{\mathrm{dist}}\bigr).
-\end{equation}
-Finally, we combine the tracking reward with the stability and safety components to form the overall reward
-\begin{equation}
-r
-= r_{\mathrm{track}}\;r_{\mathrm{stab}}
-\;+\;r_{\mathrm{safety}}.
-\end{equation}
-This product structure ensures the policy learns to track the payload while constantly maintaining stable formations. This is important because the simultaneous optimization of position error and velocities can lead to policies getting stuck in local minima, with a static payload position error remaining.
-The additive safety penalties strictly discourage unsafe or aggressive behaviors.
+\subsection{Trajectory Prediction Evaluation}
 
-This reward formulation naturally scales with the number of quadrotors \(Q\), retaining its structure and incentives as \(Q\) varies. It even works in the simplified case of a single quadrotor without a payload. We simply set \(r_{\mathrm{taut}}=1\) and use the quadrotor position for tracking error calculation. We still obtain a coherent reward that still encourages stable, smooth flight and graceful control even in the absence of cable-tautness considerations.
+Prediction quality will be evaluated using standard forecasting metrics and application-specific metrics. The standard metrics include:
 
-The reward structure can also be adapted to other tasks by replacing the tracking reward component with other task-specific rewards. This makes the reward a good basis for a wide range of scenarios with multiple quadrotors. We can now apply our reward function to train policies for different numbers of quadrotors with and without payload.
+\begin{itemize}
+\item average displacement error,
+\item final displacement error,
+\item horizontal displacement error,
+\item vertical displacement error,
+\item error as a function of prediction horizon.
+\end{itemize}
 
-% To train a policy for the quadrotor without a payload, we set \(r_{\mathrm{taut}}=1\).
-% % \subsection{Reward Design Considerations}
-% \todo{write further reward design considerations}
-% \subsection{Integration with JAXMARL}
+In addition, the dissertation will evaluate how prediction quality depends on detection quality, track length, point sparsity, drone distance, and missed detections. For helicopter detect-and-avoid relevance, scenario-level quantities such as future separation and time-to-conflict-oriented indicators will be considered. These metrics will not replace a full avoidance system, but they will indicate whether the perception pipeline produces information that is useful for downstream safety logic.
 
-% CrazyMARL integrates seamlessly with the JaxMARL ecosystem \cite{flair2023jaxmarl}. We wrap each Brax environment in a \texttt{JAXMARL.Mabrax} adapter, exposing standard methods for rollout collection, batching, and replay buffer storage. The same RL algorithms (e.g., PPO, QMIX) can be applied unchanged to single-agent or decentralized multi-agent tasks, enabling rapid experimentation across a broad class of cooperative aerial transport problems.
+\section{Experimental Procedure}
 
-%\todo{maybe consider adding a few lines about reward components that you considered but discarded in the final reward function}
-\section{Training}
-\begin{figure}[ht]
-    \centering
-    
-    \includegraphics[width=\textwidth]{experiments/train_metrics.pdf}
-    \caption[Training Metrics]{Average training metrics for one quadrotor with payload scenario. The top plot shows the average episode returns, and the bottom plot shows the average episode lengths over environment steps and wall-clock time. The shaded area represents the standard deviation across 10 seeds. The maximum possible episode length here is 2048 environment steps, which corresponds to 8.2 s of flight time. In the end, nearly all episodes are completed, indicating stable flight.}
-    \label{fig:train_metrics}
-\end{figure}
-Our training pipeline follows the approach of \autocite{flair2023jaxmarl}, leveraging the JaxMARL framework as a basis for our training method. We use the \gls{ippo} algorithm, which extends \gls{ppo} to multi-agent settings by optimizing a joint policy across all agents while maintaining decentralized execution. We also investigated the use of \gls{mappo} with a centralized critic, but found that \gls{ippo} performs sufficiently for few quadrotor scenarios.
+The experimental procedure will follow a staged design. First, synthetic LiDAR datasets will be generated and organized into training, validation, and benchmark splits. Second, baseline 3D detectors will be trained and evaluated. Third, tracking methods will be applied to detector outputs and compared against ground-truth trajectories. Fourth, trajectory prediction methods will be trained and evaluated using both ideal ground-truth tracks and realistic detector-based tracks. Finally, the complete pipeline will be evaluated on unseen benchmark scenarios.
 
-The decentralized policies are learned end-to-end via \gls{ippo} within our highly parallelized JAX/MJX simulation environment. At each iteration, a fixed number of synchronous actors collect trajectories in $N$ parallel environments over $T$ time steps, yielding $NT$ experiences per update. Collected rewards are bootstrapped with the learned critic to compute targets, and advantages are estimated using \gls{gae} with discount factor $\gamma$ and smoothing parameter $\lambda$. The overall loss combines the clipped policy objective
-\begin{equation}
-L_{\mathrm{PPO}}(\theta) = \mathbb{E}\!\bigl[\min\bigl(r_t(\theta)\,\hat{A}_t,\;\mathrm{clip}(r_t(\theta),1-\epsilon,1+\epsilon)\,\hat{A}_t\bigr)\bigr],
-\end{equation}
-a mean-squared value-function error, and an entropy regularizer to encourage sufficient exploration. Gradient norms are clipped to enhance numerical stability.
+The experiments will therefore separate four levels of performance:
 
-Since our environment has a certain level of complexity, we always train on a high number of parallel environments (16384). This might not be very sampling efficient, but it allows us to collect a large number of experiences with sufficient variance of configurations in a short time, which is crucial for stable training of policies. A lower number of environments also usually trains a working policy, but the training progress has higher variance, and it is more likely to get stuck in local minima for position tracking. In each environment, we only take 32 steps per episode. Giving us 128 minibatches of size 4096 for each episode. The training is performed on a single GPU, which allows us to leverage the high-performance capabilities of JAX and Brax for efficient training. Figure~\ref{fig:train_metrics} shows the training progress of the two quadrotor policies.%\todo{maybe add comparison of few env training to fig}
+\begin{enumerate}
+\item single-frame detection performance,
+\item tracking and state-estimation performance,
+\item trajectory prediction performance from ground-truth tracks,
+\item trajectory prediction performance from detector-based tracks.
+\end{enumerate}
 
-The training process and hyperparameters are virtually the same for all numbers of quadrotors, only the policy size is slightly adjusted for more quadrotors. We train the policy on a single RTX Ada 4000 GPU with 20GB of RAM. This gives us training speeds of up to 1 million environment steps per second, depending on the number of parallel environments and Quadrotors. We trained the policies in our experiments on one billion environment steps, which corresponds to roughly 10 minutes of training time for the single quadrotor task, 20 minutes for the dual quadrotor task, and 60 minutes for the three quadrotor tasks. We are also able to train a single quadrotor policy without a payload in less than 3 minutes.
+This separation is important because errors can propagate through the pipeline. A poor prediction may be caused by an unsuitable prediction model, but it may also be caused by detector noise, wrong data association, height errors, or missed detections. The staged evaluation allows these effects to be analyzed separately.
 
-\subsection{Policy Architecture}
-Both actor and critic networks are instantiated as fully connected, feed-forward multilayer perceptrons. The actor network comprises an input layer matching the local observation dimension, three hidden layers of 64 units with tanh activations, and a linear output layer producing the action-mean vector. A learned log-standard deviation vector of the same dimensionality parameterizes a diagonal Gaussian policy. The critic network features three hidden layers of 128 tanh units each, terminating in a scalar output. All dense layers employ orthogonal weight initialization and zero biases. During training and rollouts, actions are sampled stochastically from the policy distribution. At evaluation time, the deterministic mean action is used.
+\section{Expected Contribution}
 
-\subsection{Hyperparameters}
-We run a Bayesian optimization sweep, with early termination of runs, over the hyperparameters to find the best configuration for our task. We first conduct a coarse search over a wide range of values, then refine the search around the most promising regions. The final hyperparameters are selected based on the best-performing policy with the highest reward. Table~\ref{tab:hyperparams} summarizes the key hyperparameters used in our experiments.
+The expected contribution of the methodology is an integrated framework for sparse LiDAR-based drone tracking and trajectory prediction. The dissertation aims to contribute:
 
-\begin{table}[ht]
-  \centering
-  \caption{Key hyperparameters for training.}
-  \label{tab:hyperparams}
-  \begin{tabular}{@{}ll@{}}
-    \toprule
-    Hyperparameter & Value \\
-    \midrule
-    Total environment timesteps    & $1\times10^{9}$ \\
-    Number of environments & 16,384 \\
-    Number of steps per update & 32 \\
-    Number of minibatches & 128 \\
-    Update epochs & 8 \\
-    Anneal learning rate & false \\
-    Learning rate & $4\times10^{-4}$ \\
-    Activation function & \texttt{tanh} \\
-    Entropy coefficient & 0.01 \\
-    Discount factor ($\gamma$) & 0.995 \\
-    \gls{gae} lambda ($\lambda$) & 0.95 \\
+\begin{itemize}
+\item a benchmark structure for small airborne drone encounters in LiDAR point clouds,
+\item a systematic analysis of how sparse detections affect tracking and prediction,
+\item a tracking pipeline for non-cooperative drones using LiDAR-based detections,
+\item a comparison of model-based and learning-based short-horizon trajectory predictors,
+\item an evaluation methodology that connects detection, tracking, and prediction performance to helicopter detect-and-avoid perception requirements.
+\end{itemize}
 
-    Actor network architecture & [64, 64, 64] \\
-    Critic network architecture & [128, 128, 128] \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-
-
+The scientific value lies in bridging the gap between per-frame LiDAR object detection and safety-relevant temporal perception. Instead of treating drone detection as an isolated bounding-box prediction problem, the proposed methodology studies how sparse airborne LiDAR observations can support continuous intruder state estimation and future motion prediction.

@@ -1,162 +1,51 @@
-\chapter{Related Work}
-This chapter reviews prior work on the control of multirotor \gls{uav}s transporting cable-suspended payloads. We organize the discussion by first examining traditional model-based control strategies, which laid the foundation for understanding the dynamics and cooperative planning. Building upon these classical approaches, we then highlight recent advances in \gls{rl} for single-\gls{uav} control and payload transport, before considering simulation frameworks that enable high-throughput algorithm development. Finally, we turn to \Gls{marl} \autocite{littman1994markov}, which offers decentralized learning solutions for multi-\gls{uav} swarm coordination and collaborative payload transport. A recent survey by \cite{estevez_review_2024} provides a comprehensive overview of various methods for aerial cable-suspended transport with quadrotors, which we build upon here.
+\chapter{State of the Art}
 
-\section{Traditional Model-Based Control for Multi-\gls{uav} Payload Transport}
-Early work on cooperative payload transport relied on physics-based models and carefully designed feedback controllers. These approaches provided essential insights into how multiple \gls{uav}s interact with a shared cable-suspended payload, forming the baseline for later \gls{rl}-based and \gls{marl} methods.
+\section{Detect-and-Avoid and Non-Cooperative Aerial Intruders}
 
-Early work formulated the coupled dynamics of multiple quadrotors and their suspended payload, enabling coordinated planning and stabilization beyond quasi-static assumptions \cite{sreenath_dynamics_2013}. Similarly, \cite{villa_cooperative_2021} proposed a virtual-structure formation with adaptive dynamic compensators, achieving robust rod-shaped payload positioning under modeling errors and wind disturbances, critically, without requiring inter-\gls{uav} communication. These works demonstrate that carefully derived models and controllers can ensure stable transport, but they also highlight the complexity of explicitly modeling every disturbance and interaction.
+Detect-and-avoid systems aim to enable aircraft or unmanned systems to detect potential conflicts and perform avoidance actions without relying solely on human visual observation. The broader DAA literature distinguishes between cooperative systems, where other traffic broadcasts its state, and non-cooperative systems, where the intruder must be sensed directly. Surveys on sense-and-avoid and small-UAS collision avoidance highlight that reliable perception, tracking, and conflict assessment remain central challenges for integrating unmanned aircraft into shared airspace \cite{fasano2016senseAvoid,skowron2019senseAvoidSmallUAS,pham2015collisionAvoidanceSurvey}. More recent reviews of DAA standards emphasize that technical perception performance must ultimately be considered in relation to aviation safety requirements and operational encounter scenarios \cite{riedel2025daaStandards}.
 
-Building on these foundational models, \cite{lee_geometric_2018} derived full rigid-body dynamics on nonlinear configuration spaces and designed controllers that guarantee payload pose tracking with provable stability. In parallel, \cite{tognon_aerial_2018} showed that internal cable tension enables decentralized stabilization of any payload orientation, whereas zero-tension schemes render the payload's attitude uncontrollable. To handle parameter uncertainties, \cite{tagliabue_robust_2017} shaped each drone's apparent dynamics, demonstrating stable collaborative transport even under worst-case conditions. These contributions collectively illustrate that traditional controllers can achieve robust performance, but they often require precise knowledge of vehicle and payload parameters.
+For helicopter operations, the problem is especially relevant because helicopters often fly at low altitude and may operate outside controlled airport environments. In such conditions, non-cooperative drones can represent a difficult-to-detect hazard. Unlike cooperative aircraft, they may not provide transponder information, and unlike typical ground obstacles, they can appear at arbitrary altitude and move dynamically. This motivates sensor-based detection systems that can observe small aerial intruders directly and provide metric state estimates for tracking and avoidance.
 
-More recent work has pushed toward online optimization techniques. \cite{sun_nonlinear_2023} developed a \gls{mpc} framework that plans full six degree of freedom payload trajectories while respecting thrust, collision, and cable tension limits for teams of up to ten \glspl{uav}. In a similar direction, \cite{li_nonlinear_2023} optimized payload trajectories and inter-drone spacing within an \gls{mpc} framework, validating performance on both simulation and experiments. To address real-time computational demands, \cite{jackson_scalable_2020} introduced a distributed trajectory optimization approach, parallelizing computation across agents to enable real-time replanning in cluttered environments. These \gls{mpc}-based methods demonstrate how traditional control can be scaled to larger teams, but they still rely on accurate models and often incur significant computational overhead.
+\section{Drone Detection and the Role of LiDAR}
 
-Analyses of equilibrium and stability help inform both controller design and the motivation for learning-based methods. For example, \cite{gabellieri_equilibria_2023} analyzed equilibrium conditions and stability for two-\gls{uav} beam transport without communication, showing that internal forces induced by cable angles enhance attitude robustness under uncertain parameters. \cite{wahba_kinodynamic_2024} integrated sampling-based kinodynamic planning with a dynamics-aware optimizer to navigate \gls{uav} teams through confined spaces, achieving lower tracking errors and reduced energy consumption compared to payload-only planners. Most recently, \cite{Wang2025SafeAA} improved the agility and robustness of \gls{uav} teams carrying cable-suspended payloads, while avoiding dependence on explicit state estimation of the payload. These studies underscore both the progress and limitations of purely model-based approaches, motivating the exploration of learning-based techniques that can adapt online to uncertainties.
+Drone detection has been studied using multiple sensor modalities, including cameras, radar, radio-frequency sensing, acoustic sensing, thermal imaging, and LiDAR. Recent surveys show that no single modality solves the problem completely; each has characteristic strengths and limitations \cite{seidaliyeva2024advancesChallenges,rahman2024uavDetectionSurvey}. Camera-based systems are mature and benefit from powerful image-based neural networks, but their performance depends strongly on illumination, weather, contrast, and background appearance. Radar can provide range and velocity estimates, but small drones may have weak radar cross sections. LiDAR provides direct geometric range measurements and is therefore attractive for estimating object position in three-dimensional space \cite{seidaliyeva2025lidarUAVDetection}.
 
-\section{\gls{rl} Approaches for \gls{uav} Control}
-While traditional model-based controllers offer provable guarantees, they can struggle with highly nonlinear dynamics, unmodeled disturbances, and complex payload interactions. \gls{rl} (\gls{rl}) methods are gaining traction for \gls{uav} control because they can adapt to complex and uncertain dynamics while reducing the need for explicit modeling. In the context of payload transport, \gls{rl} offers the potential to learn control policies that implicitly account for cable dynamics and multi-agent coupling, paving the way toward more flexible and robust systems. We first review general single-\gls{uav} \gls{rl} methods and then focus on sim-to-real \gls{rl} strategies for micro-\gls{uav} platforms.
+LiDAR-based detection of small UAVs has been investigated in several works. Hammer et al.\ studied the potential of LiDAR sensors for UAV detection and later explored detection, tracking, and classification with 360-degree LiDAR systems and sensor fusion \cite{hammer2018potentialLidarUAV,hammer2018lidarSmallUAVs,hammer2019sensorFusion360Lidar}. Dogru and Marques specifically address drone detection from sparse LiDAR measurements, highlighting the challenge that small aerial objects may generate only a limited number of points \cite{dogru2022sparseLidarDrone}. More recent work investigates real-time drone detection with airborne LiDAR and deep learning, including synthetic-data-based training and tracking-by-detection pipelines \cite{manduhu2023airborneSenseDetect}. These works demonstrate the feasibility of LiDAR-based UAV detection, but they also show that sparsity, range, sensor geometry, and temporal stability remain open issues.
 
-\subsection{Single-Agent \gls{rl} for \gls{uav} Flight Control}
+A central limitation in much of the existing work is that detection is often treated as the primary output. For a safety-oriented helicopter application, however, a detector must be embedded into a temporal perception system. A single-frame bounding box does not directly answer whether a drone is approaching, whether it will intersect the helicopter path, or how reliable the estimate is. Therefore, tracking and trajectory prediction are necessary extensions of LiDAR-based drone detection.
 
-Initial applications of \gls{rl} to \gls{uav} control focused on single-agent scenarios to validate that learning-based controllers can match or exceed traditional PID and model-based methods. For example, \cite{Koch2018ReinforcementLF} evaluated Deep Deterministic Policy Gradient (DDPG) \cite{Lillicrap2015ContinuousCW}, Trust Region Policy Optimization (TRPO) \cite{Schulman2015TrustRP}, and \gls{ppo} \cite{schulman2017proximal} for inner-loop attitude control in a quadrotor simulation. Their results demonstrated that \gls{rl}-based controllers can achieve stability and responsiveness on par with or better than classical PID controllers. Building on this insight, \cite{Hwangbo2017ControlOA} proposed a neural-network-based controller trained via \gls{rl} to stabilize a quadrotor from harsh initial conditions, like being thrown upside-down. The resulting policy achieved accurate step-response behavior and robust real-world stabilization in both simulation and hardware experiments, showing that \gls{rl} can handle aggressive maneuvers.
+\section{3D LiDAR Object Detection}
 
-In highly dynamic scenarios at the edge of quadrotor agility, \cite{Song2023ReachingTL} compared optimal control and \gls{rl} in autonomous drone racing. They found that a \gls{rl}-based policy could execute aggressive maneuvers near the vehicle's limits and achieve competitive lap times, illustrating that learned policies can capture complex dynamics more effectively than hand-tuned controllers. More recently, \cite{xing_multi-task_2024} developed a multitask \gls{rl} framework enabling a single quadrotor to execute high-speed stabilization, velocity tracking, and autonomous racing tasks using a unified policy, illustrating the versatility and efficiency of learned controllers in complex scenarios. 
+Deep 3D object detection from point clouds has advanced rapidly in autonomous driving. Early point-based architectures such as PointNet and PointNet++ showed that neural networks can operate directly on unordered point sets \cite{qi2017pointnet,qi2017pointnetpp}. Voxel-based methods such as VoxelNet and SECOND convert point clouds into structured grids and apply sparse or dense convolutional networks \cite{zhou2018voxelnet,yan2018second}. PointPillars introduced a particularly efficient representation by grouping points into vertical pillars and producing a bird's-eye-view pseudo-image for fast 2D convolutional detection \cite{lang2019pointpillars}. Later methods such as PV-RCNN combine voxel and point representations, while CenterPoint formulates 3D detection as center-based object localization and tracking \cite{shi2020pvrcnn,yin2021centerpoint}. PillarNet further improves pillar-based detection performance while maintaining real-time efficiency \cite{shi2022pillarnet}.
 
-These single-agent studies set the stage for extending \gls{rl} methods to payload transport, where the coupling between vehicle and payload introduces additional challenges.
+These architectures are commonly evaluated on large autonomous-driving datasets such as KITTI, nuScenes, and Waymo Open Dataset \cite{geiger2012kitti,caesar2020nuscenes,sun2020waymo}. Such datasets have driven major progress, but their object classes and scene assumptions differ substantially from airborne drone detection. Cars, pedestrians, and cyclists are usually located on or near a ground plane. Their vertical position is therefore highly constrained. In contrast, drones are small airborne objects with free three-dimensional motion. This difference is important because many efficient LiDAR detectors rely heavily on bird's-eye-view representations. They can localize objects accurately in the horizontal plane, but their vertical localization may be less strongly constrained by the architecture and training objective.
 
-\subsection{Sim-to-Real \gls{rl} for Micro-\gls{uav} Control}
-Sim-to-real transfer remains a challenge in \gls{rl} for \gls{uav} platforms. In \cite{molchanov_sim--multi-real_2019} it is demonstrated that domain randomization over physical parameters enables a single policy trained in simulation to generalize zero-shot to quadrotors of varying sizes. Despite these advances, sim-to-real discrepancies under real-world conditions still pose significant challenges in practice, especially for micro-\glspl{uav} like the Crazyflie 2.1, which have low inertia and constrained onboard computation. These limitations have led to the development of specialized \gls{rl} strategies designed to bridge the sim-to-real gap on micro-\glspl{uav}.
+For the proposed research, this creates both an opportunity and a challenge. Existing 3D detectors can be adapted to detect drones in LiDAR point clouds, but their outputs must be evaluated not only with generic detection metrics, but also with respect to the quality of temporal state estimation. In particular, errors in height, velocity, and track continuity may be more important for drone DAA than average precision alone.
 
-Abstracting actions as \gls{ctbr} transfers better than low-level rotor \gls{pwm} or thrust commands \cite{kaufmann_benchmark_2022}. Leveraging such insights, \cite{Eschmann2024} used an asymmetric actor-critic framework, where the training process has access to privileged simulator information, while the deployed policy uses only realistic observations. This approach yielded zero-shot transfer to Crazyflie hardware within seconds of simulated learning. \cite{chen_what_2024} also managed to transfer by combining careful reward shaping and curriculum schedules, stabilizing training, and ensuring safe initial flights on the real quadrotor.
+\section{Tracking-by-Detection and State Estimation}
 
-Table~\ref{tab:rl_comparison} summarizes these and other recent \gls{rl}-based approaches for Crazyflie control. The table highlights how observation spaces, action representations, and sim-to-real techniques vary across studies, and how they achieved robust flight control under real-world conditions.
-\begin{table*}[!b]
-  \centering
-  \caption[Summary of \gls{rl} approaches]{Summary of recent \gls{rl} approaches for Crazyflie control. In the table, $\mathbf{p}$ denotes position, $\mathbf{e}$ the position errors, $\mathbf{v}$ velocity, $\mathbf{R}$ a rotation matrix (orientation), and $\boldsymbol{\omega}$ angular velocity. For details, refer to the original paper. We group \gls{pwm} and motor thrust commands as \gls{srt}.}
-  \label{tab:rl_comparison}
-  \scriptsize
-  % full text width with flexible last column
-  \rowcolors{2}{gray!20}{white}
-  \begin{tabularx}{\textwidth}{p{0.7cm} p{3.0cm} p{1.3cm} p{3.5cm} X}
-    \toprule
-    \rowcolor{white}
-    \textbf{Paper} & \textbf{Observation $\mathcal{O}$} & \textbf{Action $\mathcal{A}$} & \textbf{Reward $r$} & \textbf{Sim-to-Real} \\
-    \midrule
-    \cite{molchanov_sim--multi-real_2019} & 
-    ($\mathbf e_p,\mathbf e_v,\mathrm{vec}(\mathbf{R}),\mathbf e_\omega\,)\in\mathbb R^{18} $ & 
-    \gls{srt}  & 
-      \(\displaystyle
-    r_t=-c_t,\quad
-    c_t=\bigl(\|\mathbf e_p\|^2+\alpha_v\|\mathbf e_v\|^2+\alpha_\omega\|\mathbf e_\omega\|^2+\alpha_a\|a\|^2+\alpha_R\cos^{-1}\!\tfrac{\mathrm{tr}(\mathbf{R})-1}{2}\bigr)\Delta t
-    \) 
-    &
-     Domain randomization across most physical parameters\newline
-      Motor delay model \& motor noise\newline
-      Sensor noise injection\newline
-      Normalized thrust input\newline
-      Sim-to-sim verification\newline
-      Real-world deployment on multiple platforms  \\
-    \cite{gronauer_using_2022} & 
-    $\bigl(x_t,\mathbf{e}_t,a_{t-1}\bigr)\!\in\!\mathbb{R}^{20}$, \newline 
-    $x_t=(\mathbf{p}_t,\mathbf{v}_t,\mathbf{q}_t,\boldsymbol{\omega}_t)\!\in\!\mathbb{R}^{13}$ \newline 
-    (history $H{=}2$) & 
-    \gls{srt} \& \gls{ctbr}\newline 
-    (\gls{pwm} / AttRate / Att) & 
-    $\displaystyle r_t= -\!\Bigl(\|\mathbf{e}_t\|^{2} + 10^{-4}\|a_t\|^{2} + 10^{-3}\|a_t\!-\!a_{t-1}\|^{2} + 10^{-3}\|\boldsymbol{\omega}_t\|^{2}\Bigr) + r_f,$ \newline 
-    $r_f = -100$ if terminated &
-    Domain randomization ($k_F$, $\Delta t$, $m$, $I$, $T_m$, $k_m$) \newline
-    Gaussian \& uniform sensor noise; OU actuator noise \newline
-    Motor delay model \newline
-    Bayesian optimisation of sim parameters (1 h real flight data)\\
-    \cite{chen_what_2024} & 
-    $\bigl(e_W^{1:10},\,\mathbf v,\,\mathrm{vec}(\mathbf{R})\bigr)\!\in\!\mathbb R^{42}$
-    ($e_W^{k}$: rel.\ pos.\ to next $10$ trajectory ref pts.) & 
-    \gls{ctbr} & 
-    $r_t = r_{\text{track}} - \lambda\|a_t - a_{t-1}\|^2$, \; $\lambda=0.4$ \newline 
-    ($r_{\text{track}} \propto -\|e_W\|$) \newline
-    also evaluated other rewards
-    & 
-   
-    System identification of $m,I,k_f,T_m$ \newline
-    Selective domain randomization (only sensitive params $m, k_f$) \newline
-    Motor delay model \newline
-    Smoothness penalty on $\Delta a$ \newline
-    Large-batch \gls{ppo} training
- \\
-    \cite{ma2024skilltransfer} & 
-    $(\mathbf e,\mathbf q,[r,p,y],\mathbf v,\boldsymbol\omega,
-    \mathbf a_{t-1})$  & 
-    \gls{srt} (\gls{pwm}) & 
-    $\displaystyle
-    r_t=2-2.5\|\mathbf e\|
-    -1.5\|[r,p]\|-0.05\|\mathbf v\|
-    -0.05\|\boldsymbol\omega\|-0.1\|\mathbf a_t\|$ & 
-    Residual-dynamics skill discovery with orthogonality constraints\newline
-    Real-data fine-tuning\\
-    \cite{Eschmann2024} & 
-  $(\mathbf p,\mathbf v,\mathrm{vec}(\mathbf{R}),\boldsymbol{\omega}, \newline a_{t-1:t-H})\!\in\!\mathbb R^{18+4H}$ & 
-  \gls{srt} (RPM)& 
-  $\displaystyle r_t=-\!\bigl(w_p\|\mathbf p\|^{2}+w_v\|\mathbf v\|^{2}+w_R\phi(\mathbf{R})+w_\omega\|\boldsymbol{\omega}\|^{2}+w_a\|\mathbf a_t\|^{2}\bigr)+c_{\text{alive}}$ & 
-  Zero-shot transfer without domain randomization \newline
-  Motor delay model\newline
-  Action-history observations\newline
-  Asymmetric actor-critic with privileged critic\newline
-  Force/torque disturbances\newline
-  Gaussian sensor noise \\
-  \cite{huang_quadswarm_2023} & 
-  $(\mathbf e_i,\mathbf v_i,\mathrm{vec}(\mathbf{R}_i),\boldsymbol\omega_i, \newline 
-  \{\delta\tilde{\mathbf p}_{ij},\tilde{\mathbf v}_{ij}\}_{j=1}^{Q})$ & 
-  \gls{srt} & 
-  $\displaystyle r_t = r_{\text{pos}}+r_{\text{vel}}+r_{\text{ori}}+r_{\text{spin}}+r_{\text{act}}+r_{\delta\text{act}}+r_{\text{rot}}+r_{\text{yaw}} \;+\; r_{\text{collision}}$ 
- 
-   $r_t \;=\;
-  \alpha_{\text{pos}}\|\delta\mathbf p_i\|^{2}
-  +\alpha_{\text{vel}}\|\mathbf v_i\|^{2}
-  +\alpha_{\text{ori}}\,\mathbf{R}_{22}
-  +\alpha_{\text{spin}}\|\boldsymbol{\omega}_i\|^{2}
-  +\alpha_{\text{act}}\|\mathbf f_i\|^{2}
-  +\alpha_{\delta\text{act}}\|\mathbf f_i(t)-\mathbf f_i(t-1)\|^{2}
-  +\alpha_{\text{rot}}\frac{\operatorname{tr}(\mathbf{R}_i)-1}{2}
-  +\alpha_{\text{yaw}}\,\mathbf{R}_{00}
-  +\alpha_{\text{col}}\mathbf 1_{\text{collision}}$ 
-  & 
-  Swarm of quadrotors \newline
-  Domain randomization (mass, inertia, thrust, etc.) \newline
-  Motor delay model \& OU motor noise \newline
-  Uniform/Gaussian sensor noise injection \newline
-  Simplified collision \& downwash models \newline
-  Zero-shot transfer demonstrated on Crazyflie swarms \\ 
-    \bottomrule
-  \end{tabularx}
-\end{table*}
+Tracking-by-detection is a widely used paradigm in which an object detector provides candidate detections in each frame and a tracking algorithm associates detections over time. Classical multi-object tracking relies on prediction, association, and update steps. The Kalman filter provides a foundational method for recursively estimating the state of a dynamic system from noisy measurements \cite{kalman1960newApproach}. In the drone tracking context, a simple state may include three-dimensional position and velocity. The filter predicts the next state using a motion model, compares this prediction with a new detection, and corrects the state estimate according to the assumed measurement uncertainty.
 
-\subsection{Single \gls{uav} \gls{rl} for Payload Transport and Aerial Manipulation}
-Extending single-\gls{uav} \gls{rl} methods to payload transport, researchers have sought to address the additional complexity introduced by cable-suspended loads. \cite{belkhale_model-based_2021} introduced model-based meta-\gls{rl} that adapts quickly to unknown payload dynamics, updating its model mid-flight to maintain stability. By contrast, \cite{hua_new_2022} combined a Lyapunov-based nonlinear controller with \gls{rl}, resulting in a hybrid controller that rapidly converges and robustly manages payload disturbances. 
-These single-\gls{uav} payload studies pave the way toward multi-\gls{uav} \gls{rl} solutions by demonstrating that \gls{rl} can implicitly handle the coupling between vehicle and payload dynamics.
+Data association is another central component. The Hungarian algorithm provides a classical solution for assigning detections to tracks based on a cost matrix \cite{kuhn1955hungarian}. Modern tracking-by-detection systems often combine motion prediction with assignment. SORT demonstrated that a simple combination of Kalman filtering and Hungarian assignment can achieve efficient online tracking in image sequences \cite{bewley2016sort}. DeepSORT extends this idea with appearance-based association \cite{wojke2017deepsort}. For 3D object tracking, AB3DMOT provides a strong and simple baseline for LiDAR-based multi-object tracking and highlights the importance of appropriate 3D tracking metrics \cite{weng2020ab3dmot}.
 
-\section{Simulation Frameworks for Multi-\gls{uav} Payload Transport}
-While \gls{rl} methods promise adaptability, they require large amounts of simulated data for training. Simulation frameworks thus play a central role in developing control algorithms and enabling \gls{rl} workflows. A comprehensive survey in \cite{Dimmig2023SurveyOS} reviews a wide variety of existing simulators, highlighting how \gls{uav} simulators accelerate algorithm development.
+For sparse airborne LiDAR drone tracking, these ideas are particularly relevant because detections may be intermittent and noisy. A tracker can bridge short gaps, smooth noisy detections, and estimate velocity. However, standard tracking assumptions may be challenged by small object size, sparse point returns, and fast three-dimensional motion. Moreover, many tracking methods are developed for road traffic, where object motion is constrained by lanes and the ground plane. Non-cooperative drones may accelerate, change altitude, hover, or cross paths in ways that require adapted motion models and uncertainty handling.
 
-Specialized payload-transport simulators, such as RotorTM \cite{Li2022RotorTMAF}, accurately model cable-suspended dynamics but rely on CPU-based physics, resulting in slower runtimes that hinder sample-intensive \gls{rl} training. To address this bottleneck, GPU-accelerated frameworks have emerged. The Aerial Gym Simulator, built on NVIDIA Isaac Gym, runs thousands of multirotor instances in parallel with GPU-based physics and sensor rendering, dramatically increasing throughput \cite{aerial_gym_simulator}. Extending these capabilities, the simulator OmniDrones offers GPU-parallelized collaborative simulations of multirotor systems with rigid-link payloads, enabling multi-agent payload transport scenarios \cite{xu_omnidrones_2024}. While OmniDrones cannot yet model flexible cable dynamics and incurs some CPU-GPU synchronization overhead as multi-\gls{uav} cable-transport tasks grow in complexity, it represents a critical step toward high-throughput training of \gls{marl} policies. These simulation frameworks, by bridging the gap between physics fidelity and computational efficiency, accelerate the development of both single-agent and multi-agent \gls{rl} methods for payload transport.
+\section{Trajectory Prediction}
 
+Trajectory prediction aims to estimate future object states from past observations. In autonomous driving and robotics, prediction is often formulated as a sequence forecasting problem, where the model receives a history of positions and predicts one or multiple plausible future trajectories. Classical baselines include constant-velocity and constant-acceleration models, often implemented through Kalman or interacting multiple model filters \cite{mazor1998immSurvey}. Learning-based approaches use recurrent networks, graph models, or transformer-like architectures to capture more complex motion patterns and interactions \cite{alahi2016socialLSTM,salzmann2020trajectronpp}.
 
-\section{\gls{marl} for Multi-\gls{uav} Cooperative Tasks}
+For UAVs, trajectory prediction has been studied in both cooperative and non-cooperative settings. Xie and Chen propose an efficient online trajectory prediction method for non-cooperative UAVs, directly aligning with the need to predict future motion without relying on transmitted intent information \cite{xie2022noncooperativeUAVPrediction}. Other work investigates deep learning methods for flying vehicle trajectory prediction and flight-state-aware UAV trajectory forecasting \cite{tan2023flyingVehicleTrajectory,zhang2024flightStateRecognition}. These methods indicate that UAV trajectory prediction is an active field, but the combination with sparse LiDAR perception remains insufficiently explored.
 
-\gls{marl} has emerged as a powerful framework for multi-agent cooperative tasks, enabling agents to learn coordinated behaviors in dynamic environments. The key challenge in \gls{marl} is addressing non-stationarity. As each agent learns, the environment dynamics from any other agent's perspective change. To address this, early cooperative \gls{marl} approaches leveraged a \gls{ctde}  paradigm to stabilize learning.
+In the proposed dissertation topic, trajectory prediction is not treated as an isolated forecasting problem. Instead, it is linked to perception uncertainty. The predictor receives tracks that originate from sparse LiDAR detections and therefore contain errors, missed detections, and uncertain state estimates. This makes the problem different from prediction using clean ground-truth trajectories. A key research question is therefore how tracking uncertainty, detection confidence, and sparse point-cloud observations can be incorporated into short-horizon drone trajectory prediction.
 
-Multi-Agent Deep Deterministic Policy Gradient (MADDPG) employs a shared critic during training to stabilize inter-agent learning and coordinate policies \cite{Lowe2017MultiAgentAF}. However, relying on centralized critics introduces scalability and communication overhead as the number of agents increases. More recent work has shown that \gls{ppo}-based \gls{marl} methods can achieve comparable coordination with simpler architectures. For instance, \gls{mappo} extends \gls{ppo} by using a centralized value function during training and has demonstrated performance on par with earlier \gls{ctde} methods across standard benchmarks \cite{yu_surprising_2022}. Findings from \cite{witt_is_2020} show that \gls{ippo}, where each agent trains its own \gls{ppo} instance without any shared critic or centralized state, often matches or even outperforms \gls{mappo} on tasks such as the StarCraft Multi-Agent Challenge (SMAC). Benchmarking studies confirm that \gls{mappo} nearly matches or exceeds other \gls{marl} algorithms, while maintaining a minimal and straightforward architecture \cite{Papoudakis2020BenchmarkingMD}.
+\section{Synthetic Data and Benchmarking}
 
-Real-world \gls{marl} implementations have demonstrated the viability of decentralized learning for collaborative robotics tasks similar to multi-\gls{uav} payload transport. For example, \cite{Chen2022TowardsHBA} developed decentralized policies for multi-robot manipulation under uncertainty. \cite{Pandit2024LearningDM} demonstrated cooperative payload transport across uneven terrain without retraining, and \cite{Ji2021ReinforcementLF} enabled formation control with obstacle avoidance using only local observations. Other works, such as \cite{Chen2025DecentralizedNO}, applied decentralized \gls{marl} to coordinate multiple robots towing loads with complex dynamics like quadruped platforms. These results highlight the suitability of \gls{ppo}-based \gls{marl} methods (e.g., \gls{ippo} and \gls{mappo}) for multi-\gls{uav} payload transport, since they can scale to larger teams and adapt to dynamic interactions without requiring explicit global state estimation during execution.
+A practical challenge in LiDAR-based drone perception is the scarcity of suitable datasets. Large public 3D detection datasets focus mostly on autonomous driving, while datasets for small airborne drone detection with LiDAR are limited. Synthetic data can help address this problem by enabling controlled variation of sensor properties, drone geometry, trajectories, ranges, and environmental conditions. However, synthetic data introduces a simulation-to-reality gap. Dieter et al.\ study this gap for deep-learning-based drone detection and show that synthetic data must be carefully designed and validated to support real-world generalization \cite{dieter2023simulationRealityGap}. Recent airborne LiDAR work also uses simulation and digital-twin concepts to generate training data for drone detection \cite{manduhu2023airborneSenseDetect}.
 
-\subsection{Multi-\gls{uav} \gls{marl} for Swarm Coordination}
-In parallel to payload-specific \gls{marl} research, there has been significant progress in multi-\gls{uav} swarm coordination, which provides valuable insights for multi-\gls{uav} payload transport. \cite{huang_collision_2024} introduced attention-based neural networks enabling collision avoidance and navigation in \gls{uav} swarms, transferring policies trained with up to 32 agents directly to real hardware. \cite{xie_multi-uav_2024} addressed formation flight with obstacles through a two-stage \gls{rl} pipeline employing attention mechanisms, and validated swarm performance through real-world experiments. These swarm coordination advances, particularly in learning decentralized behaviors based on local observations, suggest strategies for coordinating multiple \gls{uav}s carrying a shared payload.
+For this dissertation, synthetic data is relevant in two ways. First, it enables systematic generation of sparse LiDAR drone encounters, including rare or safety-critical scenarios that are difficult to collect experimentally. Second, it allows controlled evaluation of tracking and trajectory prediction methods under known ground truth. Nevertheless, the resulting methods must be assessed with respect to generalization. A benchmark should therefore separate training and unseen test scenarios and should report not only detection accuracy, but also tracking continuity, velocity estimation, future position error, and conflict-relevant quantities.
 
-Lightweight perception-driven policies have also emerged. \cite{diao_efficient_2024} developed a LiDAR-based multi-agent navigation policy trained in dense simulation environments, demonstrating successful real-time collision-free flight on hardware with limited computation capabilities. \cite{zhao_deep_2024} applied deep \gls{rl} to collaborative pursuit and evasion scenarios, enabling coordinated multi-\gls{uav} target herding and obstacle avoidance. All of these works emphasize the importance of decentralized execution, local perception, and scalable architectures. These are properties that are equally critical when \gls{uav} teams carry cable-suspended payloads and must adapt quickly to disturbances and other agents' actions.
+\section{Research Gap}
 
-\subsection{Multi-\gls{uav} Collaborative Transport via \gls{marl}}
-Cooperative payload transport has been well studied under traditional control frameworks, but \gls{marl}-based approaches to this problem remain relatively new. Insights from single-\gls{uav} \gls{rl} methods, such as rapid adaptability and robustness to payload disturbances, naturally motivate extensions to multi-\gls{uav} scenarios. In these settings, \gls{marl} can facilitate decentralized, cooperative strategies that adjust in real time to the complex, coupled dynamics of cable-suspended loads.
+The reviewed literature shows substantial progress in DAA systems, LiDAR-based 3D detection, multi-object tracking, and trajectory prediction. However, the specific problem of tracking and predicting non-cooperative drones from sparse airborne LiDAR remains insufficiently addressed. Existing 3D detectors are largely optimized for ground-based autonomous-driving scenarios. Existing drone detection work often focuses on per-frame detection or ground-based counter-UAV sensing. Existing trajectory prediction methods frequently assume cleaner trajectory observations than are available from sparse LiDAR detections.
 
-For instance, \cite{Lin2024PayloadTW} proposed a centralized \gls{rl} method for two \glspl{uav} jointly carrying a cable-suspended payload, demonstrating stable transport in simulation. Building on the idea of learned coordination, \cite{Estevez2024Reinforcement} introduced an \gls{rl}-based trajectory planning approach for multi-\gls{uav} load transportation, optimizing the transport path while ensuring both stability and safety under uncertainty. Complementing these algorithmic advances, \cite{xu_omnidrones_2024} presented OmniDrones, a GPU-parallelized simulation framework that supports payload configurations via rigid links. Although OmniDrones does not yet model flexible cables and has not reported any real-world hardware transfers, it shows promise for the payload transport domain by enabling high-throughput training of multi-\gls{uav} policies.
-
-While these studies collectively establish the feasibility of \gls{marl} for multi-\gls{uav} payload transport, several challenges remain. Key questions include how to scale learned policies to teams, how to maintain stability under agile movements, more complex payload dynamics, and how to achieve reliable sim-to-real transfer on micro-\gls{uav} platforms like the Crazyflie.
-
-In summary, the progression from traditional model-based control, through single-agent \gls{rl} and high-throughput simulation frameworks, to emerging \gls{marl} methods highlights a clear trajectory toward increasingly agile, flexible, and scalable strategies for multi-\gls{uav} payload transport.
+The central research gap is therefore the lack of an integrated, safety-oriented pipeline that converts sparse airborne LiDAR measurements of small non-cooperative drones into temporally stable tracks and short-horizon trajectory predictions. Addressing this gap requires combining LiDAR-based detection, uncertainty-aware tracking, and trajectory forecasting in a way that is suitable for helicopter detect-and-avoid scenarios. The proposed dissertation will investigate this connection and evaluate how temporal integration can improve the reliability of drone state estimation beyond single-frame detection.
